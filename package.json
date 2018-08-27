@@ -1,7 +1,7 @@
 {
-  "name": "boilermaker",
+  "name": "shatteredsandswebsite",
   "version": "1.0.0",
-  "description": "Some boilerplate code to get you started - get shakin'!",
+  "description": "The Website Dedicated to the Shattered Sands",
   "engines": {
     "node": ">= 7.0.0"
   },
@@ -14,7 +14,7 @@
     "lint-fix": "npm run lint -- --fix",
     "precommit": "# lint-staged # un-comment to enable",
     "prepare": "if [ -d .git ]; then npm-merge-driver install; fi",
-    "prettify": "prettier --write \"**/*.{js,jsx,json,css,scss,md}\"",
+    "prettify": "prettier --write \"**/*.{js,jsx}\"",
     "postinstall": "touch secrets.js",
     "seed": "node script/seed.js",
     "start": "node server",
@@ -27,13 +27,9 @@
       "prettier --write",
       "npm run lint-fix",
       "git add"
-    ],
-    "*.{css,scss,json,md}": [
-      "prettier --write",
-      "git add"
     ]
   },
-  "author": "Fullstack Academy of Code",
+  "author": "Brendan Meyer",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.15.3",
