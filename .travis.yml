@@ -16,11 +16,12 @@ install:
 before_script:
   - psql -c 'create database "shatteredsandswebsite-test";' -U postgres # remember to change this name if you change it elsewhere (e.g. package.json)
 
-# before_deploy:
-#   - npm run build-client # make the bundle
-#   - rm -rf node_modules # omit from the tarball, since we skip cleanup
-# deploy:
-#   skip_cleanup: true # prevents travis from deleting the build
-#   provider: heroku
-#   app: shatteredsandsdist # see README
-#   ? api_key
+before_deploy:
+  - npm run build-client # make the bundle
+  - rm -rf node_modules # omit from the tarball, since we skip cleanup
+deploy:
+  skip_cleanup: true # prevents travis from deleting the build
+  provider: heroku
+  app: shatteredsandsdist # see README
+  api_key:
+    secure: 'YU3kf3xJTk6O0hWKoq6r88qzu8ZTSZbDPe7ZILZJ2Sx/sMSESUpminBIBnwbEIVAfeH2Lqg0S4ZEgpp9tbFqXy4Hom0bZhSnHEtOzP1eX/I2YD7JZJlaMSQgdpLAf41T0diYW7eve1TykF1Ad/ni1vf4sxSAq4diLzolyBqQTeXfe08oWrjHtysb3QRM1lhWEbEwVcXa5TlomAh8t1+qSLNS/m2enjYmclG67aznibP7eF35+6EhbM6cySPw9zSgJi7dHtyuir722VQRWl7m1i1oZFXmOGyDAfBvd9T//HfGwSwlVcDTuUd2z8UnuoMGQvl+kyHWBclguL4LoDdZSzsKORfkrtqNqEYrhd/SmhBoBzeQgJhkizoMVsC/885N7ElOtbBAlWO2Pw0vneBleOJlXPZtRR4xoDlV804LHL+b4IYwtSCiOZGDu7F5wOPw7R0E3tbiUC3zclNYCbQ4atnbmXLWeJA+mdK1MK2Tz7/pqFeojQwSxH75zek1dWsihXP9pqnI4hQjUfAGtirIT2oux/q7asmsZqsTXW+B3wPpVhzfwAgBsDyIQm+66J4ImdcbGy/o6ru4/zAKOaHDlIw9nw5TOhks+v78t/hI/CpSKa//NqVydD5rumtp/56KDnfjLUO9wzMRkXEtp7YrCsi9nwY7rRjRBuqK2UQDpaI='
