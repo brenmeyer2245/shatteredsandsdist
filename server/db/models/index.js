@@ -1,5 +1,5 @@
 const User = require('./user')
-const Character = require('./characters')
+const Character = require('./character')
 const City = require('./city')
 const Episode = require('./episode')
 const Stats = require('./stats')
