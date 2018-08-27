@@ -11,7 +11,7 @@ sudo: false # when on trusty, uses Docker containers for speed
 install:
   - npm ci # faster, goes only from package-lock
 before_script:
-  - psql -c 'create database "sharakhai-test";' -U postgres # remember to change this name if you change it elsewhere (e.g. package.json)
+  - psql -c 'create database "shatteredsandsdist-test";' -U postgres # remember to change this name if you change it elsewhere (e.g. package.json)
 
 before_deploy:
   - npm run build-client # make the bundle
@@ -19,5 +19,5 @@ before_deploy:
 deploy:
   skip_cleanup: true # prevents travis from deleting the build
   provider: heroku
-  app: shatteredsandswebsite # see README
+  app: shatteredsandsdist # see README
   api_key: secure:
