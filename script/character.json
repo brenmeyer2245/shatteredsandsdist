@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Kal E'moore",
+    "class": "Rogue",
+    "bio": "A salesman of all things with a mysterious ring",
+    "headshot": "Kal_as_McQueen.jpg",
+    "actor": "Brendan Meyer"
+  },
+  {
+    "name": "Aragwyn Moonshadow",
+    "class": "Ranger",
+    "bio":
+      "Aragwyn is a wood elf from Dumai’s well, daughter of spice merchants of humble means. When she was a child her entire family was murdered by the Sand Serpents and she was left with nothing butba mysterious Adichara bloom symbol tattoo on her hand. From this moment, she vowed to bring justice to her family by finding the ones responsible for their deaths, while at once discovering the source and meaning of the mysterious tattoo. Her loyal sand cat Noor by her side, she fears nothing the sands may bring…",
+    "headshot": "Aragwyn_Headshot.jpg",
+    "actor": "Iris Kohler"
+  },
+  {
+    "name": "Jaonos Ventium",
+    "class": "Sorceror",
+    "bio":
+      "The Shayatin of the Sands. Brood of Jizesh. The Lamplight.  Since birth the half-elven, half-djinni Jaonos Ventium has had destiny and monikers thrust upon him, but has hidden from it within bottles of Arak and pledges to prove himself as a better pirate than his elven mother Tallindra Fardan. In exchange for a wish, she and the ancient djinni Jizesh magically conceived the blue-skinned sorcerer in an instant, and Jaonos was born an heir to wind and storm magic within his very blood. An heir to magical power...but also an heir to the sins of his father.",
+    "headshot": "Jhanos2.jpg",
+    "actor": "Andrew Saenz"
+  },
+  {
+    "name": "Clock",
+    "class": "Bard-Warlock",
+    "bio":
+      "Severyn Whitlock, commonly known as Clock the Wanted, is a handsome young man with lengthy black hair. His features are soft, existing in a strange balance between masculine and feminine. He has green eyes, which seem to capture the moonlight in mysterious ways. His body is lean and weathered from years of travel and combat. Due to his circumstances, Clock often poses as the famous mercenary, Varien Grey. Varian Grey has a reputation for getting the job done by any means necessary. He wears a full-face mask made of polished silver, covered in cogs and gears, which twist and turn, somehow always in motion. Varian wears different shades of red and black, a long tattered cloak, and he moves in a very calculated manner.",
+    "headshot": "Clock_Headshot.jpg",
+    "actor": "Ben Lapaen"
+  },
+  {
+    "name": "D'harr",
+    "class": "Monk",
+    "bio": "One of the devout followers of Talisi",
+    "headshot": "DHarr.jpg",
+    "actor": "Trent Stork"
+  },
+  {
+    "name": "Beshtanang, The Ghost of Tuman",
+    "class": "Druid",
+    "bio":
+      "I was a very small child when I discovered how much my family hated me. I did not discover it by accident. Born to an elf of Dumai and a nameless human wanderer, I was sold to Feroze of the Ivory Blossom in Tuman Bay when I was still a boy. Under Feroze I was castrated & taught the arts of the hetairai, the expensive courtesan-slaves of Tuman; I was also hobbled, poisoned with wood spirit until I was blind. But my only friend from my childhood in Dumai, Ujarak the druid, had taught me the ways of the Moons and gave me my weapons of vengeance. By day a blinded whore, by night a vigilante bent on revenge against all slavers- this was the making of the Ghost of Tuman.",
+    "headshot": "besh.jpg",
+    "actor": "Lane Flores"
+  },
+  {
+    "name": "Talindra, the Pirate Queen",
+    "class": "Mage",
+    "bio":
+      "Once, there was a child who found a treasure. That treasure begat more treasure, surfeiting itself upon the world, until in terror and despair the child begged for no more of it. But treasures found in innocence cannot be given back. They can only be taken by force. The child is long dead. Long live the Pirate Queen.",
+    "headshot": "talindra.jpg",
+    "actor": "Lane Flores"
+  },
+  {
+    "name": "Androl",
+    "class": "Sorceror",
+    "bio":
+      "Through answers he has found & what he now knows of the start of the great war, he sees history starting down the same path and will do all within his power to stop the darkness from once again trying to consume the world while he searches for revenge against those who betrayed the light.",
+    "headshot": "Androl_Headshot.jpg",
+    "actor": "Matt Scannell"
+  },
+  {
+    "name": "Vass",
+    "class": "Warlock",
+    "bio":
+      "For many years Vassar Atulus was an ordinary archaeologist. The son of well meaning but distracted parents, he was essentially raised by his master Artameen. Vassar's mission is to claim and store away dangerous magical artifacts before less scrupulous tomb raiders can find them, accepting only a nominal fee for his time and services. However, all is not as it appears. On one of his first expeditions Vassar found a ring containing the demon Massiel, in exchange for magical powers Massiel now experiences the world through Vassar's senses. However, Massiel constantly seeks to free himself, and influence Vassar's heart towards darkness. A long time friend of \"Elijah Afterglow\", Vassar has only recently learned Kal's true identity, though their friendship seems stronger than ever.",
+    "headshot": "vass.jpg",
+    "actor": "Nathan Spring"
+  }
+]

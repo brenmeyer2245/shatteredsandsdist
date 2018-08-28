@@ -4,13 +4,12 @@ const City = require('./city')
 const Episode = require('./episode')
 const Stats = require('./stats')
 
-/**
- * If we had any associations to make, this would be a great place to put them!
- * ex. if we had another model called BlogPost, we might say:
- *
- *    BlogPost.belongsTo(User)
- */
-
+//define relationships
+Character.hasOne(Stats)
+Stats.belongsTo(Character)
+Episode.belongsToMany(Character, {through: 'charactersToEpisodes'})
+Character.belongsToMany(Episode, {through: 'charactersToEpisodes'})
+City.hasMany(Episode)
 /**
  * We'll export all of our models here, so that any time a module needs a model,
  * we can just require it from 'db/models'

@@ -16,9 +16,9 @@ const Episode = sqlDB.define('Episode', {
   cast: {
     type: Sequelize.STRING,
     allowNull: false,
-    validate: {
-      emptyString: true
-    }
+    // validate: {
+    //   emptyString: true
+    // }
   },
   audio: {
     type: Sequelize.STRING
