@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Sharakahi",
+    "description":
+      "At the very heart of this world lay the capital of SS called Sharakhai. Some say that Sharakhai's ancient white walls are as old as the Great Waste itself. It is massive. This multi-leveled city is famous for it's sprawling towers and thick white shining walls. It houses the world’s most impressive libraries, towering aqueducts, hanging gardens, the Grand Bazaar, Silver Spear Academy and guild houses of every kind...\nIn the center of the city is the tower of the Second Sun and Second Moon. A massive spire that reaches up towards the heavens and protrudes out of the landscape. Atop this massive construct is a giant crystal which glows bright red/orange during the day and a tranquil blue to illuminate the sands at night. It can be seen from across the Shangazi. A beacon for Wind-Ships and lost travelers alike.",
+    "pictures": "Sharakhai.jpg"
+  },
+  {
+    "name": "Bariiks Bowl",
+    "description":
+      "The Empires southernmost controlled city. It is a port city that is home to many different races and professions. It’s truly a melting pot of all walks of life, races and classes. This southern city is built on trade. It also houses the famous gladiatorial arena:  the Pit.",
+    "pictures": "bariiks.jpg"
+  },
+  {
+    "name": "Naseem",
+    "description":
+      "A small town along the western edge of the Sultan’s Highway. It is home to ancient ruins that many pilgrims seek passage to. It takes part in many religious ceremonies and it is said the Sultan himself travels here once a year to pay homage to the gods.",
+    "pictures": "naseem.jpg"
+  },
+  {
+    "name": "Uk Varr",
+    "description":
+      "\"Outcast City\" This settlement is home to once nomadic peoples forced to settle down by the Sultan. It is a place for the lost and vagabonds.",
+    "pictures": "Uk_Varr.jpg"
+  },
+  {
+    "name": "Jaffa",
+    "description":
+      "The port of Jaffa “Pirates Cove” is a grotto along the Vine. This massive cavern was once a graveyard for old wind-ships of an ancient battle. It is now a multi-tiered Pirate dwelling. A place where no one is king except the sails and the sands. It is a place to get lost, to hire a crew, charter passage or find a treasure map. It is a pirate’s paradise.",
+    "pictures": "jaffa.jpg"
+  },
+  {
+    "name": "Tuman Bay",
+    "description":
+      "This is a southeastern city that nears the “Endless Dunes and Valley of the Shifting Sands.” It is home to wealthy slave owners whose entire society is built upon the use of slaves. They are ruthless and merciless in putting down revolts. The city is under constant threat from beasts of the great dunes and the Vine. Here monster hunters and treasure seekers alike make port before heading off into the Dunes.",
+    "pictures": "tuman_bay.jpg"
+  },
+  {
+    "name": "Dumais Well",
+    "description": "Elven City",
+    "pictures": ""
+  },
+  {
+    "name": "Karak Kazrim",
+    "description": "Dwarven City",
+    "pictures": ""
+  },
+  {
+    "name": "Tear'an",
+    "description": "Norther City, home to aqueducts",
+    "pictures": ""
+  },
+  {
+    "name": "Takoom",
+    "description": "Reclusive City of Talisi and the Maidens",
+    "pictures": ""
+  }
+]
