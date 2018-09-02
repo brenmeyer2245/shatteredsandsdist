@@ -20,7 +20,7 @@ const Episode = props => {
         <div className="episode_icon">
           <img
             src={
-              'http://jbmeyer.org/wp-content/uploads/ShatteredSands/pics/' +
+              'http://jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/pics/' +
               episode.icon
             }
           />

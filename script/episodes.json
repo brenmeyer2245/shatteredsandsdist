@@ -1,9 +1,10 @@
 [
   {
     "title": "Night of the Long Knives",
-    "icon": "",
-    "cast": "",
-    "audio": "",
+    "icon": "night_of_the_long_knives_icon.jpeg",
+    "cast":
+      "Jhanos: Andrew Saenz, Clock: Ben Lapaen, D'Harr: Trent Stork, Aragwyn: Iris Kohler, Kal: Brendan Meyer",
+    "audio": "Night_Of_The_Long_Knives.flac",
     "series": "BWS",
     "bookTitle": "Festival of Fire",
     "bookNumber": 1,
@@ -14,8 +15,9 @@
   {
     "title": "In the Belly of Black Fire",
     "icon": "",
-    "cast": "",
-    "audio": "",
+    "cast":
+      "Jhanos: Andrew Saenz, Clock: Ben Lapaen, D'Harr: Trent Stork, Aragwyn: Iris Kohler, Kal: Brendan Meyer",
+    "audio": "In_The_Belly_Of_Blackfire.flac",
     "series": "BWS",
     "bookTitle": "Festival of Fire",
     "bookNumber": 1,
@@ -26,7 +28,7 @@
   {
     "title": "The Power of the Ring",
     "icon": "",
-    "cast": "",
+    "cast": "Kal: Brendan Meyer",
     "audio": "",
     "series": "VOS",
     "bookTitle": "The Eyes of Snakes",
@@ -38,8 +40,9 @@
   {
     "title": "Blood of My Blood",
     "icon": "",
-    "cast": "",
-    "audio": "",
+    "cast":
+      "Jhanos: Andrew Saenz, Clock: Ben Lapaen, D'Harr: Trent Stork, Aragwyn: Iris Kohler",
+    "audio": "Blood_Of_My_Blood.flac",
     "series": "BWS",
     "bookTitle": "Festival of Fire",
     "bookNumber": 1,
@@ -50,8 +53,8 @@
   {
     "title": "A Man of Deals",
     "icon": "",
-    "cast": "",
-    "audio": "",
+    "cast": "Kal: Brendan Meyer",
+    "audio": "A_Man_Of_Deals.mp3",
     "series": "VOS",
     "bookTitle": "The Eyes of Snakes",
     "bookNumber": 1,
@@ -62,7 +65,8 @@
   {
     "title": "Blood Transfusion",
     "icon": "",
-    "cast": "",
+    "cast":
+      "Jhanos: Andrew Saenz, D'Harr: Trent Stork, Clock: Ben Lapaen, Aragwyn: Iris Kohler",
     "audio": "",
     "series": "BWS",
     "bookTitle": "Festival of Fire",
@@ -85,8 +89,9 @@
   {
     "title": "The Storm of Steel Pt. 1",
     "icon": "",
-    "cast": "",
-    "audio": "",
+    "cast":
+      "Jhanos: Andrew Saenz, Clock: Ben Lapaen, D'Harr: Trent Stork, Aragwyn: Iris Kohler",
+    "audio": "The_Storm_Of_Steel_Part1.flac",
     "series": "BWS",
     "bookTitle": "Festival of Fire",
     "bookNumber": 1,
@@ -97,8 +102,9 @@
   {
     "title": "The Storm of Steel Pt. 2",
     "icon": "",
-    "cast": "",
-    "audio": "",
+    "cast":
+      "Jhanos: Andrew Saenz, Clock: Ben Lapaen, D'Harr: Trent Stork, Aragwyn: Iris Kohler",
+    "audio": "The_Storm_Of_Steel_Pt2.flac",
     "series": "BWS",
     "bookTitle": "Festival of Fire",
     "bookNumber": 1,
@@ -109,8 +115,8 @@
   {
     "title": "In the Shade of the White Tower",
     "icon": "",
-    "cast": "",
-    "audio": "",
+    "cast": "Vass: Nathan Spring, Kal: Brendan Meyer, Besh: Lane Flores",
+    "audio": "In_The_Shade_Of_The_White_Tower.mp3",
     "series": "VOS",
     "bookTitle": "The Eyes of Snakes",
     "bookNumber": 1,
@@ -121,7 +127,7 @@
   {
     "title": "Approaching Uk Varr",
     "icon": "",
-    "cast": "",
+    "cast": "Vass: Nathan Spring, Kal: Brendan Meyer, Besh: Lane Flores",
     "audio": "",
     "series": "VOS",
     "bookTitle": "The Eyes of Snakes",
@@ -144,7 +150,7 @@
   {
     "title": "Snakes Tomb",
     "icon": "",
-    "cast": "",
+    "cast": "Vass: Nathan Spring",
     "audio": "",
     "series": "VOS",
     "bookTitle": "The Eyes of Snakes",
@@ -168,7 +174,7 @@
   {
     "title": "Shaking Hands with the Devil",
     "icon": "",
-    "cast": "",
+    "cast": "Kal: Brendan Meyer, Androl: Matt Scannell",
     "audio": "",
     "series": "VOS",
     "bookTitle": "The Eyes of Snakes",
@@ -180,8 +186,9 @@
   {
     "title": "Blood Amber",
     "icon": "",
-    "cast": "",
-    "audio": "",
+    "cast":
+      "Kal: Brendan Meyer, Androl: Matt Scannell, Mercury: Brian Shutters",
+    "audio": "Blood_Amber.mp3",
     "series": "VOS",
     "bookTitle": "The Eyes of Snakes",
     "bookNumber": 1,
@@ -192,8 +199,9 @@
   {
     "title": "Alls Well that Ends Well",
     "icon": "alls_well_icon.jpeg",
-    "cast": "",
-    "audio": "",
+    "cast":
+      "Jhanos: Andrew Saenz, D'Harr: Trent Stork, Clock: Ben Lapaen, Aragwyn: Iris Kohler, Kal: Brendan Meyer",
+    "audio": "Alls_Well_That_Ends_Well.flac",
     "series": "BWS",
     "bookTitle": "The Heir of Malice",
     "bookNumber": 2,
@@ -215,8 +223,9 @@
   {
     "title": "Belly of the Beast pt. 2",
     "icon": "",
-    "cast": "",
-    "audio": "",
+    "cast":
+      "Jhanos: Andrew Saenz, D'Harr: Trent Stork, Clock: Ben Lapaen, Aragwyn: Iris Kohler, Kal: Brendan Meyer",
+    "audio": "Belly_Of_The_Beast Pt2.flac",
     "series": "BWS",
     "bookTitle": "The Heir of Malice",
     "bookNumber": 2,
@@ -226,8 +235,9 @@
   {
     "title": "A Part",
     "icon": "",
-    "cast": "",
-    "audio": "",
+    "cast":
+      "Jhanos: Andrew Saenz, D'Harr: Trent Stork, Clock: Ben Lapaen, Aragwyn: Iris Kohler, Kal: Brendan Meyer",
+    "audio": "A_Part.flac",
     "series": "BWS",
     "bookTitle": "The Heir of Malice",
     "bookNumber": 2,
@@ -263,8 +273,9 @@
   {
     "title": "Sins of A Souless Empire Part 1",
     "icon": "",
-    "cast": "",
-    "audio": "",
+    "cast":
+      "Jhanos: Andrew Saenz, D'Harr: Trent Stork, Clock: Ben Lapaen, Aragwyn: Iris Kohler, Kal: Brendan Meyer, Vass: Nathan Spring",
+    "audio": "Sins_Of_A_Soulless_Empire_Pt1.flac",
     "series": "BWS",
     "bookTitle": "The Heir of Malice",
     "bookNumber": 2,
@@ -275,8 +286,9 @@
   {
     "title": "Sins of A Souless Empire Part 2",
     "icon": "",
-    "cast": "",
-    "audio": "",
+    "cast":
+      "Jhanos: Andrew Saenz, Clock: Ben Lapaen, Aragwyn: Iris Kohler, Kal: Brendan Meyer, Vass: Nathan Spring",
+    "audio": "Sins_Of_A_Soulless_Empire_Pt2.flac",
     "series": "BWS",
     "bookTitle": "The Heir of Malice",
     "bookNumber": 2,
@@ -287,8 +299,9 @@
   {
     "title": "Mother Dearest",
     "icon": "",
-    "cast": "",
-    "audio": "",
+    "cast":
+      "Jhanos: Andrew Saenz, Clock: Ben Lapaen, Aragwyn: Iris Kohler, Talindra: Lane Flores",
+    "audio": "Dear_Mother.flac",
     "series": "BWS",
     "bookTitle": "The Heir of Malice",
     "bookNumber": 2,
@@ -299,8 +312,8 @@
   {
     "title": "Forgiven But Not Forgotten",
     "icon": "",
-    "cast": "",
-    "audio": "",
+    "cast": "Jhanos: Andrew Saenz, Clock: Ben Lapaen, Aragwyn: Iris Kohler",
+    "audio": "Forgiven_But_Not_Forgotten.flac",
     "series": "BWS",
     "bookTitle": "The Heir of Malice",
     "bookNumber": 2,
@@ -312,7 +325,7 @@
     "title": "Bloodlust",
     "icon": "egyptQueen.jpg",
     "cast": "Vass: Nathan Spring, Kal: Brendan Meyer",
-    "audio": "Bloodlust.mp3",
+    "audio": "BloodLust.mp3",
     "series": "VOS",
     "bookTitle": "The Eyes of Snakes",
     "bookNumber": 1,
@@ -324,7 +337,7 @@
     "icon": "Nautalis.jpg",
     "cast":
       "Clock: Ben Lapaen, Talindra: Lane Flores Jhanos: Andrew Saenz, Aragwyn: Iris Kohler Kal: Brendan Meyer",
-    "audio": "Nautalis Descendin.m4a",
+    "audio": "Nautalis_Descending.flac",
     "series": "BWS",
     "bookTitle": "Heir of Malice",
     "bookNumber": 2,
@@ -364,7 +377,7 @@
   },
   {
     "title": "Blacker Than Black",
-    "icon": "",
+    "icon": "Blacker_Than_Black_icon.jpeg",
     "cast":
       "Vass: Nathan Spring, Kal: Brendan Meyer, Androl: Matt Scannell, Hawk: Ben Lapaen",
     "audio": "",
