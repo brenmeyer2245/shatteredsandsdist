@@ -67,14 +67,10 @@ class SingleEpisode extends React.Component {
             path={`/episodes/${episodeId}/cast`}
             render={() => (
               <div className="singleEpisodeDeets m-4 elevatedCard red-trim flexDown">
-                {cast.split(',').map(person => <h4>{person}</h4>)}
+                {cast.split(',').map(person => <h4 key={person}> {person}</h4>)}
               </div>
             )}
           />
-          {/* <Route
-            path={`/episodes/${episodeId}/comments`}
-            render={() => <h1>Comments</h1>}
-          /> */}
         </div>
       </div>
     )

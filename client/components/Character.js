@@ -34,7 +34,7 @@ class Character extends React.Component {
           <img
             className="characterImg"
             src={
-              'http://jbmeyer.org/wp-content/uploads/ShatteredSands/pics/' +
+              'http://jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/pics/' +
               character.headshot
             }
           />

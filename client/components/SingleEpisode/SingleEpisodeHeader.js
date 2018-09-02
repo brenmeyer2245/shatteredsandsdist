@@ -10,15 +10,15 @@ const EpisodeHeader = props => {
     <div>
       <BackgroundCard
         style={{
-          backgroundImage: `url(http://jbmeyer.org/wp-content/uploads/ShatteredSands/pics/${
+          backgroundImage: `url("http://jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/pics/${
             props.episode.icon
-          })`
+          }")`
         }}
       >
         <h2 className="mt-4">{props.episode.title}</h2>
         <audio className="mt-4" controls="controls">
           <source
-            src={`http://jbmeyer.org/wp-content/uploads/2018/07/audio/${
+            src={`http://www.jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/audio/${
               episode.audio
             }`}
           />
