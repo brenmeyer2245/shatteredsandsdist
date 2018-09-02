@@ -2,8 +2,7 @@ import React from 'react'
 import CityCard from './CityCard'
 import CityTag from './CityTag'
 import {connect} from 'react-redux'
-import {fetchCities} from '../store/citiesReducer'
-import {fetchCurrentCharacter} from '../../store/currentCharacterReducer'
+import {fetchCities} from '../../store/citiesReducer'
 
 class AllCities extends React.Component {
   constructor(props) {
