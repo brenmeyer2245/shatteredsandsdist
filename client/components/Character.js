@@ -31,7 +31,13 @@ class Character extends React.Component {
         }`}
       >
         <div className="flexDown characterCard-thumbnail">
-          <img className="characterImg" src={'pics/' + character.headshot} />
+          <img
+            className="characterImg"
+            src={
+              'http://jbmeyer.org/wp-content/uploads/ShatteredSands/pics/' +
+              character.headshot
+            }
+          />
           <h1 className="characterTitle">{character.name}</h1>
         </div>
         <div className="characterCard-details">

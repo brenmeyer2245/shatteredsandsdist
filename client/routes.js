@@ -14,7 +14,7 @@ import {
   CreateEpisode,
   AllEpisodes
 } from './components'
-import {me} from './store'
+import {me, fetchCharacters, fetchEpisodes} from './store'
 
 /**
  * COMPONENT
@@ -40,12 +40,11 @@ class Routes extends Component {
 
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
-        {isLoggedIn && (
+        {/* {isLoggedIn && (
           <Switch>
-            {/* Routes placed here are only available after logging in */}
             <Route path="/home" component={UserHome} />
           </Switch>
-        )}
+        )} */}
         {/* Displays our Login component as a fallback */}
         <Route component={Login} />
       </Switch>
@@ -68,6 +67,8 @@ const mapDispatch = dispatch => {
   return {
     loadInitialData() {
       dispatch(me())
+      dispatch(fetchCharacters())
+      dispatch(fetchEpisodes())
     }
   }
 }

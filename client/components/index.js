@@ -9,3 +9,5 @@ export {
 } from './Episodes/EpisodeForms/CreateEpisodeForm'
 export {default as UserHome} from './user-home'
 export {Login, Signup} from './auth-form'
+export {default as MenuBar} from './MenuBar/MenuBar'
+export {default as Navbar} from './navbar'

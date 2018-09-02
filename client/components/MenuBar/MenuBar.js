@@ -3,7 +3,7 @@ import MenuButton from './MenuButton'
 
 const MenuBar = props => {
   return (
-    <div className="pageLeft elevatedCard">
+    <div id="menuBar" className="elevatedCard">
       <div className="menuBlock flexDown">
         <MenuButton name="Characters" linked="/characters">
           <div id="Thing" />

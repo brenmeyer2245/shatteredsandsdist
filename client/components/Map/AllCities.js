@@ -2,8 +2,7 @@ import React from 'react'
 import CityCard from './CityCard'
 import CityTag from './CityTag'
 import {connect} from 'react-redux'
-import {fetchCities} from '../store/citiesReducer'
-import {fetchCurrentCharacter} from '../../store/currentCharacterReducer'
+import {fetchCities} from '../../store/citiesReducer'
 
 class AllCities extends React.Component {
   constructor(props) {
@@ -41,7 +40,7 @@ class AllCities extends React.Component {
         <div
           className="worldMap elevatedCard m-2"
           style={{
-            backgroundImage: `url('pics/Shattered_Sands_Map.jpg')`
+            backgroundImage: `url('http://jbmeyer.org/wp-content/uploads/ShatteredSands/pics/Shattered_Sands_Map.jpg')`
           }}
         >
           {this.props.cities.map(city => (

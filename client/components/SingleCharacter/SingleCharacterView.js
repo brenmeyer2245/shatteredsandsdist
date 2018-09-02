@@ -21,7 +21,11 @@ export default props => {
       {/* Headshot */}
       <HeadshotBox className="flexDown headshot">
         <CharacterHeader>{currentCharacter.name}</CharacterHeader>
-        <img src={`pics/${currentCharacter.headshot}`} />
+        <img
+          src={`http://jbmeyer.org/wp-content/uploads/ShatteredSands/pics/${
+            currentCharacter.headshot
+          }`}
+        />
       </HeadshotBox>
 
       <div className="flexDown character_contents">

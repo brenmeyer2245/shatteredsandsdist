@@ -1,7 +1,7 @@
-body {
-  font-family: sans-serif;
-}
 
+body {
+  background-color: rgb(38, 36, 36);
+}
 a {
   text-decoration: none;
 }
@@ -9,7 +9,9 @@ a {
 label {
   display: block;
 }
-
+nav {
+  background-color: white;
+}
 nav a {
   display: inline-block;
   margin: 1em;
@@ -18,4 +20,437 @@ nav a {
 form div {
   margin: 1em;
   display: inline-block;
+}
+/*Shattered Sands CSS 6/6/2018*/
+
+#container{
+  max-width: 30em;
+  display: flex;
+  justify-content:center;
+  margin-left: calc(50%)
+}
+#content_frame{
+  display: flex;
+  justify-content:center;
+  max-width: 60em;
+  top: 10em;
+}
+/*Header and Filter Bar */
+.header{
+
+  background-image: url('/pics/Perisan_Palace.jpg');
+  background-size: cover;
+  background-position: 25% 33%;
+  position: fixed;
+  top: 0;
+  visibility: collapse;
+  z-index: 2;
+
+  width: calc(100vw);
+  height: calc(90% - 5em);
+  border-radius: 1%;
+  color: #fff;
+  font-family: Luminari;
+
+/*    Make 10em*/
+ transform: translateY(-55em);
+  transition: all 2s;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 3em;
+  box-shadow: 3em white;
+
+
+}
+.header.active{
+/*    add active class to the header when scroll > 10*/
+
+  transform: translateY(8em);
+}
+
+.headerText{
+  position: relative;
+  top: 11em;
+}
+
+#menuBar{
+  background-color: rgba(113,2,2);
+}
+
+
+#filter{
+  position: absolute;
+  right: 10em;
+  top: 5em;
+  height: 3em;
+  border: 2px solid black;
+
+}
+
+#filter button {
+  width: 5em;
+  background-color:rgba(6,6,69,.9);
+  color:white;
+}
+
+#filter input{
+  background-color:rgba(6,6,69,.5);
+  color: white;
+}
+
+
+
+/*General Classes*/
+.center{
+  text-align: center;
+}
+
+.flex{
+  display: flex;
+}
+
+.flexDown{
+  display: flex;
+  flex-direction: column;
+}
+
+.elevatedCard {
+  box-shadow: .7em .7em rgba(12,1,1,.2);
+  border-radius: .7em .7em;
+}
+
+.red-trim {
+  background-color: white;
+  border-top: 1em solid rgba(113,2,2);
+}
+
+
+/*Content*/
+
+
+.pageLeft{
+  position: absolute;
+  left: 0;
+  width: 12em;
+  margin-right: 4em;
+}
+.pageRight{
+  position: absolute;
+  left: 13em;
+ width: 47em;
+}
+
+.menuItems{
+  text-shadow: white;
+  text-align: center;
+  min-height: 3em;
+  width: 12em;
+}
+
+/* Pictures */
+#party_main_card{
+  flex-wrap: wrap;
+  min-height: 60em;
+  width:47em;
+  display:flex;
+}
+
+
+.characterCard{
+  margin: .5em;
+  height: 17em;
+  width: 12em;
+  align-items: center;
+  background-color:white;
+  box-shadow: .7em .7em rgba(12,1,1,.2);
+  overflow: hidden;
+  position: relative;
+  border-radius: 1em;
+  transition: height 1s, width 1s, transform 2s;
+}
+
+.characterCard.clicked{
+  z-index: 5;
+  height: 30em;
+  width: 80em;
+  transform: translate(0, -150px);
+}
+
+.characterCard-thumbnail{
+  position: absolute;
+  top: 0;
+}
+
+.characterCard-details{
+  position: absolute;
+  top: 0;
+  left: 12.2em
+}
+
+.characterImg{
+  height:14em;
+  width: 12em;
+}
+.characterTitle{
+  font-size: 1em;
+  text-align: center;
+}
+
+/*Page Right Items*/
+
+/*Episode Items*/
+.episode_card{
+  border-top: 1em solid rgb(113, 2,2);
+  max-width: 41em;
+  background-color: white;
+  margin: 1em;
+}
+
+.episode_card:hover{
+  box-shadow: .1em .1em 20px 5px rgb(173, 0, 0);
+}
+
+.episode_title{
+  text-shadow: 3px 3px #f3f3f3;
+}
+
+.episode_icon{
+  flex: 2;
+  text-align: left;
+  max-height: 10em;
+  max-width: 20em;
+}
+
+.episode_icon img{
+  width: 14em;
+  max-height: 10em;
+  margin-left: .5em;
+  margin-bottom: .5em;
+  padding: .1em;
+}
+
+.episode_text{
+  flex: 30%;
+  flex-direction: column;
+  align-items:flex-start;
+  text-align: left;
+  margin: 1em;
+}
+.episode_text p{
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.episodeDeets{
+  min-height: 40em;
+}
+.episodePage{
+  max-width: 47em;
+}
+
+.singleEpisodeDeets{
+  display: flex;
+  padding: 1rem;
+  max-width: 47em;
+  min-height: 9em;
+  background-color:#e0e0e0;
+}
+
+
+/*Footer Audio player*/
+#footer-player{
+  background-color:skyblue;
+
+
+  position:fixed;
+  bottom:0;
+  margin-left: calc(.5em);
+  display:none;
+
+  height:6em;
+  width: 35em;
+  align-items: flex-end;
+}
+#footer-player img{
+  max-height: 6em;
+  max-width: 10em;
+}
+#footer-audio-container{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  width: 99%;
+}
+#footer-audio-container audio{
+  width: 100%;
+}
+
+.statRow{
+  margin-top: .6em;
+
+}
+.statName{
+  flex-basis: 11%;
+  border-right: 1px solid black;
+}
+.dotContainer{
+  flex-basis: 70%;
+  margin-left: .5em;
+}
+.singleCharCard img{
+  min-width: 19em;
+ max-height:20rem
+}
+.singleCharCard {
+  max-width: 53.2em;
+}
+
+
+.character_contents{
+  flex-basis: 70%;
+}
+.character_contents p{
+  margin-left: .3em;
+}
+
+.statContainer{
+  margin-left: 1em;
+}
+
+.cityCard{
+  padding: .2em;
+  background-color: white;
+  z-index: 2;
+  border-top: 1em solid rgb(113,2,2);
+  /* animation: cityCardEnter 2s 1 forwards; */
+}
+
+.cityCard img {
+  width: 30em;
+  height: 20em;
+  border: 1px solid rgb(113,2,2);
+}
+
+.city_intro{
+  background-color: white;
+  color: black;
+  padding: 1em;
+  border-top: 1em solid rgb(113,2,2);
+  margin: 1em;
+}
+.worldMap {
+  height: 42em;
+  z-index: 4;
+  border: .1em solid rgb(150, 133, 82);
+  background-size: cover;
+}
+
+.cityTag{
+  height: 1.5em;
+  width: 1.5em;
+  background-color: rgb(113,2,2);
+  border: 1px solid rgb(42,12,12);
+  border-radius: 100%;
+  box-shadow: 0.1em 0.1em rgba(12,1,1,.9);
+
+}
+
+#city_view {
+  max-width: 53.2em;
+}
+
+.cityTag.cityClicked {
+  background-color: rgb(255,25,25);
+  animation: cityPulse 1s infinite forwards;
+
+}
+
+
+#Sharakahi{
+  position: relative;
+  top: 12rem;
+  left: 27.7rem;
+}
+#Naseem{
+  position: relative;
+  top: 16rem;
+  left: 10rem;
+}
+
+#Tear-an{
+  position: relative;
+  top: 0em;
+  left: 24em;
+}
+#Jaffa{
+  position: relative;
+  top: 12rem;
+  left: 49rem;
+}
+
+#Tuman-Bay{
+  position: relative;
+  top: 17rem;
+  left: 43rem;
+}
+
+#Bariiks-Bowl{
+  position: relative;
+  top: 31rem;
+  left: 18rem;
+}
+
+#Uk-Varr{
+  position: relative;
+  top: 30rem;
+  left: 1rem;
+}
+
+@keyframes cityPulse {
+  0% {
+      box-shadow: 0 0 0 0 rgba(60, 5, 5, 0.721);
+  }
+  10%{
+      box-shadow: 0 0 0 10px rgba(181, 18, 18, 0.523);
+  }
+  40%, 100% {
+      box-shadow: 0 0 0 60px rgba(255, 25, 25, 0);
+  }
+}
+
+
+@keyframes float {
+  0%{
+      transform: translateY(0px);
+  }
+  30% {
+      transform: translateY(-60px);
+  }
+  60%{
+      transform: translateY(60px);
+  }
+  100% {
+      transform: translateY(100px);
+  }
+}
+
+@keyframes cityCardEnter {
+  0% {
+      transform: translateY(-100px);
+  }
+  100%{
+      transform: translateY(0px);
+  }
+
+}
+
+.about {
+  color: white;
+  font-family: fantasy;
+  text-align: center;
+  margin-top: -1.3em;
+  min-height: 100%;
+  background-size: cover;
+  animation: float 6s infinite 1s;
 }

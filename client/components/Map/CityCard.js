@@ -4,7 +4,12 @@ import axios from 'axios'
 const CityCard = props => (
   <div className="flex cityCard m-4 p-2 elevatedCard">
     <div>
-      <img src={'pics/' + props.image} />
+      <img
+        src={
+          'http://jbmeyer.org/wp-content/uploads/ShatteredSands/pics/' +
+          props.image
+        }
+      />
     </div>
     <div className="flexDown" className="cityContents m-2 p2">
       <h1> {props.name} </h1>
