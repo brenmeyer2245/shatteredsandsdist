@@ -2,7 +2,18 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {withRouter, Route, Switch} from 'react-router-dom'
 import PropTypes from 'prop-types'
-import {Login, Signup, UserHome} from './components'
+import {
+  Login,
+  Signup,
+  UserHome,
+  AllCharacters,
+  SingleEpisode,
+  Header,
+  AllCities,
+  CreateCharacter,
+  CreateEpisode,
+  AllEpisodes
+} from './components'
 import {me} from './store'
 
 /**
@@ -19,6 +30,14 @@ class Routes extends Component {
     return (
       <Switch>
         {/* Routes placed here are available to all visitors */}
+        <Route exact path="/" component={Header} />
+        <Route exact path="/episodes" component={AllEpisodes} />
+        <Route exact path="/characters" component={AllCharacters} />
+        <Route path="/episodes/:episodeId" component={SingleEpisode} />
+        <Route path="/cities" component={AllCities} />
+        <Route path="/addCharacter" component={CreateCharacter} />
+        <Route path="/addEpisode" component={CreateEpisode} />
+
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         {isLoggedIn && (
