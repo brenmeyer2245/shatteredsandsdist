@@ -13,6 +13,7 @@ router.get('/', async (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
   try {
+    console.log('\n\n\nEpisode', req.body.episode, '\n\n\n')
     const {
       title,
       icon,
@@ -23,8 +24,11 @@ router.post('/', async (req, res, next) => {
       bookNumber,
       chapterNumber,
       episodeSummary
-    } = req.body
-    const newEpisode = await Episode.create(
+    } = req.body.episode
+
+    console.log(title, icon, cast, bookTitle)
+
+    const newEpisode = await Episode.create({
       title,
       icon,
       cast,
@@ -34,17 +38,19 @@ router.post('/', async (req, res, next) => {
       bookNumber,
       chapterNumber,
       episodeSummary
-    )
-    const episodeCharacters = cast.split(',')
-    episodeCharacters.forEach(characterName => {
-      let foundCharacter = Character.findOne({
+    })
+    const episodeCharacters = cast.split(', ')
+
+    episodeCharacters.forEach(async characterName => {
+      let foundCharacter = await Character.findOne({
         where: {
           name: characterName
         }
       })
+      console.log(foundCharacter)
       if (foundCharacter) foundCharacter.addEpisode(newEpisode)
     })
-
+    console.log('Finished')
     res.status(200).send({
       episode: newEpisode
     })

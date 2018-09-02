@@ -75,6 +75,8 @@ form div {
 
 #menuBar{
   background-color: rgba(113,2,2);
+  position: fixed;
+  left: 0;
 }
 
 

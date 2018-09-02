@@ -1,13 +1,15 @@
 import React, {Component} from 'react'
+import {connect} from 'react-redux'
+import {postEpisode} from '../../../store'
 
-export default class CreateCharacterForm extends Component {
+export class CreateCharacterForm extends Component {
   constructor() {
     super()
     this.state = {
       title: '',
       icon: '',
       cast: '',
-      series: '',
+      series: 'BWS',
       audio: '',
       bookTitle: '',
       bookNumber: 0,
@@ -25,6 +27,7 @@ export default class CreateCharacterForm extends Component {
   handleSubmit(evt) {
     evt.preventDefault()
     console.log(this.state)
+    this.props.createEpisode(this.state)
   }
 
   render() {
@@ -138,3 +141,9 @@ export default class CreateCharacterForm extends Component {
     )
   }
 }
+
+const mapDispatch = dispatch => ({
+  createEpisode: newEpisode => dispatch(postEpisode(newEpisode))
+})
+
+export default connect(null, mapDispatch)(CreateCharacterForm)
