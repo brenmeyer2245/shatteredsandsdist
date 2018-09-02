@@ -18,7 +18,12 @@ const Episode = props => {
 
       <div className="episode_content flex">
         <div className="episode_icon">
-          <img src={'pics/' + episode.icon} />
+          <img
+            src={
+              'http://jbmeyer.org/wp-content/uploads/ShatteredSands/pics/' +
+              episode.icon
+            }
+          />
         </div>
         <div className="episode_text flex m-4">
           <h4>

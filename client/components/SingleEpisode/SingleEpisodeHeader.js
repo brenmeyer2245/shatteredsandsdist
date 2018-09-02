@@ -9,7 +9,11 @@ const EpisodeHeader = props => {
   return (
     <div>
       <BackgroundCard
-        style={{backgroundImage: `url(pics/${props.episode.icon})`}}
+        style={{
+          backgroundImage: `url(http://jbmeyer.org/wp-content/uploads/ShatteredSands/pics/${
+            props.episode.icon
+          })`
+        }}
       >
         <h2 className="mt-4">{props.episode.title}</h2>
         <audio className="mt-4" controls="controls">

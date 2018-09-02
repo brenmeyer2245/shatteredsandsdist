@@ -5,7 +5,9 @@ const Header = props => {
   return (
     <HeaderContainer
       className="elevatedCard about"
-      style={{backgroundImage: `url('pics/Persian_Palace.jpg')`}}
+      style={{
+        backgroundImage: `url('http://jbmeyer.org/wp-content/uploads/ShatteredSands/pics/Persian_Palace.jpg')`
+      }}
     >
       <h1 className="headerText">Welcome to the Shattered Sands</h1>
     </HeaderContainer>
