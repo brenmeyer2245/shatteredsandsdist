@@ -13,13 +13,6 @@ const Episode = sqlDB.define('Episode', {
     type: Sequelize.STRING,
     allowNull: false
   },
-  cast: {
-    type: Sequelize.STRING,
-    allowNull: false,
-    // validate: {
-    //   emptyString: true
-    // }
-  },
   audio: {
     type: Sequelize.STRING
   },
