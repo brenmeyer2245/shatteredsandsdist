@@ -198,6 +198,14 @@ form div {
   text-align: center;
 }
 
+.character_select{
+  background: blueviolet;
+}
+
+.character_select.hidden{
+  display:none;
+}
+
 /*Page Right Items*/
 
 /*Episode Items*/

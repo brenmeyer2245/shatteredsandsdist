@@ -6,11 +6,7 @@ const EpisodeCharacters = props => {
   return (
     <div className="singleEpisodeDeets m-4 elevatedCard red-trim">
       {characters.map(character => (
-        <div
-          key={character.id}
-          className="flexDown characterCard"
-          handleClick={() => console.log('Shattered Sands')}
-        >
+        <div key={character.id} className="flexDown characterCard">
           <img
             className="characterImg"
             src={
