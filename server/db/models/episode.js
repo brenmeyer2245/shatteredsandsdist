@@ -6,24 +6,16 @@ const Episode = sqlDB.define('Episode', {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {
-      emptyString: true
+      notEmpty: true
     }
   },
   icon: {
     type: Sequelize.STRING,
     allowNull: false
   },
-  cast: {
-    type: Sequelize.STRING,
-    allowNull: false,
-    // validate: {
-    //   emptyString: true
-    // }
-  },
   audio: {
     type: Sequelize.STRING
   },
-
   series: {
     type: Sequelize.STRING,
     allowNull: false

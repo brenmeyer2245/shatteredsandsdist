@@ -27,7 +27,6 @@ class SingleEpisode extends React.Component {
 
   render() {
     const {
-      cast,
       series,
       bookNumber,
       chapterNumber,
@@ -67,7 +66,12 @@ class SingleEpisode extends React.Component {
             path={`/episodes/${episodeId}/cast`}
             render={() => (
               <div className="singleEpisodeDeets m-4 elevatedCard red-trim flexDown">
-                {cast.split(',').map(person => <h4 key={person}> {person}</h4>)}
+                {characters.map(character => (
+                  <h4 key={character.id}>
+                    {' '}
+                    {character.name}: {character.actor}
+                  </h4>
+                ))}
               </div>
             )}
           />

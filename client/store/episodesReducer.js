@@ -26,10 +26,10 @@ export const fetchEpisodes = () => {
 
 export const postEpisode = episode => {
   return async function(dispatch) {
-    const {data} = await axios.post('/api/episodes', {
+    const {data: newEpisode} = await axios.post('/api/episodes', {
       episode
     })
-    dispatch(addEpisode(data))
+    dispatch(addEpisode(newEpisode))
   }
 }
 

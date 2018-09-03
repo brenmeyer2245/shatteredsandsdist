@@ -1,18 +1,22 @@
 import React, {Component} from 'react'
+import {connect} from 'react-redux'
+import {postEpisode} from '../../../store'
+import CharacterSelect from './CharacterSelect'
 
-export default class CreateCharacterForm extends Component {
+export class CreateCharacterForm extends Component {
   constructor() {
     super()
     this.state = {
       title: '',
       icon: '',
-      cast: '',
-      series: '',
+      series: 'BWS',
       audio: '',
       bookTitle: '',
       bookNumber: 0,
       chapterNumber: 0,
-      episodeSummary: ''
+      episodeSummary: '',
+      characters: {},
+      selectHidden: true
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -22,9 +26,34 @@ export default class CreateCharacterForm extends Component {
     this.setState({[evt.target.name]: evt.target.value})
   }
 
+  characterSelection = evt => {
+    const newCharacters = Object.assign({}, this.state.characters)
+    if (newCharacters[evt.target.value]) delete newCharacters[evt.target.value]
+    else newCharacters[evt.target.value] = true
+    console.log(newCharacters)
+    this.setState({characters: newCharacters})
+  }
+
   handleSubmit(evt) {
     evt.preventDefault()
-    console.log(this.state)
+    const newEpisode = {
+      title: this.state.title,
+      icon: this.state.icon,
+      series: this.state.series,
+      audio: this.state.audio,
+      bookTitle: this.state.bookTitle,
+      bookNumber: this.state.bookNumber,
+      chapterNumber: this.state.chapterNumber,
+      episodeSummary: this.state.chapterNumber,
+      episodeCharacters: Object.keys(this.state.characters)
+    }
+    console.log(newEpisode)
+    this.props.createEpisode(newEpisode)
+  }
+
+  handleAddCharacterSelect = () => {
+    const toggleAdding = !this.state.selectHidden
+    this.setState({selectHidden: toggleAdding})
   }
 
   render() {
@@ -51,16 +80,6 @@ export default class CreateCharacterForm extends Component {
           type="text"
           className="form-control"
           value={this.state.icon}
-          onChange={this.handleChange}
-        />
-        <label htmlFor="cast" className="form-check">
-          Episode Cast
-        </label>
-        <input
-          name="cast"
-          type="text"
-          className="form-control"
-          value={this.state.cast}
           onChange={this.handleChange}
         />
         <label htmlFor="series" className="form-check">
@@ -130,7 +149,11 @@ export default class CreateCharacterForm extends Component {
           value={this.state.episodeSummary}
           placeholder="Enter Summary Here..."
         />
-
+        <CharacterSelect
+          showSelect={this.handleAddCharacterSelect}
+          hidden={this.state.selectHidden}
+          addCharacter={this.characterSelection}
+        />
         <button type="submit" className="btn-lg form-control w-75 m-2">
           Submit{' '}
         </button>
@@ -138,3 +161,9 @@ export default class CreateCharacterForm extends Component {
     )
   }
 }
+
+const mapDispatch = dispatch => ({
+  createEpisode: newEpisode => dispatch(postEpisode(newEpisode))
+})
+
+export default connect(null, mapDispatch)(CreateCharacterForm)

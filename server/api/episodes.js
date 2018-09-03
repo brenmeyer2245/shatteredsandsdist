@@ -13,35 +13,33 @@ router.get('/', async (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
   try {
+    console.log('\n\n\nEpisode', req.body.episode, '\n\n\n')
     const {
       title,
       icon,
-      cast,
       series,
       audio,
       bookTitle,
       bookNumber,
       chapterNumber,
-      episodeSummary
-    } = req.body
-    const newEpisode = await Episode.create(
+      episodeSummary,
+      episodeCharacters
+    } = req.body.episode
+
+    const newEpisode = await Episode.create({
       title,
       icon,
-      cast,
       series,
       audio,
       bookTitle,
       bookNumber,
       chapterNumber,
-      episodeSummary
-    )
-    const episodeCharacters = cast.split(',')
-    episodeCharacters.forEach(characterName => {
-      let foundCharacter = Character.findOne({
-        where: {
-          name: characterName
-        }
-      })
+      episodeSummary,
+      episodeCharacters
+    })
+
+    episodeCharacters.forEach(async characterId => {
+      let foundCharacter = await Character.findById(characterId)
       if (foundCharacter) foundCharacter.addEpisode(newEpisode)
     })
 
@@ -65,6 +63,20 @@ router.get('/:episodeId', async (req, res, next) => {
 })
 
 router.put('/:episodeId', async (req, res, next) => {
+  const foundEpisode = await Episode.findById(req.params.episodeId)
+  return foundEpisode.update(req.body).then(updatedEpisode => {
+    res
+      .json({
+        message: `${updatedEpisode.title} updated`,
+        episode: updatedEpisode
+      })
+      .catch(err => {
+        next(err)
+      })
+  })
+})
+
+router.put('/:episodeId/addCharacter', async (req, res, next) => {
   const foundEpisode = await Episode.findById(req.params.episodeId)
   return foundEpisode.update(req.body).then(updatedEpisode => {
     res

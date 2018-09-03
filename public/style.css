@@ -75,6 +75,8 @@ form div {
 
 #menuBar{
   background-color: rgba(113,2,2);
+  position: fixed;
+  left: 0;
 }
 
 
@@ -194,6 +196,14 @@ form div {
 .characterTitle{
   font-size: 1em;
   text-align: center;
+}
+
+.character_select{
+  background: blueviolet;
+}
+
+.character_select.hidden{
+  display:none;
 }
 
 /*Page Right Items*/
