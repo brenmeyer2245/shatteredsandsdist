@@ -8,7 +8,7 @@ import {EpisodeTitleLink} from './Episode'
 const adapter = new Adapter()
 enzyme.configure({adapter})
 
-describe.only('Episode', () => {
+describe('Episode', () => {
   let episodeCard
 
   beforeEach(() => {
