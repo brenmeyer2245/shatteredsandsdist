@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {postEpisode} from '../../../store'
+import {postEpisode, fetchCities} from '../../../store'
 import CharacterSelect from './CharacterSelect'
+import history from '../../../history'
 
 export class CreateCharacterForm extends Component {
   constructor() {
@@ -16,10 +17,15 @@ export class CreateCharacterForm extends Component {
       chapterNumber: 0,
       episodeSummary: '',
       characters: {},
-      selectHidden: true
+      selectHidden: true,
+      CityId: null
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  componentDidMount() {
+    this.props.getCities()
   }
 
   handleChange(evt) {
@@ -30,7 +36,6 @@ export class CreateCharacterForm extends Component {
     const newCharacters = Object.assign({}, this.state.characters)
     if (newCharacters[evt.target.value]) delete newCharacters[evt.target.value]
     else newCharacters[evt.target.value] = true
-    console.log(newCharacters)
     this.setState({characters: newCharacters})
   }
 
@@ -45,10 +50,12 @@ export class CreateCharacterForm extends Component {
       bookNumber: this.state.bookNumber,
       chapterNumber: this.state.chapterNumber,
       episodeSummary: this.state.chapterNumber,
-      episodeCharacters: Object.keys(this.state.characters)
+      episodeCharacters: Object.keys(this.state.characters),
+      CityId: parseInt(this.state.CityId)
     }
     console.log(newEpisode)
     this.props.createEpisode(newEpisode)
+    history.push('/episodes')
   }
 
   handleAddCharacterSelect = () => {
@@ -117,27 +124,54 @@ export class CreateCharacterForm extends Component {
           value={this.state.bookTitle}
           onChange={this.handleChange}
         />
-
-        <label htmlFor="bookNumber">Book Number</label>
-        <input
-          className="m-2"
-          name="bookNumber"
-          type="number"
-          min="0"
-          max="10"
-          value={this.state.bookNumber}
+        <div className="container">
+          <div>
+            <label htmlFor="bookNumber">Book Number</label>
+            <input
+              className="m-2"
+              name="bookNumber"
+              type="number"
+              min="0"
+              max="10"
+              value={this.state.bookNumber}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="chapterNumber">Chapter Number</label>
+            <input
+              className="m-2"
+              name="chapterNumber"
+              type="number"
+              min="0"
+              max="20"
+              value={this.state.chapterNumber}
+              onChange={this.handleChange}
+            />
+          </div>
+          <CharacterSelect
+            showSelect={this.handleAddCharacterSelect}
+            hidden={this.state.selectHidden}
+            addCharacter={this.characterSelection}
+          />
+        </div>
+        <label className="form-check" htmlFor="CityId">
+          {' '}
+          Episode City{' '}
+        </label>
+        <select
+          className="form-control"
+          name="CityId"
+          value={this.state.CityId}
           onChange={this.handleChange}
-        />
-        <label htmlFor="chapterNumber">Chapter Number</label>
-        <input
-          className="m-2"
-          name="chapterNumber"
-          type="number"
-          min="0"
-          max="20"
-          value={this.state.chapterNumber}
-          onChange={this.handleChange}
-        />
+        >
+          <option value={null}> N/A </option>
+          {this.props.cities.map(city => (
+            <option key={city.id} value={city.id}>
+              {city.name}
+            </option>
+          ))}
+        </select>
 
         <label htmlFor="episodeSummary" className="form-check">
           Episode Summary
@@ -149,11 +183,6 @@ export class CreateCharacterForm extends Component {
           value={this.state.episodeSummary}
           placeholder="Enter Summary Here..."
         />
-        <CharacterSelect
-          showSelect={this.handleAddCharacterSelect}
-          hidden={this.state.selectHidden}
-          addCharacter={this.characterSelection}
-        />
         <button type="submit" className="btn-lg form-control w-75 m-2">
           Submit{' '}
         </button>
@@ -162,8 +191,13 @@ export class CreateCharacterForm extends Component {
   }
 }
 
+const mapState = state => ({
+  cities: state.cities
+})
+
 const mapDispatch = dispatch => ({
+  getCities: () => dispatch(fetchCities()),
   createEpisode: newEpisode => dispatch(postEpisode(newEpisode))
 })
 
-export default connect(null, mapDispatch)(CreateCharacterForm)
+export default connect(mapState, mapDispatch)(CreateCharacterForm)
