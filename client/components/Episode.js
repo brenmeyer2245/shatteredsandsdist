@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 
-const EpisodeTitleLink = styled(Link)`
+export const EpisodeTitleLink = styled(Link)`
   text-decoration: none;
   font-size: 2em;
   color: black;
@@ -29,7 +29,7 @@ const Episode = props => {
           <h4>
             {`${episode.series} Book:${episode.bookNumber},Chapter:${
               episode.chapterNumber
-            } `}
+            }`}
           </h4>
           <audio controls="controls">
             <source

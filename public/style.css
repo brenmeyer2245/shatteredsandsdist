@@ -6982,7 +6982,12 @@ form div {
 }
 
 .character_select{
-  background: blueviolet;
+  width: 25em;
+  position: fixed;
+  top: 3em;
+  left: 1em;
+  background-color: white;
+  box-shadow: 100% 100% 5em 10em #000
 }
 
 .character_select.hidden{
@@ -7016,7 +7021,8 @@ form div {
 
 .episode_icon img{
   width: 14em;
-  max-height: 19em;
+  max-height: 9em;
+  max-width: 13em;
   margin-left: .5em;
   margin-bottom: .5em;
   padding: .1em;
@@ -7106,14 +7112,6 @@ form div {
 .character_contents p{
   margin-left: .3em;
 }
-
-.character_select{
-  background: blueviolet;
-}
- .character_select.hidden{
-  display:none;
-}
-
 
 .statContainer{
   margin-left: 1em;

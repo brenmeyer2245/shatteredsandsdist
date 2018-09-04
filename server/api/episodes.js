@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const {Episode, Character} = require('../db/models')
+const {Episode, Character, City} = require('../db/models')
 
 router.get('/', async (req, res, next) => {
   try {
@@ -23,7 +23,8 @@ router.post('/', async (req, res, next) => {
       bookNumber,
       chapterNumber,
       episodeSummary,
-      episodeCharacters
+      episodeCharacters,
+      CityId
     } = req.body.episode
 
     const newEpisode = await Episode.create({
@@ -35,14 +36,14 @@ router.post('/', async (req, res, next) => {
       bookNumber,
       chapterNumber,
       episodeSummary,
-      episodeCharacters
+      episodeCharacters,
+      CityId
     })
 
     episodeCharacters.forEach(async characterId => {
       let foundCharacter = await Character.findById(characterId)
       if (foundCharacter) foundCharacter.addEpisode(newEpisode)
     })
-
     res.status(200).send({
       episode: newEpisode
     })

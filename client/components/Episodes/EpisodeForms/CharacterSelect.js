@@ -1,16 +1,22 @@
 import React, {Fragment} from 'react'
 import {connect} from 'react-redux'
 const CharacterSelect = props => {
-  console.log(props)
   return (
     <Fragment>
-      <button id="character_add_btn" type="button" onClick={props.showSelect}>
+      <button
+        className={props.hidden ? 'btn-primary' : 'btn-outline-primary'}
+        id="character_add_btn"
+        type="button"
+        onClick={props.showSelect}
+      >
         {' '}
         {props.hidden ? 'Add Characters' : 'Hide Characters'}
       </button>
       <div
         className={
-          props.hidden ? 'character_select hidden' : 'character_select'
+          props.hidden
+            ? 'character_select hidden'
+            : 'character_select elevatedCard red-trim'
         }
       >
         {props.characters.map(character => (
