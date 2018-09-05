@@ -1,47 +1,52 @@
-import axios from 'axios';
+import axios from 'axios'
 
 const ActionTypes = {
   ADD_CHARACTER: 'ADD_CHARACTER',
-  GET_CHARACTERS: 'GET_CHARACTERS',
-};
+  GET_CHARACTERS: 'GET_CHARACTERS'
+}
 
 //ACTION CREATORS
 const getCharacters = characters => ({
   type: ActionTypes.GET_CHARACTERS,
-  characters,
-});
+  characters
+})
 
 const addCharacter = character => ({
   type: ActionTypes.ADD_CHARACTER,
-  character,
-});
+  character
+})
 
 //THUNK CREATORS
 export const fetchCharacters = () => {
   return async function(dispatch) {
-    const { data } = await axios('/api/characters');
-    dispatch(getCharacters(data));
-  };
-};
+    const {data} = await axios('/api/characters')
+    dispatch(getCharacters(data))
+  }
+}
 
 export const postCharacters = character => {
   return async function(dispatch) {
-    const { data } = await axios.post('/api/characters', {
-      character: character,
-    });
-    dispatch(addCharacter(data));
-  };
-};
+    const {data} = await axios.post('/api/characters', {
+      character: character
+    })
+    //fetch the new character info, eager load in stats
+    const {data: newCharacter} = await axios.get(
+      '/api/characters/' + data.character.id
+    )
+    console.log(newCharacter)
+    dispatch(addCharacter(newCharacter))
+  }
+}
 
 const charactersReducer = (charactersState = [], action) => {
   switch (action.type) {
     case 'GET_CHARACTERS':
-      return action.characters;
+      return action.characters
     case 'ADD_CHARACTER':
-      return [...charactersState, action.character];
+      return [...charactersState, action.character]
     default:
-      return charactersState;
+      return charactersState
   }
-};
+}
 
-export default charactersReducer;
+export default charactersReducer
