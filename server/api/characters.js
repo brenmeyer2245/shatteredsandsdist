@@ -19,10 +19,40 @@ router.get('/:characterId', async (req, res, next) => {
 })
 
 router.post('/', async (req, res, next) => {
-  const newChar = await Character.create(req.body)
+  const {
+    name,
+    classType,
+    bio,
+    DEX,
+    CON,
+    STR,
+    WIS,
+    CHA,
+    INT,
+    headshotUrl,
+    actor
+  } = req.body.character
+
+  const newCharacter = await Character.create({
+    name,
+    class: classType,
+    bio,
+    headshot: headshotUrl,
+    actor
+  })
+
+  const newStats = await Stats.create({
+    dexterity: DEX,
+    constitution: CON,
+    strength: STR,
+    wisdom: WIS,
+    charisma: CHA,
+    intelligence: INT
+  })
+  newCharacter.setStat(newStats)
+
   res.status(200).send({
-    message: `Character created`,
-    character: newChar
+    character: newCharacter
   })
 })
 

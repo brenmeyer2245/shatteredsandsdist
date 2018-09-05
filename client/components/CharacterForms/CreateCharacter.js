@@ -1,23 +1,41 @@
 import React, {Component} from 'react'
+import {postCharacters} from '../../store'
+import history from '../../history'
+import {connect} from 'react-redux'
 
-export default class CreateCharacterForm extends Component {
+export class CreateCharacterForm extends Component {
   constructor() {
     super()
     this.state = {
       name: '',
-      class: '',
+      classType: '',
       bio: '',
-      DEX: 0,
-      CON: 0,
-      STR: 0,
-      WIS: 0,
-      CHA: 0,
-      INT: 0,
+      DEX: 10,
+      CON: 10,
+      STR: 10,
+      WIS: 10,
+      CHA: 10,
+      INT: 10,
       headshotUrl: '',
       actor: ''
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+  }
+  invalidState = () => {
+    const {DEX, CON, STR, WIS, CHA, INT, name, classType} = this.state
+    const stats = [DEX, CON, STR, WIS, CHA, INT]
+    let invalid = stats.reduce((sum, stat) => {
+      stat = parseInt(stat)
+      if (stat < 0 || stat > 40) {
+        sum++
+      }
+      return sum
+    }, 0)
+    if (invalid > 0) return true
+    if (name === '') return true
+    if (classType === '') return true
+    return false
   }
 
   handleChange(evt) {
@@ -26,20 +44,8 @@ export default class CreateCharacterForm extends Component {
 
   handleSubmit(evt) {
     evt.preventDefault()
-    this.setState({
-      name: '',
-      class: '',
-      bio: '',
-      DEX: 0,
-      CON: 0,
-      STR: 0,
-      WIS: 0,
-      CHA: 0,
-      INT: 0,
-      headshotUrl: '',
-      actor: ''
-    })
-    console.log(this.state)
+    this.props.createCharacter(this.state)
+    history.push('/characters')
   }
 
   render() {
@@ -58,6 +64,17 @@ export default class CreateCharacterForm extends Component {
           value={this.state.name}
           onChange={this.handleChange}
         />
+        <label htmlFor="classType" className="form-check">
+          Character Class
+        </label>
+        <input
+          name="classType"
+          type="text"
+          className="form-control"
+          value={this.state.class}
+          onChange={this.handleChange}
+        />
+
         <label htmlFor="actor" className="form-check">
           Actor Name
         </label>
@@ -68,16 +85,7 @@ export default class CreateCharacterForm extends Component {
           value={this.state.actor}
           onChange={this.handleChange}
         />
-        <label htmlFor="class" className="form-check">
-          Character Class
-        </label>
-        <input
-          name="class"
-          type="text"
-          className="form-control"
-          value={this.state.class}
-          onChange={this.handleChange}
-        />
+
         <label htmlFor="headshotUrl" className="form-check">
           Headshot File Name
         </label>
@@ -88,68 +96,83 @@ export default class CreateCharacterForm extends Component {
           value={this.state.headshotUrl}
           onChange={this.handleChange}
         />
-        <div className="p-3 text-center">
-          <label htmlFor="DEX">DEX</label>
-          <input
-            className="m-2"
-            name="DEX"
-            type="number"
-            min="0"
-            max="40"
-            value={this.state.DEX}
-            onChange={this.handleChange}
-          />
-          <label htmlFor="CON">CON</label>
-          <input
-            className="m-2"
-            name="CON"
-            type="number"
-            min="0"
-            max="40"
-            value={this.state.CON}
-            onChange={this.handleChange}
-          />
-          <label htmlFor="INT">INT</label>
-          <input
-            className="m-2"
-            name="INT"
-            type="number"
-            min="0"
-            max="40"
-            value={this.state.INT}
-            onChange={this.handleChange}
-          />
-          <label htmlFor="WIS">WIS</label>
-          <input
-            className="m-2"
-            name="WIS"
-            type="number"
-            min="0"
-            max="40"
-            value={this.state.WIS}
-            onChange={this.handleChange}
-          />
-          <label htmlFor="STR">STR</label>
-          <input
-            className="m-2"
-            name="STR"
-            type="number"
-            min="0"
-            max="40"
-            value={this.state.STR}
-            onChange={this.handleChange}
-          />
+        <div className="container">
+          <label className="center">Character Stats by Full Number</label>
+          <div className="row ml-sm-5">
+            <div className="col-1">
+              <label htmlFor="DEX">DEX</label>
+              <input
+                className="m-2"
+                name="DEX"
+                type="number"
+                min="0"
+                max="40"
+                value={this.state.DEX}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="col-1">
+              <label htmlFor="CON">CON</label>
+              <input
+                className="m-2"
+                name="CON"
+                type="number"
+                min="0"
+                max="40"
+                value={this.state.CON}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="col-1">
+              <label htmlFor="INT">INT</label>
+              <input
+                className="m-2"
+                name="INT"
+                type="number"
+                min="0"
+                max="40"
+                value={this.state.INT}
+                onChange={this.handleChange}
+              />
+            </div>
 
-          <label htmlFor="CHA">CHA</label>
-          <input
-            className="m-2"
-            name="CHA"
-            type="number"
-            min="0"
-            max="40"
-            value={this.state.CHA}
-            onChange={this.handleChange}
-          />
+            <div className="col-1">
+              <label htmlFor="WIS">WIS</label>
+              <input
+                className="m-2"
+                name="WIS"
+                type="number"
+                min="0"
+                max="40"
+                value={this.state.WIS}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="col-1">
+              <label htmlFor="STR">STR</label>
+              <input
+                className="m-2"
+                name="STR"
+                type="number"
+                min="0"
+                max="40"
+                value={this.state.STR}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="col-1">
+              <label htmlFor="CHA">CHA</label>
+              <input
+                className="m-2"
+                name="CHA"
+                type="number"
+                min="0"
+                max="40"
+                value={this.state.CHA}
+                onChange={this.handleChange}
+              />
+            </div>
+          </div>
         </div>
         <label htmlFor="bio" className="form-check">
           Character Bio
@@ -162,10 +185,22 @@ export default class CreateCharacterForm extends Component {
           placeholder="Enter Bio Here..."
         />
 
-        <button type="submit" className="btn-lg form-control w-75 m-2">
+        <button
+          type="submit"
+          disabled={this.invalidState()}
+          className={
+            this.invalidState() ? 'invisible' : 'btn-lg form-control w-75 m-2'
+          }
+        >
           Submit{' '}
         </button>
       </form>
     )
   }
 }
+
+const mapDispatch = dispatch => ({
+  createCharacter: newCharacter => dispatch(postCharacters(newCharacter))
+})
+
+export default connect(null, mapDispatch)(CreateCharacterForm)
