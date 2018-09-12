@@ -5,14 +5,15 @@ import PropTypes from 'prop-types'
 import {
   Login,
   Signup,
-  UserHome,
   AllCharacters,
   SingleEpisode,
   Header,
   AllCities,
   CreateCharacter,
   CreateEpisode,
-  AllEpisodes
+  AllEpisodes,
+  EditCharacter,
+  EditEpisode
 } from './components'
 import {me, fetchCharacters, fetchEpisodes} from './store'
 
@@ -37,7 +38,8 @@ class Routes extends Component {
         <Route path="/cities" component={AllCities} />
         <Route path="/addCharacter" component={CreateCharacter} />
         <Route path="/addEpisode" component={CreateEpisode} />
-
+        <Route path="/editCharacter/:characterId" component={EditCharacter} />
+        <Route path="/editEpisode/:episodeId" component={EditEpisode} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route component={Login} />

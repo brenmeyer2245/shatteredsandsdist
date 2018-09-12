@@ -44,4 +44,10 @@ const episodesReducer = (episodesState = [], action) => {
   }
 }
 
+//Reducer Selectors
+
+export const getEpisodeById = (episodes, id) => {
+  return episodes.find(episode => episode.id === id)
+}
+
 export default episodesReducer

@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {postEpisode, fetchCities} from '../../../store'
+import {fetchCurrentEpisode, fetchCities} from '../../../store'
 import CharacterSelect from './CharacterSelect'
 import history from '../../../history'
 
-export class CreateEpisodeForm extends Component {
+export class EditEpisodeForm extends Component {
   constructor() {
     super()
     this.state = {
@@ -24,8 +24,41 @@ export class CreateEpisodeForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  componentDidMount() {
+  async componentDidMount() {
+    const {episodeId} = this.props.match.params
     this.props.getCities()
+    await this.props.getCurrentEpisode(parseInt(episodeId, 10))
+    console.log(this.props.currentEpisode)
+    const {
+      title,
+      icon,
+      series,
+      audio,
+      bookTitle,
+      bookNumber,
+      chapterNumber,
+      episodeSummary,
+      CityId,
+      Characters
+    } = this.props.currentEpisode
+
+    const characters = Characters.reduce((list, character) => {
+      const id = character.id
+      list[id] = true
+      return list
+    }, {})
+    this.setState({
+      title,
+      icon,
+      series,
+      audio,
+      bookTitle,
+      bookNumber,
+      chapterNumber,
+      episodeSummary,
+      CityId,
+      characters
+    })
   }
 
   handleChange(evt) {
@@ -53,7 +86,6 @@ export class CreateEpisodeForm extends Component {
       episodeCharacters: Object.keys(this.state.characters),
       CityId: parseInt(this.state.CityId)
     }
-    console.log(newEpisode)
     this.props.createEpisode(newEpisode)
     history.push('/episodes')
   }
@@ -192,12 +224,14 @@ export class CreateEpisodeForm extends Component {
 }
 
 const mapState = state => ({
-  cities: state.cities
+  cities: state.cities,
+  currentEpisode: state.currentEpisode
 })
 
 const mapDispatch = dispatch => ({
   getCities: () => dispatch(fetchCities()),
+  getCurrentEpisode: id => dispatch(fetchCurrentEpisode(id)),
   createEpisode: newEpisode => dispatch(postEpisode(newEpisode))
 })
 
-export default connect(mapState, mapDispatch)(CreateEpisodeForm)
+export default connect(mapState, mapDispatch)(EditEpisodeForm)

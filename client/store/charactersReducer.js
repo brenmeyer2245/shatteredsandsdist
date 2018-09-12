@@ -49,4 +49,10 @@ const charactersReducer = (charactersState = [], action) => {
   }
 }
 
+//Reducer Selectors
+
+export const getCharacterById = (characters, id) => {
+  return characters.find(character => character.id === id)
+}
+
 export default charactersReducer
