@@ -4,7 +4,7 @@ const EpisodeCharacters = props => {
   const {characters} = props
   console.log(props)
   return (
-    <div className="singleEpisodeDeets m-4 elevatedCard red-trim">
+    <div className="singleEpisodeDeets m-4 elevatedCard red-trim flex-lg-wrap">
       {characters.map(character => (
         <div key={character.id} className="flexDown characterCard">
           <img

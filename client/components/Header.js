@@ -6,7 +6,7 @@ const Header = props => {
     <HeaderContainer
       className="elevatedCard about"
       style={{
-        backgroundImage: `url('http://jbmeyer.org/wp-content/uploads/ShatteredSands/pics/Persian_Palace.jpg')`
+        backgroundImage: `url('http://www.jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/pics/Persian_Palace.jpg')`
       }}
     >
       <h1 className="headerText">Welcome to the Shattered Sands</h1>

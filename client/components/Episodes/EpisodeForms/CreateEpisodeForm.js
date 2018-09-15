@@ -69,66 +69,75 @@ export class CreateEpisodeForm extends Component {
         onSubmit={this.handleSubmit}
         className="form-group m-3 elevatedCard red-trim p-4"
       >
-        <label htmlFor="title" className="form-check">
-          Episode Title
-        </label>
-        <input
-          name="title"
-          type="text"
-          className="form-control"
-          value={this.state.title}
-          onChange={this.handleChange}
-        />
-        <label htmlFor="icon" className="form-check">
-          Episode Icon File Name
-        </label>
-        <input
-          name="icon"
-          type="text"
-          className="form-control"
-          value={this.state.icon}
-          onChange={this.handleChange}
-        />
-        <label htmlFor="series" className="form-check">
-          Book Series
-        </label>
-        <select
-          name="series"
-          className="form-control"
-          value={this.state.series}
-          onChange={this.handleChange}
-        >
-          <option value="BWS">Blood Wet Sands</option>
+        <div className="input-group-text">
+          <label htmlFor="title" className="form-check">
+            Episode Title
+          </label>
 
-          <option value="VOS">Veil of Spears </option>
-        </select>
+          <input
+            name="title"
+            type="text"
+            className="form-control"
+            value={this.state.title}
+            onChange={this.handleChange}
+          />
+        </div>
+        <div className="input-group-text">
+          <label htmlFor="icon" className="form-check">
+            Episode Icon File Name
+          </label>
+          <input
+            name="icon"
+            type="text"
+            className="form-control"
+            value={this.state.icon}
+            onChange={this.handleChange}
+          />
+        </div>
+        <div className="input-group-text">
+          <label htmlFor="series" className="form-check">
+            Book Series
+          </label>
+          <select
+            name="series"
+            className="form-control"
+            value={this.state.series}
+            onChange={this.handleChange}
+          >
+            <option value="BWS">Blood Wet Sands</option>
 
-        <label htmlFor="audio" className="form-check">
-          Episode Audio File Name
-        </label>
-        <input
-          name="audio"
-          type="text"
-          className="form-control"
-          value={this.state.audio}
-          onChange={this.handleChange}
-        />
-
-        <label htmlFor="bookTitle" className="form-check">
-          Book Title
-        </label>
-        <input
-          name="bookTitle"
-          type="text"
-          className="form-control"
-          value={this.state.bookTitle}
-          onChange={this.handleChange}
-        />
+            <option value="VOS">Veil of Spears </option>
+          </select>
+        </div>
+        <div className="input-group-text">
+          <label htmlFor="audio" className="form-check">
+            Episode Audio File Name
+          </label>
+          <input
+            name="audio"
+            type="text"
+            className="form-control"
+            value={this.state.audio}
+            onChange={this.handleChange}
+          />
+        </div>
+        <div className="input-group-text">
+          <label htmlFor="bookTitle" className="form-check">
+            Book Title
+          </label>
+          <input
+            name="bookTitle"
+            type="text"
+            className="form-control"
+            value={this.state.bookTitle}
+            onChange={this.handleChange}
+          />
+        </div>
         <div className="container">
           <div>
             <label htmlFor="bookNumber">Book Number</label>
             <input
-              className="m-2"
+              className="col-9 m-2"
               name="bookNumber"
               type="number"
               min="0"
@@ -140,7 +149,7 @@ export class CreateEpisodeForm extends Component {
           <div>
             <label htmlFor="chapterNumber">Chapter Number</label>
             <input
-              className="m-2"
+              className="col-9 m-2"
               name="chapterNumber"
               type="number"
               min="0"
@@ -150,40 +159,44 @@ export class CreateEpisodeForm extends Component {
             />
           </div>
           <CharacterSelect
+            selectedCharacters={this.state.characters}
             showSelect={this.handleAddCharacterSelect}
             hidden={this.state.selectHidden}
             addCharacter={this.characterSelection}
           />
         </div>
-        <label className="form-check" htmlFor="CityId">
-          {' '}
-          Episode City{' '}
-        </label>
-        <select
-          className="form-control"
-          name="CityId"
-          value={this.state.CityId}
-          onChange={this.handleChange}
-        >
-          <option value={null}> N/A </option>
-          {this.props.cities.map(city => (
-            <option key={city.id} value={city.id}>
-              {city.name}
-            </option>
-          ))}
-        </select>
-
-        <label htmlFor="episodeSummary" className="form-check">
-          Episode Summary
-        </label>
-        <textArea
-          name="episodeSummary"
-          className="form-control"
-          onChange={this.handleChange}
-          value={this.state.episodeSummary}
-          placeholder="Enter Summary Here..."
-        />
-        <button type="submit" className="btn-lg form-control w-75 m-2">
+        <div className="input-group-text">
+          <label className="form-check" htmlFor="CityId">
+            {' '}
+            Episode City{' '}
+          </label>
+          <select
+            className="form-control"
+            name="CityId"
+            value={this.state.CityId}
+            onChange={this.handleChange}
+          >
+            <option value={null}> N/A </option>
+            {this.props.cities.map(city => (
+              <option key={city.id} value={city.id}>
+                {city.name}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="input-group-text">
+          <label htmlFor="episodeSummary" className="form-check">
+            Episode Summary
+          </label>
+          <textArea
+            name="episodeSummary"
+            className="form-control"
+            onChange={this.handleChange}
+            value={this.state.episodeSummary}
+            placeholder="Enter Summary Here..."
+          />
+        </div>
+        <button type="submit" className="btn-lg btn-outline-primary col m-2">
           Submit{' '}
         </button>
       </form>

@@ -6982,8 +6982,9 @@ form div {
 }
 
 .character_select{
-  width: 25em;
+  max-width: 55em;
   position: fixed;
+  padding: 1em;
   top: 3em;
   left: 1em;
   background-color: white;

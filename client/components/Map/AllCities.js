@@ -40,7 +40,7 @@ class AllCities extends React.Component {
         <div
           className="worldMap elevatedCard m-2"
           style={{
-            backgroundImage: `url('http://jbmeyer.org/wp-content/uploads/ShatteredSands/pics/Shattered_Sands_Map.jpg')`
+            backgroundImage: `url('http://www.jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/pics/Shattered_Sands_Map.jpg')`
           }}
         >
           {this.props.cities.map(city => (

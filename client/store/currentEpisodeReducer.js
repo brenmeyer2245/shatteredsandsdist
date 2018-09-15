@@ -13,8 +13,8 @@ const getCurrentEpisode = episode => ({
 //THUNK CREATORS
 export const fetchCurrentEpisode = episodeId => {
   return async function(dispatch) {
-    const {data} = await axios('/api/episodes/' + episodeId)
-    dispatch(getCurrentEpisode(data))
+    const {data: episode} = await axios('/api/episodes/' + episodeId)
+    dispatch(getCurrentEpisode(episode))
   }
 }
 

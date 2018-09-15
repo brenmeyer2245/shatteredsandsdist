@@ -13,7 +13,6 @@ router.get('/', async (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
   try {
-    console.log('\n\n\nEpisode', req.body.episode, '\n\n\n')
     const {
       title,
       icon,
@@ -64,31 +63,58 @@ router.get('/:episodeId', async (req, res, next) => {
 })
 
 router.put('/:episodeId', async (req, res, next) => {
-  const foundEpisode = await Episode.findById(req.params.episodeId)
-  return foundEpisode.update(req.body).then(updatedEpisode => {
-    res
-      .json({
-        message: `${updatedEpisode.title} updated`,
-        episode: updatedEpisode
-      })
-      .catch(err => {
-        next(err)
-      })
-  })
-})
+  try {
+    const foundEpisode = await Episode.findById(req.params.episodeId, {
+      include: [Character]
+    })
+    const {
+      title,
+      icon,
+      series,
+      audio,
+      bookTitle,
+      bookNumber,
+      chapterNumber,
+      episodeSummary,
+      episodeCharacters,
+      CityId
+    } = req.body
 
-router.put('/:episodeId/addCharacter', async (req, res, next) => {
-  const foundEpisode = await Episode.findById(req.params.episodeId)
-  return foundEpisode.update(req.body).then(updatedEpisode => {
-    res
-      .json({
-        message: `${updatedEpisode.title} updated`,
-        episode: updatedEpisode
-      })
-      .catch(err => {
-        next(err)
-      })
-  })
+    const updatedEpisode = await foundEpisode.update({
+      title,
+      icon,
+      series,
+      audio,
+      bookTitle,
+      bookNumber,
+      chapterNumber,
+      episodeSummary,
+      CityId
+    })
+    let chars = foundEpisode.Characters
+    //remove characters
+    await chars.forEach(async character => {
+      const {id} = character.dataValues
+      if (!episodeCharacters[id]) {
+        const removal = await Character.findById(id)
+        foundEpisode.removeCharacter(removal)
+      } else {
+        delete episodeCharacters[id]
+      }
+    })
+    //add characters
+    await Object.keys(episodeCharacters).forEach(async charId => {
+      const addedCharacter = await Character.findById(charId)
+      foundEpisode.addCharacter(addedCharacter)
+    })
+
+    res.json({
+      message: `${updatedEpisode.title} updated`,
+      episode: updatedEpisode
+    })
+  } catch (error) {
+    next(error)
+  }
 })
 
 router.delete('/:episodeId', async (req, res, next) => {
