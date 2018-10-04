@@ -15,12 +15,14 @@ const Header = props => {
 }
 
 const HeaderContainer = styled.div`
-  color: white;
-  font-family: fantasy;
-  text-align: center;
-  margin-top: -1.3em;
-  min-height: 100%;
-  background-size: cover;
+color: white;
+font-family: fantasy;
+text-align: center;
+margin-top: -1.3em;
+min-height: 100%;
+height: 85vh;
+width: 80vw;
+background-size: cover;
 `
 
 export default Header

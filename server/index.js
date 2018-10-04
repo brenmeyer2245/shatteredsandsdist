@@ -64,7 +64,11 @@ const createApp = () => {
   app.use(passport.session())
 
   // auth and api routes
+  console.log(1)
+
   app.use('/auth', require('./auth'))
+  console.log(2)
+
   app.use('/api', require('./api'))
 
   // static file-serving middleware
@@ -72,6 +76,7 @@ const createApp = () => {
 
   // any remaining requests with an extension (.js, .css, etc.) send 404
   app.use((req, res, next) => {
+
     if (path.extname(req.path).length) {
       const err = new Error('Not found')
       err.status = 404
@@ -88,6 +93,7 @@ const createApp = () => {
 
   // error handling endware
   app.use((err, req, res, next) => {
+    console.log(req)
     console.error(err)
     console.error(err.stack)
     res.status(err.status || 500).send(err.message || 'Internal server error.')

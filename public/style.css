@@ -7225,13 +7225,16 @@ form div {
       transform: translateY(0px);
   }
   30% {
-      transform: translateY(-60px);
+      transform: translateY(-20px);
   }
   60%{
-      transform: translateY(60px);
+      transform: translateY(0px);
+  }
+  80% {
+      transform: translateY(-20px);
   }
   100% {
-      transform: translateY(100px);
+    transform: translateY(0px);
   }
 }
 
@@ -7252,5 +7255,5 @@ form div {
   margin-top: -1.3em;
   min-height: 100%;
   background-size: cover;
-  animation: float 6s infinite 1s;
+  /* animation: float 6s infinite 1s; */
 }
