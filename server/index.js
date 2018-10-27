@@ -87,15 +87,13 @@ const createApp = () => {
   })
 
   // sends index.html
-  app.use('*', (req, res) => {
+  app.get('*', (req, res) => {
+    console.log("Into Index")
     res.sendFile(path.join(__dirname, '..', 'public/index.html'))
   })
 
   // error handling endware
   app.use((err, req, res, next) => {
-    console.log(req)
-    console.error(err)
-    console.error(err.stack)
     res.status(err.status || 500).send(err.message || 'Internal server error.')
   })
 }

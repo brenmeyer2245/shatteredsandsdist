@@ -7143,7 +7143,7 @@ form div {
   height: 42em;
   z-index: 4;
   border: .1em solid rgb(150, 133, 82);
-  background-size: cover;
+  background-size: 100%;
 }
 
 .cityTag{
@@ -7169,42 +7169,59 @@ form div {
 
 #Sharakahi{
   position: relative;
-  top: 12rem;
-  left: 27.7rem;
+  top: 10rem;
+  left: 22rem;
 }
 #Naseem{
   position: relative;
-  top: 16rem;
-  left: 10rem;
+  top: 12rem;
+  left: 8rem;
 }
 
 #Tear-an{
   position: relative;
-  top: 0em;
-  left: 24em;
+  top: -12rem;
+  left: 19em;
 }
 #Jaffa{
   position: relative;
-  top: 12rem;
-  left: 49rem;
+  top: 8rem;
+  left: 40rem;
 }
 
 #Tuman-Bay{
   position: relative;
-  top: 17rem;
-  left: 43rem;
+  top: 13rem;
+  left: 35rem;
 }
 
 #Bariiks-Bowl{
   position: relative;
-  top: 31rem;
-  left: 18rem;
+  top: 25rem;
+  left: 14rem;
+}
+
+#Dumais-Well{
+  position: relative;
+    top: 7rem;
+    left: 31em;
 }
 
 #Uk-Varr{
   position: relative;
-  top: 30rem;
+  top: 24rem;
   left: 1rem;
+}
+#Takoom{
+  position: relative;
+    top: -13rem;
+    left: 1em;
+}
+
+#Karak-Kazrim{
+  position: relative;
+  top: -10rem;
+  left: 41em;
 }
 
 @keyframes cityPulse {
