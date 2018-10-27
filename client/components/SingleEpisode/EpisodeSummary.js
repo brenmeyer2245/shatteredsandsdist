@@ -1,12 +1,15 @@
 import React from 'react'
 
 const EpisodeSummary = props => {
-  const {summary, series, bookNumber, bookTitle, chapterNumber, title} = props
-  const photos = [
-    'https://s7d1.scene7.com/is/image/PETCO/puppy-090517-dog-featured-355w-200h-d',
-    'https://s7d1.scene7.com/is/image/PETCO/puppy-090517-dog-featured-355w-200h-d',
-    'https://s7d1.scene7.com/is/image/PETCO/puppy-090517-dog-featured-355w-200h-d'
-  ]
+  const {
+    summary,
+    series,
+    bookNumber,
+    bookTitle,
+    chapterNumber,
+    title,
+    photos
+  } = props
   return (
     <div className="singleEpisodeDeets mt-4 elevatedCard red-trim flexDown">
       <h2 className="text-center">
