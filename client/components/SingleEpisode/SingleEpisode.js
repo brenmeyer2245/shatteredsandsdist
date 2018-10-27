@@ -4,6 +4,7 @@ import EpisodeCharacters from './EpisodeCharacters'
 import {EpisodeHeader} from './SingleEpisodeHeader'
 import {fetchCurrentEpisode} from '../../store/currentEpisodeReducer'
 import {connect} from 'react-redux'
+import EpisodeSummary from './EpisodeSummary'
 
 //Styled Components
 const CharacterCard = props => {
@@ -46,26 +47,12 @@ class SingleEpisode extends React.Component {
           />
           <Route
             path={`/episodes/${episodeId}/summary`}
-            render={() => (
-              <div className="singleEpisodeDeets m-4 elevatedCard red-trim flexDown">
-                <h2>
-                  {series} Book: {bookNumber}, {bookTitle}
-                </h2>
-                <h2>
-                  Chapter {chapterNumber}: {title}
-                </h2>
-                <p>
-                  {this.props.currentEpisode.summary
-                    ? this.props.currentEpisode.summary
-                    : 'No Summary Listed'}{' '}
-                </p>
-              </div>
-            )}
+            render={() => <EpisodeSummary {...this.props.currentEpisode} />}
           />
           <Route
             path={`/episodes/${episodeId}/cast`}
             render={() => (
-              <div className="singleEpisodeDeets m-4 elevatedCard red-trim flexDown">
+              <div className="singleEpisodeDeets mt-4 elevatedCard red-trim flexDown">
                 {characters.map(character => (
                   <h4 key={character.id}>
                     {' '}

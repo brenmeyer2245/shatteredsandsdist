@@ -7140,7 +7140,7 @@ form div {
   margin: 1em;
 }
 .worldMap {
-  height: 42em;
+  height: 34em;
   z-index: 4;
   border: .1em solid rgb(150, 133, 82);
   background-size: 100%;
@@ -7222,6 +7222,14 @@ form div {
   position: relative;
   top: -10rem;
   left: 41em;
+}
+
+.episode-summary-img{
+  border: 2px solid black;
+  max-width: 20em;
+  max-height: 20em;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 @keyframes cityPulse {
