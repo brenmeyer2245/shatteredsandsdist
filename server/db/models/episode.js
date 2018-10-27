@@ -36,6 +36,9 @@ const Episode = sqlDB.define('Episode', {
   episodeSummary: {
     type: Sequelize.TEXT,
     allowNull: true
+  },
+  photos: {
+    type: Sequelize.ARRAY(Sequelize.TEXT)
   }
 })
 
