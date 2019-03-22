@@ -1,12 +1,25 @@
 import React from 'react'
+import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
+import {fetchCurrentEpisode} from '../store'
 
 export const EpisodeTitleLink = styled(Link)`
   text-decoration: none;
   font-size: 2em;
   color: black;
 `
+
+function updateAudio(url, title){
+  console.log(url, title);
+  let audio = document.getElementById('audioPlayer');
+  let source = document.getElementById('audioPlayer-source-mp3');
+  document.getElementById('audioPlayer-title').innerHTML = title;
+  source.src = url;
+  audio.load();
+  audio.play();
+}
+
 
 const Episode = props => {
   const {episode} = props
@@ -31,18 +44,21 @@ const Episode = props => {
               episode.chapterNumber
             }`}
           </h4>
-          <audio controls="controls">
-            <source
-              src={`http://jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/audio/${
-                episode.audio
-              }`}
-            />
-            You're Browser Does not support Audio
-          </audio>
+          <button onClick={() => {
+                    let myurl = 'http://jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/audio/' + episode.audio
+                    updateAudio(myurl, episode.title)
+                    props.updateCurrentEpisode(episode.id);
+                }
+          }> Play Episode </button>
         </div>
       </div>
     </div>
   )
 }
 
-export default Episode
+const mapDispatch = (dispatch) => ({
+  updateCurrentEpisode: (id) => dispatch(fetchCurrentEpisode(id))
+})
+
+
+export default connect(null, mapDispatch)(Episode)

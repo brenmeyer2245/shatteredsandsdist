@@ -3,26 +3,25 @@ import styled from 'styled-components'
 
 const Header = props => {
   return (
-    <HeaderContainer
+    <div
       className="elevatedCard about"
       style={{
-        backgroundImage: `url('http://www.jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/pics/Persian_Palace.jpg')`
+        backgroundImage: `url('/pics/book_background.jpg')`
       }}
     >
       <h1 className="headerText">Welcome to the Shattered Sands</h1>
-    </HeaderContainer>
+    </div>
   )
 }
 
-const HeaderContainer = styled.div`
-color: white;
-font-family: fantasy;
-text-align: center;
-margin-top: -1.3em;
-min-height: 100%;
-height: 85vh;
-width: 80vw;
-background-size: cover;
-`
+// const HeaderContainer = styled.div`
+// color: white;
+// font-family: fantasy;
+// text-align: center;
+// margin-top: -1.3em;
+// height: 52em;
+// width: 40em;
+// background-size: contain;
+// `
 
 export default Header
