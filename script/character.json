@@ -3,7 +3,7 @@
     "name": "Kal E'moore",
     "class": "Rogue",
     "bio": "A salesman of all things with a mysterious ring",
-    "headshot": "Kal_as_McQueen.jpg",
+    "headshot": "Kal_headshot_cartoon.png",
     "actor": "Brendan Meyer"
   },
   {
@@ -68,5 +68,29 @@
       "For many years Vassar Atulus was an ordinary archaeologist. The son of well meaning but distracted parents, he was essentially raised by his master Artameen. Vassar's mission is to claim and store away dangerous magical artifacts before less scrupulous tomb raiders can find them, accepting only a nominal fee for his time and services. However, all is not as it appears. On one of his first expeditions Vassar found a ring containing the demon Massiel, in exchange for magical powers Massiel now experiences the world through Vassar's senses. However, Massiel constantly seeks to free himself, and influence Vassar's heart towards darkness. A long time friend of \"Elijah Afterglow\", Vassar has only recently learned Kal's true identity, though their friendship seems stronger than ever.",
     "headshot": "vass.jpg",
     "actor": "Nathan Spring"
+  },
+  {
+    "name": "Macide",
+    "class": "Blood Mage",
+    "bio":
+      "A Mysterious BloodMage",
+    "headshot": "vass.jpg",
+    "actor": "Nathan Spring"
+  },
+  {
+    "name": "Turok",
+    "class": "WarCleric",
+    "bio":
+      "Kals friend",
+    "headshot": "vass.jpg",
+    "actor": "Brian Scannel"
+  },
+  {
+    "name": "Juvaan",
+    "class": "Blood Mage",
+    "bio":
+      "Leader of the Moonless Host",
+    "headshot": "vass.jpg",
+    "actor": "Brian Scannel"
   }
 ]

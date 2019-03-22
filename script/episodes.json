@@ -39,7 +39,7 @@
   },
   {
     "title": "Blood of My Blood",
-    "icon": "",
+    "icon": "Blood_Of_My_Blood.flac",
     "cast":
       "Jhanos: Andrew Saenz, Clock: Ben Lapaen, D'Harr: Trent Stork, Aragwyn: Iris Kohler",
     "audio": "Blood_Of_My_Blood.flac",
@@ -64,7 +64,7 @@
   },
   {
     "title": "Blood Transfusion",
-    "icon": "",
+    "icon": "Blood_Transfusion.flac",
     "cast":
       "Jhanos: Andrew Saenz, D'Harr: Trent Stork, Clock: Ben Lapaen, Aragwyn: Iris Kohler",
     "audio": "",
@@ -359,7 +359,7 @@
     "title": "Ways of the Dark",
     "icon": "the_ways.jpg",
     "cast": "Vass: Nathan Spring, Kal: Brendan Meyer, Androl: Matt Scannell",
-    "audio": "Ways_of_the_Dark.mp3",
+    "audio": "Ways_Of_The_Dark.mp3",
     "series": "VOS",
     "bookTitle": "The Eyes of Snakes",
     "bookNumber": 1,
@@ -369,7 +369,7 @@
     "title": "Deja Vu",
     "icon": "",
     "cast": "Jhanos: Andrew Saenz, Clock: Ben Lapaen, Aragwyn: Iris Kohler",
-    "audio": "",
+    "audio": "Deja_Vu.flac",
     "series": "BWS",
     "bookTitle": "Blood Of My Blood",
     "bookNumber": 3,
@@ -391,7 +391,7 @@
     "icon": "",
     "cast":
       "Jhanos: Andrew Saenz, Jhanos: Andrew Saenz,  Besh: Lane Flores, Androl: Matt Scannell",
-    "audio": "",
+    "audio": "Crossroads.flac",
     "series": "BWS",
     "bookTitle": "Blood Of My Blood",
     "bookNumber": 3,

@@ -83,5 +83,32 @@
     "strength": 12,
     "charisma": 20,
     "CharacterId": 9
+  },
+  {
+    "dexterity": 14,
+    "constitution": 12,
+    "wisdom": 12,
+    "intelligence": 16,
+    "strength": 12,
+    "charisma": 20,
+    "CharacterId": 10
+  },
+  {
+    "dexterity": 14,
+    "constitution": 12,
+    "wisdom": 12,
+    "intelligence": 16,
+    "strength": 12,
+    "charisma": 20,
+    "CharacterId": 11
+  }
+  ,{
+    "dexterity": 14,
+    "constitution": 12,
+    "wisdom": 12,
+    "intelligence": 16,
+    "strength": 12,
+    "charisma": 20,
+    "CharacterId": 12
   }
 ]

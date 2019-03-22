@@ -6784,7 +6784,9 @@ a.text-dark:hover, a.text-dark:focus {
 /*# sourceMappingURL=style.css.map */
 
 body {
-  background-color: rgb(38, 36, 36);
+  background-image: url('/pics/wood_boards_background.jpg');
+  background-repeat: repeat-y;
+  background-size: cover;
 }
 a {
   text-decoration: none;
@@ -6854,13 +6856,15 @@ form div {
 
 .headerText{
   position: relative;
-  top: 11em;
+  top: 25%;
+  left: 5%;
+  font-size: 30px;
 }
 
 #menuBar{
   background-color: rgba(113,2,2);
   position: fixed;
-  left: 0;
+  left: 5%;
 }
 
 #filter{
@@ -6915,13 +6919,13 @@ form div {
 
 .pageLeft{
   position: absolute;
-  left: 0;
+  left: 5%;
   width: 12em;
   margin-right: 4em;
 }
 .pageRight{
   position: absolute;
-  left: 13em;
+  left: 25em;
  width: 47em;
 }
 
@@ -6943,22 +6947,55 @@ form div {
 
 .characterCard{
   margin: .5em;
-  height: 17em;
-  width: 12em;
+  height: 20em;
+  width: 13.5em;
   align-items: center;
-  background-color:white;
-  box-shadow: .7em .7em rgba(12,1,1,.2);
+  background-image: url(/pics/brown-card-texture.jpg);
+  box-shadow: 0.7em 0.7em rgba(12,1,1,.2);
   overflow: hidden;
-  position: relative;
+  position: absolute;
   border-radius: 1em;
-  transition: height 1s, width 1s, transform 2s;
+  transition: height 1s, width 1s, transform 1s;
 }
 
 .characterCard.clicked{
   z-index: 5;
-  height: 30em;
-  width: 80em;
-  transform: translate(0, -150px);
+  /* height: 30em; */
+  width: 34em;
+  display: absolute;
+
+}
+
+.transformLeft{
+  transform: translate(100px, 0);
+}
+
+.transformRight{
+  transform: translate(-400px,0);
+}
+
+.transformTop{
+  transform: translate(-100px, -100px);
+}
+
+.transformBottom{
+  transform: translate(-100px, 100px);
+}
+
+.transformLeft.transformTop{
+  transform: translate(100px, -100px);
+}
+
+.transformRight.transformTop{
+  transform: translate(-400px,-100px);
+}
+
+.transformLeft.transformBottom{
+  transform: translate(100px, 100px);
+}
+
+.transformRight.transformBottom{
+  transform: translate(-400px,100px);
 }
 
 .characterCard-thumbnail{
@@ -6969,11 +7006,16 @@ form div {
 .characterCard-details{
   position: absolute;
   top: 0;
-  left: 12.2em
+  left: 14em;
+}
+
+.characterImgContainer{
+  border: 2px solid black;
+  margin: .7em;
 }
 
 .characterImg{
-  height:14em;
+  height:16em;
   width: 12em;
 }
 .characterTitle{
@@ -6995,10 +7037,18 @@ form div {
   display:none;
 }
 
+.characterCard-Stats-rowRight{
+  margin-top: -.3em;
+}
+
+
+
+
 /*Page Right Items*/
 
 /*Episode Items*/
 .episode_card{
+  background-image: url('pics/brown-card-texture.jpg');
   border-top: 1em solid rgb(113, 2,2);
   max-width: 41em;
   background-color: white;
@@ -7024,7 +7074,7 @@ form div {
   width: 14em;
   max-height: 9em;
   max-width: 13em;
-  margin-left: .5em;
+  margin-left: 2.5em;
   margin-bottom: .5em;
   padding: .1em;
 }
@@ -7053,7 +7103,8 @@ form div {
   padding: 1rem;
   max-width: 47em;
   min-height: 9em;
-  background-color:#e0e0e0;
+  background-image: url('/pics/brown-card-texture.jpg');
+  /* background-color:#e0e0e0; */
 }
 
 
@@ -7087,7 +7138,7 @@ form div {
 }
 
 .statRow{
-  margin-top: .6em;
+  margin-top: .5em;
 
 }
 .statName{
@@ -7114,8 +7165,15 @@ form div {
   margin-left: .3em;
 }
 
+.characterCard-details p {
+  margin-top: 2em;
+  margin-left: 2em;
+  margin-bottom: 1rem;
+}
+
 .statContainer{
   margin-left: 1em;
+  margin-top: 1em;
 }
 
 .cityCard{
@@ -7230,7 +7288,48 @@ form div {
   max-height: 20em;
   margin-left: 1em;
   margin-right: 1em;
+
 }
+
+.about {
+color: white;
+font-family: fantasy;
+text-align: center;
+margin-top: -1.3em;
+position: absolute;
+height: 52em;
+width: 40em;
+background-size: contain;
+}
+
+#SideBarAudioPlayer {
+  position: fixed;
+  top: 25em;
+  background-color: rgba(113,2,2);
+  color: white;
+}
+
+
+
+@media(max-width: 1038px){
+  .headerText{
+    font-size: 30px;
+  }
+}
+
+@media(max-width: 500px){
+  .headerText{
+    font-size: 15px;
+  }
+  .about{
+    height: 27em;
+    width: 21em;
+    position: absolute;
+    top: 20em;
+    right: 38em;
+  }
+}
+
 
 @keyframes cityPulse {
   0% {
@@ -7273,11 +7372,42 @@ form div {
 
 }
 
-.about {
-  color: white;
-  font-family: fantasy;
-  text-align: center;
-  margin-top: -1.3em;
-  min-height: 100%;
-  background-size: cover;
+@media screen and (max-width: 1150px ){
+  .pageRight {
+    width: 40em;
+  }
+
 }
+@media screen and (max-width: 1050px ){
+  .pageRight {
+    width: 35em;
+  }
+}
+@media screen and (max-width: 965px ){
+    .pageRight {
+      width: 30em;
+    }
+}
+
+@media screen and (max-width: 885px ){
+  .pageRight {
+    width: 20em;
+  }
+}
+@media screen and (max-width: 800px ){
+  .pageRight {
+   left: 20em;
+  }
+}
+
+@media screen and (max-width: 640px ){
+  .pageRight {
+   left: 15em;
+  }
+}
+@media screen and (max-width: 400px ){
+  .pageRight {
+   left: 1em;
+  }
+}
+
