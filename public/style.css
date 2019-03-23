@@ -7098,13 +7098,18 @@ form div {
   max-width: 47em;
 }
 
-.singleEpisodeDeets{
+.singleEpisodeDeets-base{
   display: flex;
   padding: 1rem;
   max-width: 47em;
   min-height: 9em;
-  background-image: url('/pics/brown-card-texture.jpg');
-  /* background-color:#e0e0e0; */
+  background-image: url('/pics/paper-background-scroll.gif');
+  background-size: cover;
+}
+.singleEpisodeDeets-contents{
+  margin: 3em;
+  margin-left: 5em;
+  margin-top: 7em;
 }
 
 

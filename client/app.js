@@ -4,7 +4,6 @@ import {Navbar, MenuBar, SideBarAudioPlayer} from './components'
 import Routes from './routes'
 
 const App = () => {
-  console.log("Yes")
   return (
     <div>
       <Navbar />
