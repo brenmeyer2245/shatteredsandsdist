@@ -12,7 +12,8 @@ const EpisodeSummary = props => {
   } = props
   return (
     <div className="singleEpisodeDeets-base mt-4 elevatedCard flexDown">
-      <div className="singleEpisodeDeets-contents">
+
+     <div className="singleEpisodeDeets-contents">
         <h2 className="text-center">
           {series} Book: {bookNumber}, {bookTitle}
         </h2>
@@ -55,8 +56,7 @@ const EpisodeSummary = props => {
         </div>
         <br />
         </div>
-    </div>
-  )
-}
+        </div>
+  )}
 
 export default EpisodeSummary

@@ -7098,6 +7098,19 @@ form div {
   max-width: 47em;
 }
 
+
+.episode-single-header{
+  text-align: center;
+  color: white;
+  min-height: 13em;
+  background-position: 10% 32%;
+  background-size: inherit;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  box-shadow: 0.7em 0.7em rgba(12, 1, 1, 0.2);
+}
+
+
 .singleEpisodeDeets-base{
   display: flex;
   padding: 1rem;
