@@ -3,22 +3,13 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 import {fetchCurrentEpisode} from '../store'
+import {updateAudio} from '../utils/'
 
 export const EpisodeTitleLink = styled(Link)`
   text-decoration: none;
   font-size: 2em;
   color: black;
 `
-
-function updateAudio(url, title){
-  console.log(url, title);
-  let audio = document.getElementById('audioPlayer');
-  let source = document.getElementById('audioPlayer-source-mp3');
-  document.getElementById('audioPlayer-title').innerHTML = title;
-  source.src = url;
-  audio.load();
-  audio.play();
-}
 
 
 const Episode = props => {

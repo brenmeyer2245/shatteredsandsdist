@@ -19,7 +19,6 @@ class SingleEpisode extends React.Component {
   async componentDidMount() {
     const episodeId = this.props.match.params.episodeId
     try {
-      console.log('Test')
       await this.props.getCurrentEpisode(episodeId)
     } catch (err) {
       console.log('Error!', err)
@@ -52,18 +51,21 @@ class SingleEpisode extends React.Component {
           <Route
             path={`/episodes/${episodeId}/cast`}
             render={() => (
-              <div className="singleEpisodeDeets mt-4 elevatedCard red-trim flexDown">
+              <div className="singleEpisodeDeets-base mt-4 elevatedCard flexDown">
+              <div className="singleEpisodeDeets-contents mt-4flexDown">
+              <h1 className="text-center font-GreatVibes">Test:</h1>
                 {characters.map(character => (
-                  <h4 key={character.id}>
+                  <h3 className="font-Merienda" key={character.id}>
                     {' '}
                     {character.name}: {character.actor}
-                  </h4>
+                  </h3>
                 ))}
+              </div>
               </div>
             )}
           />
+          </div>
         </div>
-      </div>
     )
   }
 }

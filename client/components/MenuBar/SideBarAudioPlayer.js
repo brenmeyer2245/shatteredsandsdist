@@ -5,10 +5,10 @@ import {connect} from 'react-redux'
 const SideBarAudioPlayer = (props) => {
   return (
     <div id="SideBarAudioPlayer" className="elevatedCard">
-        <div style={{padding:"1em"}}>
+        <div style={{padding:".5em", textAlign: "center"}}>
             <h5 id="audioPlayer-title">{"No Episode Selected"}</h5>
         </div>
-        <hr />
+        <hr style={{marginBottom: ".1em", marginTop: ".1em"}}/>
         <div>
          <audio id="audioPlayer" style={{width: "15em", padding:"1em"}} controls>
             <source id="audioPlayer-source-mp3" type="audio/mp3"></source>

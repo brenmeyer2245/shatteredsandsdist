@@ -6792,6 +6792,44 @@ a {
   text-decoration: none;
 }
 
+.font-Cookie{
+  font-family: 'Cookie', cursive;
+}
+
+.font-DancingScript{
+  font-family: 'Dancing Script', cursive;
+}
+
+.font-GreatVibes{
+  font-family: 'Great Vibes', cursive;
+}
+
+.font-HomemadeApple{
+  font-family: 'Homemade Apple', cursive;
+}
+
+
+.font-LobsterTwo{
+  font-family: 'Lobster Two', cursive;
+}
+
+.font-Merienda{
+  font-family: 'Merienda', cursive;
+}
+
+.font-NanumMyeongjo{
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+.font-NothingYouCouldDo{
+  font-family: 'Nothing You Could Do', cursive;}
+
+.font-ReenieBeanie{
+  font-family: 'Reenie Beanie', cursive;}
+
+.font-Tangerine{
+  font-family: 'Tangerine', cursive;}
+
 label {
   display: block;
 }
@@ -6865,6 +6903,7 @@ form div {
   background-color: rgba(113,2,2);
   position: fixed;
   left: 5%;
+  padding: .5em;
 }
 
 #filter{
@@ -7098,11 +7137,24 @@ form div {
   max-width: 47em;
 }
 
+
+.episode-single-header{
+  text-align: center;
+  color: white;
+  min-height: 13em;
+  background-position: 10% 32%;
+  background-size: inherit;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  box-shadow: 0.7em 0.7em rgba(12, 1, 1, 0.2);
+}
+
+
 .singleEpisodeDeets-base{
   display: flex;
   padding: 1rem;
   max-width: 47em;
-  min-height: 9em;
+  min-height: 30em;
   background-image: url('/pics/paper-background-scroll.gif');
   background-size: cover;
 }
@@ -7110,6 +7162,8 @@ form div {
   margin: 3em;
   margin-left: 5em;
   margin-top: 7em;
+  margin-bottom: 5em;
+
 }
 
 
@@ -7309,7 +7363,7 @@ background-size: contain;
 
 #SideBarAudioPlayer {
   position: fixed;
-  top: 25em;
+  top: 30em;
   background-color: rgba(113,2,2);
   color: white;
 }
