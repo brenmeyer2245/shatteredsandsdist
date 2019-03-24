@@ -53,12 +53,12 @@ class SingleEpisode extends React.Component {
             render={() => (
               <div className="singleEpisodeDeets-base mt-4 elevatedCard flexDown">
               <div className="singleEpisodeDeets-contents mt-4flexDown">
-              <h2 className="text-center">Cast:</h2>
+              <h1 className="text-center font-GreatVibes">Test:</h1>
                 {characters.map(character => (
-                  <h4 key={character.id}>
+                  <h3 className="font-Merienda" key={character.id}>
                     {' '}
                     {character.name}: {character.actor}
-                  </h4>
+                  </h3>
                 ))}
               </div>
               </div>
