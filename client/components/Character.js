@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import StatDisplay from './SingleCharacter/StatDisplay'
 class Character extends React.Component {
   constructor(props) {
@@ -8,7 +8,8 @@ class Character extends React.Component {
       transformX: "",
       transformY: "",
       prevX: this.props.coords.xPosition,
-      prevY: this.props.coords.yPosition
+      prevY: this.props.coords.yPosition,
+      bioSelected: false
     }
 
     this.applyTransform = this.applyTransform.bind(this)
@@ -40,7 +41,12 @@ class Character extends React.Component {
 
   }
 
+   updateShowBio = (evt) => {
+    evt.stopPropagation();
+    console.log("Butts")
+    this.setState({bioSelected: !this.state.bioSelected})
 
+ }
   handleClick() {
     this.applyTransform();
     this.setState({isClicked: !this.state.isClicked})
@@ -57,6 +63,7 @@ class Character extends React.Component {
       'constitution',
       'intelligence'
     ]
+    console.log("Show Bio", this.state.bioSelected)
     return (
       <div
         ref={this.characterCard}
@@ -70,16 +77,21 @@ class Character extends React.Component {
         <div className="characterImgContainer">
           <img
             className="characterImg"
-            src={"/pics/Kal_headshot_cartoon.png"
+            src={"http://www.jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/pics/" + character.headshot
             }
           />
            </div>
 
           <h1 className="characterTitle">{character.name}</h1>
         </div>
-        <div className="characterCard-details">
+        <div className="characterCard-details font-NothingYouCouldDo">
 
-          <div className="flex statContainer">
+
+        {/* Check if showBio Button is clicked, show stats by default */}
+        { !this.state.bioSelected ?
+            //Show Stats
+            <Fragment>
+            <div className="flex statContainer">
               {/* Row of All the Column Names */}
               <div className="rowLeft flexdown">
               {statNames.map(stat => {
@@ -101,8 +113,18 @@ class Character extends React.Component {
             })}
             </div>
           </div>
+
           <p> {`Blurb about the character`}</p>
-          {/* <p> {character.bio} </p> */}
+
+          </Fragment> :
+
+          // Show Character Bio
+          <div className="characterCard-details-bio-container font-NothingYouCouldDo">
+            {this.props.character.bio}
+          </div>
+
+        }
+          <button className="btn-dark font-NothingYouCouldDo" style={{padding:".3em"}} type="button" onClick={this.updateShowBio}> {this.state.bioSelected ? "Show Stats" : "Show Bio"} </button>
         </div>
       </div>
     )

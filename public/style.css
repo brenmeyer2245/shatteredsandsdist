@@ -7005,6 +7005,15 @@ form div {
 
 }
 
+
+
+.characterCard-details-bio-container{
+  overflow: scroll;
+    padding: 1em;
+    height: 14.5em;
+}
+
+
 .transformLeft{
   transform: translate(100px, 0);
 }
