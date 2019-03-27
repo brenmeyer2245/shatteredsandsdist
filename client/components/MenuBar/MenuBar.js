@@ -11,10 +11,11 @@ const MenuBar = props => {
           <div id="Thing" />
           Characters
         </MenuButton>
-        <MenuButton name="About" />
+        <MenuButton name="Home" />
         <MenuButton name="Episodes" linked="/episodes" />
         <MenuButton name="The World" linked="/cities" />
         <MenuButton name="History" linked="/history" />
+        <MenuButton name="Search" linked="/search" />
         {props.isLoggedIn && (
           <Fragment>
             <MenuButton name="Add Episode" linked="/addEpisode" />
