@@ -124,7 +124,7 @@ class Character extends React.Component {
           </div>
 
         }
-          <button className="btn-dark font-NothingYouCouldDo" style={{padding:".3em"}} type="button" onClick={this.updateShowBio}> {this.state.bioSelected ? "Show Stats" : "Show Bio"} </button>
+          <button className="btn-dark font-NothingYouCouldDo" style={{padding:".3em", marginTop:".8em"}} type="button" onClick={this.updateShowBio}> {this.state.bioSelected ? "Show Stats" : "Show Bio"} </button>
         </div>
       </div>
     )

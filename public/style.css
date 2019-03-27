@@ -7479,3 +7479,26 @@ background-size: contain;
   }
 }
 
+
+
+#searchBar-container {
+    background: red;
+    height: 10em;
+}
+
+#searchBar {
+  padding: 1em;
+}
+
+#searchBar-results{
+  background: blue;
+  color: white;
+  height: 4em;
+  overflow: scroll;
+}
+
+
+.searchBar-resultWindow-result {
+  display: block;
+  padding: .5em;
+}
