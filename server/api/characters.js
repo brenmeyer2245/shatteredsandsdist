@@ -1,16 +1,16 @@
 const express = require('express')
 const router = express.Router()
-const {Character, Stats} = require('../db/models')
+const {Character, Stats, Episode} = require('../db/models')
 
 router.get('/', async (req, res, next) => {
-  const characters = await Character.findAll({include: [Stats]})
+  const characters = await Character.findAll({include: [Stats, Episode]})
   res.json(characters)
 })
 
 router.get('/:characterId', async (req, res, next) => {
   try {
     let foundCharacter = await Character.findById(req.params.characterId, {
-      include: [Stats]
+      include: [Stats, Episode]
     })
     res.json(foundCharacter)
   } catch (err) {

@@ -7007,12 +7007,11 @@ form div {
 
 
 
-.characterCard-details-bio-container{
+.characterCard-details-bio-container, .characterCard-details-episodeList-container{
   overflow: scroll;
     padding: 1em;
     height: 14.5em;
 }
-
 
 .transformLeft{
   transform: translate(100px, 0);
@@ -7252,6 +7251,58 @@ form div {
   /* animation: cityCardEnter 2s 1 forwards; */
 }
 
+
+.city-card-img{
+  background-image: url('/pics/brown-card-texture.jpg');
+  padding: 1em;
+  border-radius: 1em;
+  min-height: 20em;
+  margin-top: 1em;
+}
+
+#city-card-updateImageButtonGrid{
+  margin-left: 2%;
+  width: 10em;
+  position: absolute;
+  left: 41em;
+}
+
+.city-card-img-updateButton{
+  margin-top: 20%;
+    margin-left: 25%;
+    margin-bottom: 2em;
+
+}
+
+.city-card-contents{
+  height: 45em;
+  background-image: url('/pics//parchment-bg-burnt.png');
+  background-size: cover;
+  padding: 8em;
+}
+
+.city-card-contents-repeated{
+  height: 70em;
+  width: 53em;
+  background-position-x: -40px;
+  background-image: url(/pics//parchment-bg-burnt.png);
+  background-size: cover;
+  /* padding: 8em; */
+  padding: 9em;
+  padding-right: 11em;
+  padding-left: 5em;
+  padding-bottom: 0em;
+  margin-bottom: -3em;
+}
+
+
+
+
+
+
+
+
+
 .cityCard img {
   width: 30em;
   height: 20em;
@@ -7259,10 +7310,9 @@ form div {
 }
 
 .city_intro{
-  background-color: white;
+  background-image: url('/pics/brown-card-texture.jpg');
   color: black;
   padding: 1em;
-  border-top: 1em solid rgb(113,2,2);
   margin: 1em;
 }
 .worldMap {
@@ -7284,6 +7334,7 @@ form div {
 
 #city_view {
   max-width: 53.2em;
+  text-align: center;
 }
 
 .cityTag.cityClicked {
@@ -7477,28 +7528,4 @@ background-size: contain;
   .pageRight {
    left: 1em;
   }
-}
-
-
-
-#searchBar-container {
-    background: red;
-    height: 10em;
-}
-
-#searchBar {
-  padding: 1em;
-}
-
-#searchBar-results{
-  background: blue;
-  color: white;
-  height: 4em;
-  overflow: scroll;
-}
-
-
-.searchBar-resultWindow-result {
-  display: block;
-  padding: .5em;
 }

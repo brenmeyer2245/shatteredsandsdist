@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react'
 import StatDisplay from './SingleCharacter/StatDisplay'
+import history from '../history'
 class Character extends React.Component {
   constructor(props) {
     super(props)
@@ -9,7 +10,7 @@ class Character extends React.Component {
       transformY: "",
       prevX: this.props.coords.xPosition,
       prevY: this.props.coords.yPosition,
-      bioSelected: false
+      infoViewSelected: "stats"
     }
 
     this.applyTransform = this.applyTransform.bind(this)
@@ -24,15 +25,11 @@ class Character extends React.Component {
 
   applyTransform(){
       let {x, y} = this.characterCard.current.getBoundingClientRect()
-      console.log("Transform", this.props.character.name, x, y)
-
      if (!this.state.isClicked){
-
         //If y is lt 150, transformTop, gt 400, transformBottom, else do nothing
         let topOrBottom = (y < 150) ? "transformBottom" : "transformTop";
         //if x is lt 450, transformLeft, gt 800 transformRight, else do nothing
         let rightOrLeft = (x < 450) ? "transformLeft" : (x > 800) ? "transformRight" : ""
-        console.log(topOrBottom, rightOrLeft)
         this.setState({transformX: rightOrLeft, transformY: topOrBottom })
      } else {
       this.setState({transformX: "", transformY: "" })
@@ -41,12 +38,13 @@ class Character extends React.Component {
 
   }
 
-   updateShowBio = (evt) => {
+  updateInfoView = (evt, viewType) => {
     evt.stopPropagation();
-    console.log("Butts")
-    this.setState({bioSelected: !this.state.bioSelected})
+    console.log("Before", this.state.infoViewSelected);
+    console.log("Update", viewType);
+    this.setState({infoViewSelected: viewType});
+  }
 
- }
   handleClick() {
     this.applyTransform();
     this.setState({isClicked: !this.state.isClicked})
@@ -63,7 +61,7 @@ class Character extends React.Component {
       'constitution',
       'intelligence'
     ]
-    console.log("Show Bio", this.state.bioSelected)
+    console.log('View', this.state.infoViewSelected);
     return (
       <div
         ref={this.characterCard}
@@ -88,8 +86,8 @@ class Character extends React.Component {
 
 
         {/* Check if showBio Button is clicked, show stats by default */}
-        { !this.state.bioSelected ?
-            //Show Stats
+        { this.state.infoViewSelected === 'stats' ?
+           ( //Show Stats
             <Fragment>
             <div className="flex statContainer">
               {/* Row of All the Column Names */}
@@ -116,15 +114,47 @@ class Character extends React.Component {
 
           <p> {`Blurb about the character`}</p>
 
-          </Fragment> :
+          </Fragment>)
 
-          // Show Character Bio
+          : this.state.infoViewSelected === "bio" ?
+
+         ( // Show Character Bio
           <div className="characterCard-details-bio-container font-NothingYouCouldDo">
             {this.props.character.bio}
+          </div>  )
+          :
+          (//Show Character Episodes
+            <div className="characterCard-details-episodeList-container font-NothingYouCouldDo">
+            {this.props.character.Episodes.map(episode => (
+              <div key={'episode_' + episode.id} className="characterCard-details-episodeList-episode">
+                  <a href="#"
+                      onClick={(evt) => {
+                          evt.stopPropagation();
+                          history.replace('/episodes/' + episode.id);
+                      }}>
+                    {episode.title}
+                  </a>
+              </div>
+            ))}
           </div>
-
+          )
         }
-          <button className="btn-dark font-NothingYouCouldDo" style={{padding:".3em", marginTop:".8em"}} type="button" onClick={this.updateShowBio}> {this.state.bioSelected ? "Show Stats" : "Show Bio"} </button>
+          <div className="flex font-NothingYouCouldDo characterCard-navbar">
+             <button className="btn-dark" style={{padding:".3em", marginTop:".8em"}} type="button"
+                      onClick={(evt) => {
+                        let newInfoView = this.state.infoViewSelected === "stats" ? "bio" : "stats"
+                        this.updateInfoView(evt, newInfoView)
+                      }}>
+                      {this.state.infoViewSelected === "stats" ? "Show Bio" : "Show Stats"}
+            </button>
+             <button className="btn-dark" style={{padding:".3em", marginTop:".8em"}} type="button"
+                      onClick={(evt) => {
+                        let newInfoView = this.state.infoViewSelected === "episodes" ? "bio" : "episodes"
+                        this.updateInfoView(evt, newInfoView);
+                      }}>
+                      {this.state.infoViewSelected === "episodes" ? "Show Bio" : "Show Episodes"}
+            </button>
+          </div>
         </div>
       </div>
     )
