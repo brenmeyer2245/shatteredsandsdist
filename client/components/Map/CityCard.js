@@ -1,37 +1,9 @@
 import React from 'react'
 import axios from 'axios'
-
-
-/**
- *
- * @param {*} description
- * Split description is used in the case of a description that is
- * too long to fit on the background image of the page.
- * Current, one page can hold 2100 characters.
- * Split Description splits the description in to an array of pages
- * that can be rendered in different chunks
- */
-function splitDescription(description){
-  let descriptionArray = [];
-  let currentId = 0;
-  let pageBreak = 2100;
-  while (currentId < description.length){
-    let end = currentId + pageBreak;
-    //check if end is less than 2100 characters out
-    if (end >= description.length) {
-      end = description.length - 1;
-    }
-    //push substring of current to end
-    descriptionArray.push("Num 1" + description.slice(currentId, end));
-    //update currentId
-    currentId = end + 1
-  }
-  return descriptionArray;
-}
-
+import {splitSummaryToPages, testSummary} from '../../utils'
 
 const CityCard = props => {
-  console.log(props);
+  let description = props.description || testSummary
   return (
   <div className="city-card-container">
 
@@ -56,14 +28,14 @@ const CityCard = props => {
     </div>
 
     {/* Text Summary of City */}
-    {props.description.length <= 2100 ?
+    {description.length <= 2100 ?
    ( //Smaller Description => One Page
     <div className="flexDown" className="city-card-contents font-Merienda">
       <h1> {props.name} </h1>
-      <p> {props.description} </p>
+      <p> {description} </p>
     </div> ) :
     ( <div>
-      {splitDescription(props.description).map((page, id) => (
+      {splitSummaryToPages(testSummary, 2100).map((page, id) => (
         <div key={"page" + id} className="flexDown" className="city-card-contents-repeated font-Merienda">
         {id === 0 && (<h1> {props.name} </h1> )}
         <p> {page} </p>

@@ -147,7 +147,7 @@ class Character extends React.Component {
                       }}>
                       {this.state.infoViewSelected === "stats" ? "Show Bio" : "Show Stats"}
             </button>
-             <button className="btn-dark" style={{padding:".3em", marginTop:".8em"}} type="button"
+             <button className="btn-dark" style={{padding:".3em", marginTop:".8em", marginLeft:"1em"}} type="button"
                       onClick={(evt) => {
                         let newInfoView = this.state.infoViewSelected === "episodes" ? "bio" : "episodes"
                         this.updateInfoView(evt, newInfoView);

@@ -15,14 +15,15 @@ export default props => {
       <EpisodeNavLink to={`/episodes/${props.episodeId}/cast`}>
         Cast
       </EpisodeNavLink>
-      <EpisodeNavLink onClick={(evt) => {
+      {props.audio && props.audio.length &&
+      (<EpisodeNavLink onClick={(evt) => {
         evt.preventDefault();
         let myurl = 'http://jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/audio/' + props.audio
         if (props.title && props.audio) updateAudio(myurl, props.title)
         else console.log(`${!props.audio ? 'Audio is not defined' : 'Title is not defined'}`);
       }} to={`#`} >
         Play
-      </EpisodeNavLink>
+      </EpisodeNavLink>)}
     </EpisodeNavWrapper>
   );
 };
@@ -39,9 +40,12 @@ const EpisodeNavWrapper = styled.div`
 `;
 
 const EpisodeNavLink = styled(Link)`
-  color: white;
-  font-size: 1.3em;
-  text-decoration: none;
-  padding: 0.7em 2.5em;
-  margin: 0.7em;
+    color: white;
+    font-size: 1.3em;
+    width: 25%;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    padding: 1%;
+    margin: 1%;
+    text-align: center;
 `;

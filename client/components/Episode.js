@@ -15,7 +15,7 @@ export const EpisodeTitleLink = styled(Link)`
 const Episode = props => {
   const {episode} = props
   return (
-    <div className="episode_card center elevatedCard ">
+    <div className="episode_card center elevatedCard font-Merienda">
       <EpisodeTitleLink to={`/episodes/${episode.id}`}>
         {episode.title}
       </EpisodeTitleLink>
@@ -30,17 +30,25 @@ const Episode = props => {
           />
         </div>
         <div className="episode_text flex m-4">
-          <h4>
-            {`${episode.series} Book:${episode.bookNumber},Chapter:${
-              episode.chapterNumber
-            }`}
-          </h4>
-          <button onClick={() => {
-                    let myurl = 'http://jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/audio/' + episode.audio
-                    updateAudio(myurl, episode.title)
-                    props.updateCurrentEpisode(episode.id);
-                }
-          }> Play Episode </button>
+          <div className="flex font-Merienda font-weight-bold justify-content-center w-100">
+              <span>
+                {`${episode.series} Book:${episode.bookNumber}`}
+              </span>
+              <span className="ml-2">
+                {`Chapter:${
+                  episode.chapterNumber
+                }`}
+              </span>
+          </div>
+         { episode.audio && episode.audio.length && (
+                        <button onClick={() => {
+                                           let myurl = 'http://jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/audio/' + episode.audio
+                                            updateAudio(myurl, episode.title)
+                                            props.updateCurrentEpisode(episode.id);
+                                            }
+                                        }
+                                className="btn btn-block btn-primary">
+                         Play Episode </button>)}
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ const Character = require('./character')
 const City = require('./city')
 const Episode = require('./episode')
 const Stats = require('./stats')
+const HistoricalItem = require('./historicalItem');
 
 //define relationships
 Character.hasOne(Stats)
@@ -21,5 +22,6 @@ module.exports = {
   City,
   Character,
   Episode,
-  Stats
+  Stats,
+  HistoricalItem
 }

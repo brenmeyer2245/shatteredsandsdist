@@ -31,7 +31,8 @@ class AllCities extends React.Component {
       <div id="city_view">
         <div className="city_intro red-trim elevatedCard">
           <h1>The World of the Shattered Sands </h1>
-          {/* <p>
+          {/* - Original Intro for this Page => Will determine if it Stays
+            <p>
             {' '}
             This world is set within the vast and seemingly endless desert of
             the Shangazi, also known as the "Great Waste". <br />Along the edges
