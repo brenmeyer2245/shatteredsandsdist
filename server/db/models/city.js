@@ -11,7 +11,7 @@ const City = sqlDB.define('City', {
     allowNull: false
   },
   pictures: {
-    type: Sequelize.TEXT
+    type: Sequelize.ARRAY(Sequelize.TEXT)
   }
 })
 

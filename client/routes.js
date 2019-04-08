@@ -13,9 +13,11 @@ import {
   CreateEpisode,
   AllEpisodes,
   EditCharacter,
-  EditEpisode,
-  SearchBar
+  EditEpisode
 } from './components'
+import History from './components/History/History'
+import CityMarker from './components/Animations/CityMarker'
+
 import {me, fetchCharacters, fetchEpisodes} from './store'
 
 /**
@@ -36,8 +38,9 @@ class Routes extends Component {
         <Route exact path="/episodes" component={AllEpisodes} />
         <Route exact path="/characters" component={AllCharacters} />
         <Route path="/episodes/:episodeId" component={SingleEpisode} />
+        <Route path="/history" component={History} />
         <Route path="/cities" component={AllCities} />
-        <Route path="/search" render={(routeProps) => (<SearchBar />)} />
+        <Route path="/lottie" component={CityMarker} />
         {isLoggedIn &&
         (<Switch>
             <Route path="/addCharacter" component={CreateCharacter} />

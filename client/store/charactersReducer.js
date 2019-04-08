@@ -20,6 +20,7 @@ const addCharacter = character => ({
 export const fetchCharacters = () => {
   return async function(dispatch) {
     const {data} = await axios('/api/characters')
+    console.log(data);
     dispatch(getCharacters(data))
   }
 }

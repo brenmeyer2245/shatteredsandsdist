@@ -8,24 +8,31 @@ class AllCities extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      currentCity: {}
+      currentCity: {},
+      currentPictureId: 0
     }
     this.clickOnCity = this.clickOnCity.bind(this)
+    this.updateCarosel = this.updateCarosel.bind(this)
   }
   async componentDidMount() {
     await this.props.getCities()
   }
 
   clickOnCity(city) {
-    this.setState({currentCity: city})
+    this.setState({currentCity: city, currentCityId: 0})
+  }
+
+  updateCarosel(newId){
+    this.setState({currentPictureId: newId});
   }
 
   render() {
     return (
       <div id="city_view">
-        <div className="city_intro elevatedCard">
+        <div className="city_intro red-trim elevatedCard">
           <h1>The World of the Shattered Sands </h1>
-          <p>
+          {/* - Original Intro for this Page => Will determine if it Stays
+            <p>
             {' '}
             This world is set within the vast and seemingly endless desert of
             the Shangazi, also known as the "Great Waste". <br />Along the edges
@@ -35,7 +42,7 @@ class AllCities extends React.Component {
             of sand. <br />Grottos, slums, gladiator pits, hanging gardens,
             opium dens and bazaars litter most cities. Here under the harsh sun
             and reflections of the Shangzi your destiny is truly your own.{' '}
-          </p>
+          </p> */}
         </div>
         <div
           className="worldMap elevatedCard m-2"
@@ -54,15 +61,17 @@ class AllCities extends React.Component {
           ))}
         </div>
 
-        {this.state.currentCity.id ? (
+        {this.state.currentCity.id && (
           <div className="city_display">
             <CityCard
               name={this.state.currentCity.name}
               description={this.state.currentCity.description}
-              image={this.state.currentCity.pictures}
+              pictures={this.state.currentCity.pictures}
+              updateCarosel={this.updateCarosel}
+              currentPictureId={this.state.currentPictureId}
             />
           </div>
-        ) : null}
+        )}
       </div>
     )
   }

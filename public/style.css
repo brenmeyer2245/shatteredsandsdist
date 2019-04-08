@@ -7007,12 +7007,12 @@ form div {
 
 
 
-.characterCard-details-bio-container{
+
+.characterCard-details-bio-container, .characterCard-details-episodeList-container{
   overflow: scroll;
     padding: 1em;
     height: 14.5em;
 }
-
 
 .transformLeft{
   transform: translate(100px, 0);
@@ -7120,11 +7120,12 @@ form div {
 
 .episode_icon img{
   width: 14em;
-  max-height: 9em;
-  max-width: 13em;
+  max-height: 8em;
+  max-width: 11em;
   margin-left: 2.5em;
   margin-bottom: .5em;
-  padding: .1em;
+  border: 1px solid black;
+
 }
 
 .episode_text{
@@ -7162,9 +7163,9 @@ form div {
 .singleEpisodeDeets-base{
   display: flex;
   padding: 1rem;
-  max-width: 47em;
-  min-height: 30em;
-  background-image: url('/pics/paper-background-scroll.gif');
+  max-width: 44em;
+  min-height: 56em;
+  background-image: url(/pics/paper-background-scroll.gif);
   background-size: cover;
 }
 .singleEpisodeDeets-contents{
@@ -7252,6 +7253,58 @@ form div {
   /* animation: cityCardEnter 2s 1 forwards; */
 }
 
+
+.city-card-img{
+  background-image: url('/pics/brown-card-texture.jpg');
+  padding: 1em;
+  border-radius: 1em;
+  min-height: 20em;
+  margin-top: 1em;
+}
+
+#city-card-updateImageButtonGrid{
+  margin-left: 2%;
+  width: 10em;
+  position: absolute;
+  left: 41em;
+}
+
+.city-card-img-updateButton{
+  margin-top: 20%;
+    margin-left: 25%;
+    margin-bottom: 2em;
+
+}
+
+.city-card-contents{
+  height: 45em;
+  background-image: url('/pics//parchment-bg-burnt.png');
+  background-size: cover;
+  padding: 8em;
+}
+
+.city-card-contents-repeated{
+  height: 70em;
+  width: 53em;
+  background-position-x: -40px;
+  background-image: url(/pics//parchment-bg-burnt.png);
+  background-size: cover;
+  /* padding: 8em; */
+  padding: 9em;
+  padding-right: 11em;
+  padding-left: 5em;
+  padding-bottom: 0em;
+  margin-bottom: -3em;
+}
+
+
+
+
+
+
+
+
+
 .cityCard img {
   width: 30em;
   height: 20em;
@@ -7259,10 +7312,9 @@ form div {
 }
 
 .city_intro{
-  background-color: white;
+  background-image: url('/pics/brown-card-texture.jpg');
   color: black;
   padding: 1em;
-  border-top: 1em solid rgb(113,2,2);
   margin: 1em;
 }
 .worldMap {
@@ -7284,6 +7336,7 @@ form div {
 
 #city_view {
   max-width: 53.2em;
+  text-align: center;
 }
 
 .cityTag.cityClicked {
@@ -7378,27 +7431,44 @@ background-size: contain;
 }
 
 
-
-@media(max-width: 1038px){
-  .headerText{
-    font-size: 30px;
-  }
+.history-catalogue-item{
+  background-image: url(/pics/background-white-paper-burnt.png);
+    width: 99%;
+    height: 63vh;
+    background-size: cover;
 }
 
-@media(max-width: 500px){
-  .headerText{
-    font-size: 15px;
-  }
-  .about{
-    height: 27em;
-    width: 21em;
-    position: absolute;
-    top: 20em;
-    right: 38em;
-  }
+.history-catalogue-item img {
+  vertical-align: middle;
+    border-style: none;
+    height: 33%;
+    margin: 3em;
+    border: 2px solid black;
 }
 
+.history-catalogue-menu{
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+  cursor: pointer;
+  min-height: 10em;
+}
 
+.history-catalogue-menu-list{
+  list-style-type: none;
+  /* padding: 1em; */
+  margin: 1em 1em 0em 1em;
+  min-width: 20%;
+}
+
+.history-catalogue-menu-list{
+  list-style-type: "arabic-indic";
+}
+
+.history-catalogue-menu-list-item:hover{
+  color: black;
+  font-size: 1.5em;
+}
 @keyframes cityPulse {
   0% {
       box-shadow: 0 0 0 0 rgba(60, 5, 5, 0.721);
@@ -7440,39 +7510,94 @@ background-size: contain;
 
 }
 
-@media screen and (max-width: 1150px ){
-  .pageRight {
-    width: 40em;
-  }
 
-}
-@media screen and (max-width: 1050px ){
-  .pageRight {
-    width: 35em;
-  }
-}
-@media screen and (max-width: 965px ){
-    .pageRight {
-      width: 30em;
-    }
-}
 
-@media screen and (max-width: 885px ){
-  .pageRight {
-    width: 20em;
+@media screen and (max-width: 1151px){
+  .menuItems{
+    width: 10em;
   }
-}
-@media screen and (max-width: 800px ){
-  .pageRight {
-   left: 20em;
+  #audioPlayer{
+    width: 13em;
+  }
+  .pageRight{
+    left: 22em;
   }
 }
 
-@media screen and (max-width: 640px ){
-  .pageRight {
-   left: 15em;
+@media screen and (max-width: 1100px){
+  .pageRight{
+    left: 19em;
   }
 }
+
+@media screen and (max-width: 1100px){
+  .pageRight{
+   width: 44em;
+  }
+}
+
+@media screen and (max-width: 995px){
+  .pageRight{
+   width: 40em;
+  }
+}
+
+@media screen and (max-width: 940px){
+  .pageRight{
+   width: 38em;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .pageRight{
+   width: 35em;
+  }
+}
+
+@media screen and (max-width: 855px ){
+  .pageRight {
+    width: 32em;
+  }
+}
+
+@media screen and (max-width: 808px ){
+  .pageRight {
+    width: 29em;
+  }
+}
+
+
+
+@media screen and (max-width: 750px ){
+  .pageRight {
+   width: 25em;
+  }
+}
+
+@media screen and (max-width: 700px ){
+  .pageRight {
+   width: 22em;
+  }
+}
+
+@media screen and (max-width: 665 ){
+  .pageRight {
+   width: 20em;
+  }
+}
+
+@media screen and (max-width: 620px ){
+  .pageRight {
+   width: 18em;
+  }
+}
+
+@media screen and (max-width: 590px ){
+  .pageRight {
+   width: 15em;
+  }
+}
+
 @media screen and (max-width: 400px ){
   .pageRight {
    left: 1em;
@@ -7480,25 +7605,21 @@ background-size: contain;
 }
 
 
-
-#searchBar-container {
-    background: red;
-    height: 10em;
+@media(max-width: 1038px){
+  .headerText{
+    font-size: 30px;
+  }
 }
 
-#searchBar {
-  padding: 1em;
-}
-
-#searchBar-results{
-  background: blue;
-  color: white;
-  height: 4em;
-  overflow: scroll;
-}
-
-
-.searchBar-resultWindow-result {
-  display: block;
-  padding: .5em;
+@media(max-width: 500px){
+  .headerText{
+    font-size: 15px;
+  }
+  .about{
+    height: 27em;
+    width: 21em;
+    position: absolute;
+    top: 20em;
+    right: 38em;
+  }
 }

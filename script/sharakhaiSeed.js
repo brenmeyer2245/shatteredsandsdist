@@ -1,10 +1,11 @@
-const {User, Episode, Character, Stats, City} = require('../server/db/models')
+const {User, Episode, Character, Stats, City, HistoricalItem} = require('../server/db/models')
 const db = require('../server/db/db')
 const characters = require('./character.json')
 const charactersToEpisodes = require('./charactersToEpisodes.json')
 const cities = require('./cities.json')
 const episodes = require('./episodes.json')
 const stats = require('./stats.json')
+const history = require('./history.json')
 
 async function sharakhaiSeed() {
   await db.sync({force: true})
@@ -23,6 +24,10 @@ async function sharakhaiSeed() {
   //seed Stats
   await Stats.bulkCreate(stats)
   console.log('seeded Stats')
+
+  //seed history items
+  await HistoricalItem.bulkCreate(history)
+  console.log('seeded History')
 
   //seed Cities
   await City.bulkCreate(cities)

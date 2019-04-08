@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Venom Fang",
+    "description": "The flagship of Dessan the Scarred, this massive pirate ship is one of the most feared and deadly ships to ever sift through the dunes of the Shangazii",
+    "picture": "Venom-Fang.jpg",
+    "category": "Ship"
+  },
+  {
+    "name": "Black Mamba",
+    "description": "a",
+    "picture": "",
+    "category": "Weapon"
+  },
+  {
+    "name": "The Asp",
+    "description": "Big Boss Thrane's personal sifter. During the fall of Bariik's he gifted to to the party in order for them to escape the Tuman Bay blockade. It is a fast and agile ship that moves with deadly precision upon the sands. ",
+    "picture": "",
+    "category": "Ship"
+  },
+  {
+    "name": "The Blue Heron",
+    "description": "A trading Sifter from Naseem that belonged to Ramahd Quimir in his hunt to bring justice to the Blood Mage Macide. Despite being a trading vessel it has been crudely outfitted for combat. It's trademark is it's light blue solar sails. The shift was given to Jaonos Ventium for his capture of Macide",
+    "picture": "Blue-Heron.jpg",
+    "category": "Ship"
+  },
+  {
+    "name": "The Morning Star",
+    "description": "a",
+    "picture": "Morning-Star.jpg",
+    "category": "Ship"
+  },
+  {
+    "name": "The Javelin",
+    "description": "The Sultan, Hamzakiir's flagship. It is the strongest warship in the Silver Spears armada and often captained by the head of the Silver Spears, it's grand general, Ishan \"the Honey tongue\"",
+    "picture": "Javelin.jpg",
+    "category": "Ship"
+  }
+]

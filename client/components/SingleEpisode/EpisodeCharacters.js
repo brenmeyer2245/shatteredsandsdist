@@ -4,10 +4,10 @@ const EpisodeCharacters = props => {
   const {characters} = props
   console.log(props)
   return (
-    <div className="mt-4 flex-lg-wrap">
+    <div className="mt-4 flex-lg-wrap flex">
       {characters.map(character => (
-        <div key={character.id} className="flex characterCard">
-           <div className="flexDown characterCard-thumbnail">
+        <div key={character.id} className="flex characterCard" style={{position:"inherit"}}>
+           <div className="flexDown characterCard-thumbnail" style={{position:"inherit"}}>
             <div className="characterImgContainer">
 
               <img

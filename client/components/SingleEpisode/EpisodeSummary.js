@@ -1,8 +1,8 @@
-import React from 'react'
+import React, {Fragment} from 'react'
+import {splitSummaryToPages, testSummary} from '../../utils'
 
 const EpisodeSummary = props => {
   const {
-    summary,
     series,
     bookNumber,
     bookTitle,
@@ -10,53 +10,34 @@ const EpisodeSummary = props => {
     title,
     photos
   } = props
-  return (
-    <div className="singleEpisodeDeets-base mt-4 elevatedCard flexDown">
+  let summary = props.summary || testSummary
 
-     <div className="singleEpisodeDeets-contents">
-        <h2 className="text-center font-GreatVibes">
-          {series} Book: {bookNumber}, {bookTitle}
-        </h2>
-        <h2 className="text-center font-GreatVibes">
-          Chapter {chapterNumber}: {title}
-        </h2>
-        <br />
-        <div className="font-Merienda">
-          <div className="flex">
-            <div>
-              {photos ? (
-                <img className="episode-summary-img" src={photos[0]} />
-              ) : null}
-            </div>
-            <div className="episode-summary-text ">
-              {summary ||
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
-            </div>
-          </div>
-          <br />
-          <div className="flex">
-            {summary ||
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
-            <div>
-              {photos ? (
-                <img className="episode-summary-img" src={photos[1]} />
-              ) : null}
-            </div>
-          </div>
-          <br />
-          <div className="flex">
-            <div>
-              {photos ? (
-                <img className="episode-summary-img" src={photos[2]} />
-              ) : null}
-            </div>
-            {summary ||
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
-          </div>
-        </div>
-        <br />
-        </div>
-        </div>
+  return (
+    <div className="singleEpisode-summary-container" style={{height: "70vh", width: "80vw"}}>
+      {/* Split By Page */}
+    {splitSummaryToPages(summary, 1450).map((page, index) => (
+
+          <div key={"page"  + index} className="singleEpisodeDeets-base mt-4 elevatedCard flexDown">
+            <div className="singleEpisodeDeets-contents">
+               {index === 0  && (
+                <Fragment>
+               <h2 className="text-center font-GreatVibes">
+                  {series} Book: {bookNumber}, {bookTitle}
+                </h2>
+                <h2 className="text-center font-GreatVibes">
+                  Chapter {chapterNumber}: {title}
+                </h2>
+                <br />
+                </Fragment>)}
+                <div className="font-Merienda">
+                        <div className="episode-summary-text ">
+                          {page}
+                        </div>
+                </div>
+                <br />
+             </div>
+          </div>))}
+      </div>
   )}
 
 export default EpisodeSummary
