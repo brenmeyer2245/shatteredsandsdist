@@ -34,11 +34,11 @@
     "name": "D'harr",
     "class": "Monk",
     "bio": "One of the devout followers of Talisi",
-    "headshot": "DHarr.jpg",
+    "headshot": "Dharr-headshot.jpg",
     "actor": "Trent Stork"
   },
   {
-    "name": "Beshtanang, The Ghost of Tuman",
+    "name": "Beshtanang",
     "class": "Druid",
     "bio":
       "I was a very small child when I discovered how much my family hated me. I did not discover it by accident. Born to an elf of Dumai and a nameless human wanderer, I was sold to Feroze of the Ivory Blossom in Tuman Bay when I was still a boy. Under Feroze I was castrated & taught the arts of the hetairai, the expensive courtesan-slaves of Tuman; I was also hobbled, poisoned with wood spirit until I was blind. But my only friend from my childhood in Dumai, Ujarak the druid, had taught me the ways of the Moons and gave me my weapons of vengeance. By day a blinded whore, by night a vigilante bent on revenge against all slavers- this was the making of the Ghost of Tuman.",
@@ -46,11 +46,11 @@
     "actor": "Lane Flores"
   },
   {
-    "name": "Talindra, the Pirate Queen",
+    "name": "Talindra",
     "class": "Mage",
     "bio":
       "Once, there was a child who found a treasure. That treasure begat more treasure, surfeiting itself upon the world, until in terror and despair the child begged for no more of it. But treasures found in innocence cannot be given back. They can only be taken by force. The child is long dead. Long live the Pirate Queen.",
-    "headshot": "talindra.jpg",
+    "headshot": "talindra_2.jpg",
     "actor": "Lane Flores"
   },
   {
@@ -61,6 +61,15 @@
     "headshot": "Androl_Headshot.jpg",
     "actor": "Matt Scannell"
   },
+  {
+    "name": "Julian E'Moore",
+    "class": "Fighter",
+    "bio":
+      "A Silver Spear Captain who has won the trust and favor of Ishaan. He is making quite an impression on the highest members of the Silver Spears inner circle.",
+    "headshot": "Julian-E'Moore-headshot.jpg",
+    "actor": "Brian Scannel"
+  },
+
   {
     "name": "Vass",
     "class": "Warlock",
@@ -74,23 +83,63 @@
     "class": "Blood Mage",
     "bio":
       "A Mysterious BloodMage",
-    "headshot": "vass.jpg",
-    "actor": "Nathan Spring"
+    "headshot": "Macide.jpg",
+    "actor": "Soren Ersbak"
   },
   {
     "name": "Turok",
     "class": "WarCleric",
     "bio":
       "Kals friend",
-    "headshot": "vass.jpg",
+    "headshot": "Turak.png",
     "actor": "Brian Scannel"
   },
   {
-    "name": "Juvaan",
+    "name": "Dessan",
+    "class": "Pirate Lord",
+    "bio":
+      "Pirate Lord. Hunts the thief, Clock the Wanted. Head of Sand Serpens",
+    "headshot": "Dessan.jpg",
+    "actor": "Brian Scannel"
+  },
+  {
+    "name": "Artameen",
+    "class": "Scholar",
+    "bio":
+      "Mentor of Vassar, a Scholar of the Collegia in Sharakhai, driven out of favor by his wild obsession with the Yuan-Ti",
+    "headshot": "master-artameen.jpg",
+    "actor": "Brian Scannel"
+  },
+  {
+    "name": "Kraven",
+    "class": "Toady",
+    "bio":
+      "An Ivory League Penny Pincher, sent to sneer at contractors and those that might pull a fast one.",
+    "headshot": "Kraven_headshot.png",
+    "actor": "Brian Scannel"
+  },
+  {
+    "name": "D'Neal",
+    "class": "Fighter",
+    "bio":
+      "His sister was murdered at the hands of the Blood Mage, Macide. He swore revenge and followed it all the way to the deck of the Turiyat.",
+    "headshot": "D'Neil-headshot.jpg",
+    "actor": "Brian Scannel"
+  },
+  {
+    "name": "Anya Varesh",
     "class": "Blood Mage",
     "bio":
-      "Leader of the Moonless Host",
-    "headshot": "vass.jpg",
+      "A powerful blood mage and wife of Lord Raffi of Tuman Bay. She is stunningly beautiful and would appear to be a trophy wife of a powerful lord. However, her eyes and blood-crimson lips would suggest that she has much more influence and power than one would expect",
+    "headshot": "Ana-Varesh.jpg",
+    "actor": "Brian Scannel"
+  },{
+    "name": "Zhai'ir Al-Vidad",
+    "class": "Pirate",
+    "bio":
+      "Captain of the Black Lotus. Shows up at the most convenient times...for him",
+    "headshot": "ruby-Eye.jpg",
     "actor": "Brian Scannel"
   }
+
 ]

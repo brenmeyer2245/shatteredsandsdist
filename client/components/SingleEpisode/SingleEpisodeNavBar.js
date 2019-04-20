@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import {updateAudio} from '../../utils'
+import { urlPrefix } from '../../../Common/Constants';
+
 
 export default props => {
+  console.log('here', urlPrefix)
   return (
     <EpisodeNavWrapper>
       <EpisodeNavLink to={`/episodes/${props.episodeId}/summary`}>
@@ -15,15 +18,17 @@ export default props => {
       <EpisodeNavLink to={`/episodes/${props.episodeId}/cast`}>
         Cast
       </EpisodeNavLink>
-      {props.audio && props.audio.length &&
+      {props.audio && props.audio.length === 1 ?
       (<EpisodeNavLink onClick={(evt) => {
         evt.preventDefault();
-        let myurl = 'http://jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/audio/' + props.audio
+        let myurl = urlPrefix.audio + props.audio
         if (props.title && props.audio) updateAudio(myurl, props.title)
         else console.log(`${!props.audio ? 'Audio is not defined' : 'Title is not defined'}`);
       }} to={`#`} >
         Play
-      </EpisodeNavLink>)}
+      </EpisodeNavLink>
+      ) : (
+        props.audio && props.audio.length > 1 ? (<EpisodeNavLink to={`/episodes/${props.episodeId}/audio`}> Audio </EpisodeNavLink>) : null)}
     </EpisodeNavWrapper>
   );
 };

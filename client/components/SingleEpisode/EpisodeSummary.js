@@ -10,7 +10,7 @@ const EpisodeSummary = props => {
     title,
     photos
   } = props
-  let summary = props.summary || testSummary
+  let summary = props.episodeSummary || "Summary Currently Not Available"
 
   return (
     <div className="singleEpisode-summary-container" style={{height: "70vh", width: "80vw"}}>

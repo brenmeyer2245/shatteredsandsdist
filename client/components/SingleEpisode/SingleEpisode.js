@@ -4,7 +4,9 @@ import EpisodeCharacters from './EpisodeCharacters'
 import {EpisodeHeader} from './SingleEpisodeHeader'
 import {fetchCurrentEpisode} from '../../store/currentEpisodeReducer'
 import {connect} from 'react-redux'
+import {updateAudio} from '../../utils'
 import EpisodeSummary from './EpisodeSummary'
+import { urlPrefix } from '../../../Common/Constants';
 
 //Styled Components
 const CharacterCard = props => {
@@ -31,8 +33,11 @@ class SingleEpisode extends React.Component {
       bookNumber,
       chapterNumber,
       bookTitle,
-      title
+      title,
+      audio,
     } = this.props.currentEpisode
+    console.log(audio);
+
     const characters = this.props.currentEpisode.Characters
     const episodeId = this.props.currentEpisode.id
     return (
@@ -48,6 +53,30 @@ class SingleEpisode extends React.Component {
             path={`/episodes/${episodeId}/summary`}
             render={() => <EpisodeSummary {...this.props.currentEpisode} />}
           />
+
+          <Route
+            path={`/episodes/${episodeId}/audio`}
+            render={ () => (
+              <div className="mt-4 flexDown">
+                  <div className="mt-4 flex flex-wrap" style={{justifyContent: "center"}}>
+
+                  {audio.map((section, id) => (
+                   <div className="font-Merienda elevatedCard bg-primary font-Merienda text-center text-white w-25 mt-3 ml-3" key={id}>
+                      {' '}
+                      <h6>{`Part ${id + 1}`}</h6>
+                      <button onClick={() => {
+                                           let myurl = urlPrefix.audio + section
+                                            updateAudio(myurl, title)
+                                            }
+                                        }
+                                className="btn btn-block btn-primary">
+                         Play Episode </button>
+                    </div>
+                   ))}
+              </div>
+              </div>
+            )}
+            />
           <Route
             path={`/episodes/${episodeId}/cast`}
             render={() => (
@@ -74,7 +103,7 @@ const mapStateToProps = state => ({
   currentEpisode: state.currentEpisode
 })
 const mapDispatchToProp = dispatch => ({
-  getCurrentEpisode: id => dispatch(fetchCurrentEpisode(id))
+  getCurrentEpisode: id => dispatch(fetchCurrentEpisode(id)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProp)(SingleEpisode)

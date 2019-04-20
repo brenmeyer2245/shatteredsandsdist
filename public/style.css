@@ -7262,6 +7262,11 @@ form div {
   margin-top: 1em;
 }
 
+.city-card-img-container{
+  width: 100%;
+  margin: 1%
+}
+
 #city-card-updateImageButtonGrid{
   margin-left: 2%;
   width: 10em;
@@ -7273,7 +7278,6 @@ form div {
   margin-top: 20%;
     margin-left: 25%;
     margin-bottom: 2em;
-
 }
 
 .city-card-contents{
@@ -7346,15 +7350,16 @@ form div {
 }
 
 
-#Sharakahi{
-  position: relative;
-  top: 10rem;
-  left: 22rem;
-}
 #Naseem{
   position: relative;
   top: 12rem;
   left: 8rem;
+}
+
+#Sharakhai{
+  position: relative;
+  top: 10rem;
+  left: 22rem;
 }
 
 #Tear-an{
@@ -7434,14 +7439,15 @@ background-size: contain;
 .history-catalogue-item{
   background-image: url(/pics/background-white-paper-burnt.png);
     width: 99%;
-    height: 63vh;
+    height: 65vh;
     background-size: cover;
 }
 
 .history-catalogue-item img {
   vertical-align: middle;
     border-style: none;
-    height: 33%;
+    height: 50%;
+    max-width: 55%;
     margin: 3em;
     border: 2px solid black;
 }
@@ -7452,6 +7458,7 @@ background-size: contain;
   list-style-type: none;
   cursor: pointer;
   min-height: 10em;
+  margin-left: 15%;
 }
 
 .history-catalogue-menu-list{
@@ -7459,6 +7466,10 @@ background-size: contain;
   /* padding: 1em; */
   margin: 1em 1em 0em 1em;
   min-width: 20%;
+}
+
+.history-catalogue-menu-items h6:hover {
+  color: black;
 }
 
 .history-catalogue-menu-list{

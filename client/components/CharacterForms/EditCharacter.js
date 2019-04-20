@@ -22,6 +22,21 @@ export class EditCharacterForm extends Component {
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
+
+  componentDidMount(){
+   // let character = getCharacterById()
+   console.log(this.props.currentCharacter);
+   if (this.props.currentCharacter){
+     const {name, class: classType, bio, headshot: headshotUrl, actor} = this.props.currentCharacter
+     const {dexterity: DEX, constitution: CON, strength: STR,
+            intelligence: INT, wisdom: WIS, charisma: CHA} = this.props.currentCharacter.Stat
+
+      this.setState({
+        name, actor, classType, bio, headshotUrl, DEX, CON, STR, WIS, CHA, INT
+      })
+   }
+  }
+
   componentDidUpdate(pastProps) {
     if (!pastProps.currentCharacter && this.props.currentCharacter) {
       const {name, bio, headshot, actor} = this.props.currentCharacter
@@ -73,7 +88,7 @@ export class EditCharacterForm extends Component {
 
   handleSubmit(evt) {
     evt.preventDefault()
-    this.props.createCharacter(this.state)
+    this.props.editCharacter(this.state)
     history.push('/characters')
   }
 
@@ -211,7 +226,7 @@ export class EditCharacterForm extends Component {
           className="form-control"
           onChange={this.handleChange}
           value={this.state.bio}
-          placeholder="Enter Bio Here..."
+          placeHolder={this.state.bio}
         />
 
         <button
@@ -232,7 +247,8 @@ const mapState = (state, {match}) => ({
   currentCharacter: getCharacterById(
     state.characters,
     parseInt(match.params.characterId, 10)
-  )
+  ),
+  characters: state.characters
 })
 
 const mapDispatch = dispatch => ({

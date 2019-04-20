@@ -1,58 +1,66 @@
 [
   {
-    "name": "Sharakahi",
+    "name": "Sharakhai",
     "description":
       "At the very heart of this world lay the capital of SS called Sharakhai. Some say that Sharakhai's ancient white walls are as old as the Great Waste itself. It is massive. This multi-leveled city is famous for it's sprawling towers and thick white shining walls. It houses the world’s most impressive libraries, towering aqueducts, hanging gardens, the Grand Bazaar, Silver Spear Academy and guild houses of every kind...\nIn the center of the city is the tower of the Second Sun and Second Moon. A massive spire that reaches up towards the heavens and protrudes out of the landscape. Atop this massive construct is a giant crystal which glows bright red/orange during the day and a tranquil blue to illuminate the sands at night. It can be seen from across the Shangazi. A beacon for Wind-Ships and lost travelers alike.",
-  "pictures": ["sharakhai-main.jpg", "Kal_headshot_cartoon.png"]
+  "pictures": ["Sharakai%20Slums.jpg", "Sharakhai.jpg", "Sharakhai_2.jpg", "Sharakhai_4.jpg", "Sharakhai_5.jpg", "Sharakhai_8.jpg", "Sharakhai_big.jpg", "sharakhai-11.jpg", "sharakhai-12.jpg", "sharakhai-14.jpg", "sharakhai-15.jpg", "sharakhai-16.jpg", "sharakhai-17.jpg", "sharakhai-18.jpg", "sharakhai-20.jpg", "sharakhai-21.jpg", "sharakhai-main.jpg", "sharakhai-slums.jpg", "sharakhai-tower.jpg", "sharakshai-19.jpg"]
   },
   {
     "name": "Bariiks Bowl",
     "description":
       "The Empires southernmost controlled city. It is a port city that is home to many different races and professions. It’s truly a melting pot of all walks of life, races and classes. This southern city is built on trade. It also houses the famous gladiatorial arena:  the Pit.",
-    "pictures": ["bariiks.jpg"]
+    "pictures": ["Bariiks.jpg", "Bariiks_Bowl_2.jpg", "Bariiks_Bowl_4.jpg", "Bariiks_FightingPits.jpg", "bariiks-11.jpg", "bariiks-12.jpg", "bariiks-14.jpg", "bariiks-16.jpg", "bariiks-18.jpg", "bariiks-19.jpg", "bariiks-20.jpg", "bariiks-21.jpg", "bariiks-22.jpg", "bariiks-23.jpg", "bariiks-25.jpg", "bariiks-27.jpg", "bariiks.jpg", "bariiks15.jpg"]
   },
   {
     "name": "Naseem",
     "description":
       "A small town along the western edge of the Sultan’s Highway. It is home to ancient ruins that many pilgrims seek passage to. It takes part in many religious ceremonies and it is said the Sultan himself travels here once a year to pay homage to the gods.",
-    "pictures": ["naseem.jpg"]
+    "pictures": ["Naseem-16.jpg", "Naseem_3.jpg", "Naseem_6.jpg", "Ivory_league.jpg", "naseem-11.jpg", "naseem-12.jpg", "naseem-13.jpg", "naseem-14.jpg", "naseem-15.jpg", "naseem-17.jpg", "naseem-18.jpg", "naseem-19.jpg", "naseem-2.jpg", "naseem-20.jpg", "naseem-21.jpg", "naseem-22.jpg" ]
   },
   {
     "name": "Uk Varr",
     "description":
       "\"Outcast City\" This settlement is home to once nomadic peoples forced to settle down by the Sultan. It is a place for the lost and vagabonds.",
-    "pictures": ["Uk_Varr.jpg"]
+    "pictures": ["Uk_Varr.jpg",
+      "uk-varr-4.jpg"]
   },
   {
     "name": "Jaffa",
     "description":
       "The port of Jaffa “Pirates Cove” is a grotto along the Vine. This massive cavern was once a graveyard for old wind-ships of an ancient battle. It is now a multi-tiered Pirate dwelling. A place where no one is king except the sails and the sands. It is a place to get lost, to hire a crew, charter passage or find a treasure map. It is a pirate’s paradise.",
-    "pictures": ["jaffa.jpg"]
+    "pictures": ["jaffa.jpg", "Jaffa2.jpg",
+    "Jaffa_insignia.jpg"]
   },
   {
     "name": "Tuman Bay",
     "description":
-      "This is a southeastern city that nears the “Endless Dunes and Valley of the Shifting Sands.” It is home to wealthy slave owners whose entire society is built upon the use of slaves. They are ruthless and merciless in putting down revolts. The city is under constant threat from beasts of the great dunes and the Vine. Here monster hunters and treasure seekers alike make port before heading off into the Dunes.",
-    "pictures": ["tuman_bay.jpg"]
+    "Slavers City” – this is a southeastern city that nears the “Endless Dunes and Valley of the Shifting Sands.” It is home to wealthy slave owners whose entire society is built upon the use of slaves. They are ruthless and merciless in putting down revolts. The city is under constant threat from beasts of the great dunes and the Vine. Here monster hunters and treasure seekers alike make port before heading off into the Dunes.",
+    "pictures": ["Tuman-16.jpg", "Tuman_Bay_2.jpg","Tuman_Bay_3.jpg","Tuman_Bay_4.jpg","Tuman_Bay_5.jpg","Tuman_Bay_6.jpg","Tuman_Bay_7.jpg","tuman-0.jpg","tuman-12.jpg", "tuman-17.jpg","tuman-18.jpg","tuman-20.jpg","tuman-21.jpg","tuman-22.jpg","tuman-23.jpg","tuman-27.jpg"]
   },
   {
     "name": "Dumais Well",
-    "description": "Elven City",
-    "pictures": [""]
+    "description": "The Elven city is a mysterious and beautiful oasis reknowned for the water that dwells within its springs. Travelers from all across the Shangazi to drink from the well and their many tents and travelling cars make up what is known as 'Caravan City' all along Dumais Well's perimeter. The wood elves that live inside Dumais enforce a strict law. Any non-elf can enter the springs during the day. However, at night, all non-wood elves must vacate the city.",
+    "pictures": ["Dumais.jpg", "Dumais_2.jpg"]
   },
   {
     "name": "Karak Kazrim",
-    "description": "Dwarven City",
-    "pictures": [""]
+    "description": "Located in the northwest corner of SS it’s entrance lay between two massive statues at the base of Crooked Peak. This Dwarven city is the only in the land. They are master craftsmen and engineers, but their gates have been closed for the last 50 years and many dwarves, once so common in the world, slowly return to Karak. They have closed their shining gates from trade.",
+    "pictures": ["Karak%20Kazrim.jpg", "Karak_Kazrim_2.jpg"]
   },
   {
     "name": "Tear'an",
-    "description": "Norther City, home to aqueducts",
-    "pictures": [""]
+    "description": "“The Chalice” – The empires most northern controlled city. It is the bread basket of the land. In it is also found the military academy for the Silver Spears and the Arcana College. Behind the spires of the Arcana college lay a mystical lake, “Tear”. This water runs to Sharakhai via a massive aqueduct system. The aqueduct almost 200 feet high and patrolled day and night by the frigates and foot troops of the the Silver Spears.",
+    "pictures": ["Tear'an-5.jpg",
+      "Tear'an-8.jpg",
+      "Tear'an.jpg",
+      "Tear'an_2.jpg",
+      "The%20Black%20Tower.jpg",
+      "Arcana%20Collegia.jpg"
+      ]
   },
   {
     "name": "Takoom",
-    "description": "Reclusive City of Talisi and the Maidens",
-    "pictures": [""]
+    "description": "Not much is known about this Northeastern settlement other than it is a holy place of the God Talisi. It is said that the Blade Maidens are born and trained here.",
+    "pictures": ["Takoom.jpg", "takoom-5.jpg"]
   }
 ]

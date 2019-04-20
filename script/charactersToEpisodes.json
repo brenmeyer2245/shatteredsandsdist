@@ -1,14 +1,6 @@
 [
   {
     "episodeId": 1,
-    "characterId": 1
-  },
-  {
-    "episodeId": 1,
-    "characterId": 2
-  },
-  {
-    "episodeId": 1,
     "characterId": 3
   },
   {
@@ -17,7 +9,11 @@
   },
   {
     "episodeId": 1,
-    "characterId": 5
+    "characterId": 16
+  },
+  {
+    "episodeId": 1,
+    "characterId": 17
   },
   {
     "episodeId": 2,
@@ -38,10 +34,38 @@
   {
     "episodeId": 2,
     "characterId": 5
+  },
+  {
+    "episodeId": 2,
+    "characterId": 15
+  },
+  {
+    "episodeId": 2,
+    "characterId": 18
   },
   {
     "episodeId": 3,
     "characterId": 1
+  },
+  {
+    "episodeId": 3,
+    "characterId": 2
+  },
+  {
+    "episodeId": 3,
+    "characterId": 3
+  },
+  {
+    "episodeId": 3,
+    "characterId": 4
+  },
+  {
+    "episodeId": 3,
+    "characterId": 5
+  },
+  {
+    "episodeId": 3,
+    "characterId": 18
   },
   {
     "episodeId": 4,
@@ -61,26 +85,54 @@
   },
   {
     "episodeId": 5,
+    "characterId": 2
+  },
+  {
+    "episodeId": 5,
+    "characterId": 3
+  },
+  {
+    "episodeId": 5,
+    "characterId": 4
+  },
+  {
+    "episodeId": 5,
+    "characterId": 5
+  },
+  {
+    "episodeId": 6,
     "characterId": 1
   },
   {
-    "episodeId": 6,
+    "episodeId": 5,
+    "characterId": 12
+  },
+  {
+    "episodeId": 5,
+    "characterId": 17
+  },
+  {
+    "episodeId": 7,
     "characterId": 2
   },
   {
-    "episodeId": 6,
+    "episodeId": 7,
     "characterId": 3
   },
   {
-    "episodeId": 6,
+    "episodeId": 7,
     "characterId": 4
   },
   {
-    "episodeId": 6,
+    "episodeId": 7,
     "characterId": 5
   },
   {
     "episodeId": 8,
+    "characterId": 1
+  },
+  {
+    "episodeId": 8,
     "characterId": 2
   },
   {
@@ -94,6 +146,22 @@
   {
     "episodeId": 8,
     "characterId": 5
+  },
+  {
+    "episodeId": 8,
+    "characterId": 12
+  },
+  {
+    "episodeId": 8,
+    "characterId": 13
+  },
+  {
+    "episodeId": 8,
+    "characterId": 9
+  },
+  {
+    "episodeId": 9,
+    "characterId": 1
   },
   {
     "episodeId": 9,
@@ -113,15 +181,23 @@
   },
   {
     "episodeId": 10,
-    "characterId": 1
+    "characterId": 2
   },
   {
     "episodeId": 10,
-    "characterId": 6
+    "characterId": 3
   },
   {
     "episodeId": 10,
-    "characterId": 9
+    "characterId": 4
+  },
+  {
+    "episodeId": 10,
+    "characterId": 5
+  },
+  {
+    "episodeId": 10,
+    "characterId": 11
   },
   {
     "episodeId": 11,
@@ -129,11 +205,11 @@
   },
   {
     "episodeId": 11,
-    "characterId": 6
+    "characterId": 12
   },
   {
     "episodeId": 11,
-    "characterId": 9
+    "characterId": 13
   },
   {
     "episodeId": 12,
@@ -152,124 +228,120 @@
     "characterId": 5
   },
   {
-    "episodeId": 13,
-    "characterId": 6
-  },
-  {
-    "episodeId": 13,
-    "characterId": 9
+    "episodeId": 12,
+    "characterId": 11
   },
   {
     "episodeId": 14,
+    "characterId": 2
+  },
+  {
+    "episodeId": 14,
+    "characterId": 3
+  },
+  {
+    "episodeId": 14,
+    "characterId": 4
+  },
+  {
+    "episodeId": 14,
+    "characterId": 5
+  },
+  {
+    "episodeId": 14,
+    "characterId": 16
+  },
+  {
+    "episodeId": 15,
+    "characterId": 2
+  },
+  {
+    "episodeId": 15,
+    "characterId": 3
+  },
+  {
+    "episodeId": 15,
+    "characterId": 4
+  },
+  {
+    "episodeId": 15,
+    "characterId": 5
+  },
+  {
+    "episodeId": 15,
+    "characterId": 16
+  },
+  {
+    "episodeId": 16,
+    "characterId": 1
+  },
+  {
+    "episodeId": 16,
     "characterId": 6
   },
   {
-    "episodeId": 15,
-    "characterId": 1
-  },
-  {
-    "episodeId": 15,
-    "characterId": 8
+    "episodeId": 16,
+    "characterId": 10
   },
   {
     "episodeId": 16,
-    "characterId": 1
+    "characterId": 9
   },
   {
     "episodeId": 16,
+    "characterId": 17
+  },
+  {
+    "episodeId": 17,
+    "characterId": 1
+  },
+  {
+    "episodeId": 17,
+    "characterId": 6
+  },
+  {
+    "episodeId": 17,
+    "characterId": 10
+  },
+  {
+    "episodeId": 18,
+    "characterId": 2
+  },
+  {
+    "episodeId": 18,
+    "characterId": 3
+  },
+  {
+    "episodeId": 18,
+    "characterId": 4
+  },
+  {
+    "episodeId": 18,
+    "characterId": 5
+  },
+  {
+    "episodeId": 19,
+    "characterId": 6
+  },
+  {
+    "episodeId": 19,
+    "characterId": 10
+  },
+  {
+    "episodeId": 20,
+    "characterId": 6
+  },
+  {
+    "episodeId": 21,
+    "characterId": 1
+  },
+  {
+    "episodeId": 21,
     "characterId": 8
   },
   {
-    "episodeId": 17,
-    "characterId": 1
-  },
-  {
-    "episodeId": 17,
-    "characterId": 2
-  },
-  {
-    "episodeId": 17,
-    "characterId": 3
-  },
-  {
-    "episodeId": 17,
-    "characterId": 4
-  },
-  {
-    "episodeId": 17,
-    "characterId": 5
-  },
-  {
-    "episodeId": 18,
-    "characterId": 1
-  },
-  {
-    "episodeId": 18,
-    "characterId": 2
-  },
-  {
-    "episodeId": 18,
-    "characterId": 3
-  },
-  {
-    "episodeId": 18,
-    "characterId": 4
-  },
-  {
-    "episodeId": 19,
-    "characterId": 1
-  },
-  {
-    "episodeId": 19,
-    "characterId": 2
-  },
-  {
-    "episodeId": 19,
-    "characterId": 3
-  },
-  {
-    "episodeId": 19,
-    "characterId": 4
-  },
-  {
-    "episodeId": 19,
-    "characterId": 5
-  },
-  {
-    "episodeId": 20,
-    "characterId": 1
-  },
-  {
-    "episodeId": 20,
-    "characterId": 2
-  },
-  {
-    "episodeId": 20,
-    "characterId": 3
-  },
-  {
-    "episodeId": 20,
-    "characterId": 4
-  },
-  {
-    "episodeId": 20,
-    "characterId": 5
-  },
-  {
     "episodeId": 21,
-    "characterId": 2
-  },
-  {
-    "episodeId": 21,
-    "characterId": 3
-  },
-  {
-    "episodeId": 21,
-    "characterId": 4
-  },
-  {
-    "episodeId": 21,
-    "characterId": 5
+    "characterId": 14
   },
   {
     "episodeId": 22,
@@ -277,7 +349,11 @@
   },
   {
     "episodeId": 22,
-    "characterId": 9
+    "characterId": 8
+  },
+  {
+    "episodeId": 22,
+    "characterId": 14
   },
   {
     "episodeId": 23,
@@ -301,7 +377,11 @@
   },
   {
     "episodeId": 23,
-    "characterId": 9
+    "characterId": 16
+  },
+  {
+    "episodeId": 23,
+    "characterId": 13
   },
   {
     "episodeId": 24,
@@ -321,7 +401,11 @@
   },
   {
     "episodeId": 24,
-    "characterId": 9
+    "characterId": 5
+  },
+  {
+    "episodeId": 25,
+    "characterId": 1
   },
   {
     "episodeId": 25,
@@ -340,8 +424,8 @@
     "characterId": 5
   },
   {
-    "episodeId": 25,
-    "characterId": 7
+    "episodeId": 26,
+    "characterId": 1
   },
   {
     "episodeId": 26,
@@ -357,15 +441,39 @@
   },
   {
     "episodeId": 26,
+    "characterId": 5
+  },
+  {
+    "episodeId": 26,
+    "characterId": 13
+  },
+  {
+    "episodeId": 26,
+    "characterId": 9
+  },
+  {
+    "episodeId": 26,
+    "characterId": 18
+  },
+  {
+    "episodeId": 27,
+    "characterId": 2
+  },
+  {
+    "episodeId": 27,
+    "characterId": 3
+  },
+  {
+    "episodeId": 27,
+    "characterId": 4
+  },
+  {
+    "episodeId": 27,
     "characterId": 5
   },
   {
     "episodeId": 27,
-    "characterId": 1
-  },
-  {
-    "episodeId": 27,
-    "characterId": 9
+    "characterId": 18
   },
   {
     "episodeId": 28,
@@ -373,19 +481,19 @@
   },
   {
     "episodeId": 28,
+    "characterId": 10
+  },
+  {
+    "episodeId": 29,
+    "characterId": 1
+  },
+  {
+    "episodeId": 29,
+    "characterId": 10
+  },
+  {
+    "episodeId": 29,
     "characterId": 2
-  },
-  {
-    "episodeId": 28,
-    "characterId": 3
-  },
-  {
-    "episodeId": 28,
-    "characterId": 4
-  },
-  {
-    "episodeId": 28,
-    "characterId": 7
   },
   {
     "episodeId": 29,
@@ -396,16 +504,36 @@
     "characterId": 4
   },
   {
+    "episodeId": 29,
+    "characterId": 5
+  },
+  {
+    "episodeId": 29,
+    "characterId": 12
+  },
+  {
     "episodeId": 30,
     "characterId": 1
   },
   {
     "episodeId": 30,
-    "characterId": 8
+    "characterId": 10
   },
   {
     "episodeId": 30,
-    "characterId": 9
+    "characterId": 2
+  },
+  {
+    "episodeId": 30,
+    "characterId": 3
+  },
+  {
+    "episodeId": 30,
+    "characterId": 4
+  },
+  {
+    "episodeId": 30,
+    "characterId": 12
   },
   {
     "episodeId": 31,
@@ -420,31 +548,379 @@
     "characterId": 4
   },
   {
-    "episodeId": 32,
-    "characterId": 1
+    "episodeId": 31,
+    "characterId": 7
+  },
+  {
+    "episodeId": 31,
+    "characterId": 11
   },
   {
     "episodeId": 32,
-    "characterId": 8
+    "characterId": 2
   },
   {
     "episodeId": 32,
-    "characterId": 9
-  },
-  {
-    "episodeId": 33,
     "characterId": 3
   },
   {
-    "episodeId": 33,
+    "episodeId": 32,
     "characterId": 4
   },
   {
     "episodeId": 33,
-    "characterId": 6
+    "characterId": 1
   },
   {
     "episodeId": 33,
+    "characterId": 10
+  },
+  {
+    "episodeId": 33,
+    "characterId": 12
+  },
+  {
+    "episodeId": 33,
+    "characterId": 17
+  },
+
+  {
+    "episodeId": 34,
+    "characterId": 1
+  },
+  {
+    "episodeId": 34,
+    "characterId": 2
+  },
+  {
+    "episodeId": 34,
+    "characterId": 3
+  },
+  {
+    "episodeId": 34,
+    "characterId": 4
+  },
+  {
+    "episodeId": 34,
+    "characterId": 13
+  },
+  {
+    "episodeId": 34,
+    "characterId": 7
+  },
+  {
+    "episodeId": 35,
+    "characterId": 3
+  },
+  {
+    "episodeId": 35,
+    "characterId": 4
+  },
+  {
+    "episodeId": 36,
+    "characterId": 1
+  },
+  {
+    "episodeId": 36,
+    "characterId": 10
+  },
+  {
+    "episodeId": 36,
     "characterId": 8
+  },
+  {
+    "episodeId": 36,
+    "characterId": 12
+  },
+  {
+    "episodeId": 37,
+    "characterId": 3
+  }, {
+    "episodeId": 37,
+    "characterId": 4
+  },
+  {
+    "episodeId": 37,
+    "characterId": 2
+  },
+  {
+    "episodeId":  38 ,
+    "characterId": 1
+  },
+  {
+    "episodeId": 38,
+    "characterId": 10
+  },
+  {
+    "episodeId": 38,
+    "characterId": 8
+  },
+  {
+    "episodeId": 38,
+    "characterId": 12
+  },
+  {
+    "episodeId":  39 ,
+    "characterId": 1
+  },
+  {
+    "episodeId": 39,
+    "characterId": 10
+  },
+  {
+    "episodeId": 39,
+    "characterId": 8
+  },
+  {
+    "episodeId": 39,
+    "characterId": 6
+  },
+  {
+    "episodeId": 39,
+    "characterId": 12
+  },
+  {
+    "episodeId": 39,
+    "characterId": 11
+  },
+  {
+    "episodeId": 40,
+    "characterId": 11
+  },
+  {
+    "episodeId": 40,
+    "characterId": 6
+  },
+  {
+    "episodeId": 40,
+    "characterId": 3
+  },
+  {
+    "episodeId": 40,
+    "characterId": 4
+  },
+  {
+    "episodeId": 40,
+    "characterId": 8
+  },
+  {
+    "episodeId": 41,
+    "characterId": 1
+  },
+  {
+    "episodeId": 41,
+    "characterId": 12
+  },
+  {
+    "episodeId": 41,
+    "characterId": 3
+  },
+  {
+    "episodeId": 41,
+    "characterId": 11
+  },
+  {
+    "episodeId": 41,
+    "characterId": 16
+  },
+  {
+    "episodeId": 42,
+    "characterId": 11
+  },
+  {
+    "episodeId": 42,
+    "characterId": 3
+  },
+  {
+    "episodeId": 42,
+    "characterId": 4
+  },
+  {
+    "episodeId": 43,
+    "characterId": 4
+  },
+  {
+    "episodeId": 43,
+    "characterId": 5
+  },
+  {
+    "episodeId": 43,
+    "characterId": 2
+  },
+  {
+    "episodeId": 44,
+    "characterId": 11
+  },
+  {
+    "episodeId": 44,
+    "characterId": 1
+  },
+  {
+    "episodeId": 44,
+    "characterId": 3
+  },
+  {
+    "episodeId": 44,
+    "characterId": 12
+  },
+  {
+    "episodeId": 44,
+    "characterId": 10
+  },
+  {
+    "episodeId": 44,
+    "characterId": 17
+  },
+  {
+    "episodeId": 45,
+    "characterId": 11
+  },
+  {
+    "episodeId": 45,
+    "characterId": 1
+  },
+  {
+    "episodeId": 45,
+    "characterId": 3
+  },
+  {
+    "episodeId": 45,
+    "characterId": 12
+  },
+  {
+    "episodeId": 45,
+    "characterId": 10
+  },
+  {
+    "episodeId": 46,
+    "characterId": 11
+  },
+  {
+    "episodeId": 46,
+    "characterId": 1
+  },
+  {
+    "episodeId": 46,
+    "characterId": 3
+  },
+  {
+    "episodeId": 46,
+    "characterId": 10
+  },
+  {
+    "episodeId": 47,
+    "characterId": 1
+  },
+  {
+    "episodeId": 47,
+    "characterId": 3
+  },
+  {
+    "episodeId": 47,
+    "characterId": 10
+  },
+  {
+    "episodeId": 47,
+    "characterId": 18
+  },
+  {
+    "episodeId": 47,
+    "characterId": 12
+  },
+  {
+    "episodeId": 48,
+    "characterId": 1
+  },
+  {
+    "episodeId": 48,
+    "characterId": 3
+  },
+  {
+    "episodeId": 48,
+    "characterId": 4
+  },
+  {
+    "episodeId": 48,
+    "characterId": 10
+  },
+  {
+    "episodeId": 49,
+    "characterId": 1
+  },
+  {
+    "episodeId": 49,
+    "characterId": 10
+  },
+  {
+    "episodeId": 49,
+    "characterId": 6
+  },
+  {
+    "episodeId": 49,
+    "characterId": 12
+  },
+  {
+    "episodeId": 50,
+    "characterId": 3
+  },
+  {
+    "episodeId": 50,
+    "characterId": 4
+  },
+  {
+    "episodeId": 50,
+    "characterId": 11
+  },
+  {
+    "episodeId": 50,
+    "characterId": 18
+  },
+  {
+    "episodeId": 51,
+    "characterId": 1
+  },
+  {
+    "episodeId": 51,
+    "characterId": 10
+  },
+  {
+    "episodeId": 51,
+    "characterId": 6
+  },
+  {
+    "episodeId": 51,
+    "characterId": 12
+  },
+  {
+    "episodeId": 52,
+    "characterId": 1
+  },
+  {
+    "episodeId": 52,
+    "characterId": 10
+  },
+  {
+    "episodeId": 52,
+    "characterId": 6
+  },
+  {
+    "episodeId": 52,
+    "characterId": 12
+  },
+  {
+    "episodeId": 53,
+    "characterId": 7
+  },
+  {
+    "episodeId": 53,
+    "characterId": 5
+  },
+  {
+    "episodeId": 54,
+    "characterId": 7
+  },
+  {
+    "episodeId": 54,
+    "characterId": 5
   }
 ]

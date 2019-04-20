@@ -3,13 +3,16 @@ import CityCard from './CityCard'
 import CityTag from './CityTag'
 import {connect} from 'react-redux'
 import {fetchCities} from '../../store/citiesReducer'
+import CityMarkerAnimation from '../animations/CityMarkerAnimation'
+import {urlPrefix} from '../../../Common/Constants'
 
 class AllCities extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       currentCity: {},
-      currentPictureId: 0
+      currentPictureId: 0,
+      urlPrefix: urlPrefix.pics.cities
     }
     this.clickOnCity = this.clickOnCity.bind(this)
     this.updateCarosel = this.updateCarosel.bind(this)
@@ -31,6 +34,7 @@ class AllCities extends React.Component {
       <div id="city_view">
         <div className="city_intro red-trim elevatedCard">
           <h1>The World of the Shattered Sands </h1>
+
           {/* - Original Intro for this Page => Will determine if it Stays
             <p>
             {' '}
@@ -50,6 +54,10 @@ class AllCities extends React.Component {
             backgroundImage: `url('http://www.jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/pics/Shattered_Sands_Map.jpg')`
           }}
         >
+         {/* <div style={{position: "relative", width: '1em', top: "45%", left:"16%", right: "0em", zIndex: "100"}}>
+         <CityMarkerAnimation />
+          </div> */}
+
           {this.props.cities.map(city => (
             <CityTag
               clickOnCity={this.clickOnCity}
@@ -65,6 +73,7 @@ class AllCities extends React.Component {
           <div className="city_display">
             <CityCard
               name={this.state.currentCity.name}
+              urlPrefix={this.state.urlPrefix}
               description={this.state.currentCity.description}
               pictures={this.state.currentCity.pictures}
               updateCarosel={this.updateCarosel}

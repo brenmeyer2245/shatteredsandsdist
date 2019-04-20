@@ -4,6 +4,8 @@ import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 import {fetchCurrentEpisode} from '../store'
 import {updateAudio} from '../utils/'
+import {urlPrefix} from '../../Common/Constants'
+import history from '../history'
 
 export const EpisodeTitleLink = styled(Link)`
   text-decoration: none;
@@ -24,7 +26,7 @@ const Episode = props => {
         <div className="episode_icon">
           <img
             src={
-              'http://jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/pics/' +
+              urlPrefix.pics.episodes +
               episode.icon
             }
           />
@@ -40,15 +42,24 @@ const Episode = props => {
                 }`}
               </span>
           </div>
-         { episode.audio && episode.audio.length && (
+         { episode.audio.length ? (
                         <button onClick={() => {
-                                           let myurl = 'http://jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/audio/' + episode.audio
+                                           let myurl = urlPrefix.audio + episode.audio[0]
                                             updateAudio(myurl, episode.title)
                                             props.updateCurrentEpisode(episode.id);
                                             }
                                         }
                                 className="btn btn-block btn-primary">
-                         Play Episode </button>)}
+                         Play Episode </button>) : null}
+
+            <button onClick={() => {
+                               props.updateCurrentEpisode(episode.id)
+                               history.push(`/editEpisode/${episode.id}`)
+                              }
+                            }
+                              className="btn btn-block btn-primary">
+            Edit Episode </button>
+
         </div>
       </div>
     </div>
@@ -57,6 +68,10 @@ const Episode = props => {
 
 const mapDispatch = (dispatch) => ({
   updateCurrentEpisode: (id) => dispatch(fetchCurrentEpisode(id))
+})
+
+const mapState = (dispatch) => ({
+  isAdmin: state.user.role === 'admin'
 })
 
 

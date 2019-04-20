@@ -13,11 +13,9 @@ router.get('/', async(req, res, next) => {
 
 
 router.get('/:itemId', async(req, res, next) => {
-  console.log("Hit the Server");
   const {itemId} = req.params
   const historicalItem = await HistoricalItem.findById(itemId);
   if (!historicalItem) next();
-  console.log(historicalItem);
   res.send(historicalItem);
 })
 

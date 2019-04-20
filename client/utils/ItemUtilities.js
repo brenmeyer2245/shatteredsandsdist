@@ -1,10 +1,8 @@
-export const filterByCategory = (listOfItems, listOfCategories) => {
-  let itemsByCategory = [];
-  listOfCategories.forEach(category => {
-    let categoryItems = listOfItems.filter(item => item.category === category);
-    itemsByCategory.push(categoryItems);
+export const filterByCategory = (listOfItems, category) => {
+ return listOfItems.filter(item => {
+   if (item.category) return item.category === category
+   else return false
   });
-  return itemsByCategory
 }
 
 export const createListOfCategories = (listOfItems) => {
