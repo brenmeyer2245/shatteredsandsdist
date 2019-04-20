@@ -3,6 +3,7 @@ import axios from 'axios'
 import styled from 'styled-components'
 import StatDisplay from './StatDisplay'
 import {Route} from 'react-router-dom'
+import { urlPrefix } from '../../../Common/Constants';
 
 export default props => {
   const statNames = [
@@ -14,7 +15,7 @@ export default props => {
     'intelligence'
   ]
   const {currentCharacter} = props
-  console.log(props)
+  console.log(urlPrefix)
 
   return (
     <div className="flex singleCharCard">
@@ -22,7 +23,7 @@ export default props => {
       <HeadshotBox className="flexDown headshot">
         <CharacterHeader>{currentCharacter.name}</CharacterHeader>
         <img
-          src={`http://jbmeyer.org/wp-content/uploads/ShatteredSands/pics/${
+          src={`${urlPrefix.pics.characters}${
             currentCharacter.headshot
           }`}
         />

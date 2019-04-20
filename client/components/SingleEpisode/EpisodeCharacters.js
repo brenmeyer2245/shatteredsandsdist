@@ -1,4 +1,5 @@
 import React from 'react'
+import { urlPrefix } from '../../../Common/Constants';
 
 const EpisodeCharacters = props => {
   const {characters} = props
@@ -13,7 +14,7 @@ const EpisodeCharacters = props => {
               <img
                 className="characterImg"
                 src={
-                  'http://jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/pics/' +
+                  urlPrefix.pics.characters +
                   character.headshot
                 }
               />

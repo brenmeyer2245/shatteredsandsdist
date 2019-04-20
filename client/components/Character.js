@@ -1,6 +1,8 @@
 import React, {Fragment} from 'react'
 import StatDisplay from './SingleCharacter/StatDisplay'
 import history from '../history'
+import {urlPrefix} from '../../Common/Constants'
+
 class Character extends React.Component {
   constructor(props) {
     super(props)
@@ -75,7 +77,7 @@ class Character extends React.Component {
         <div className="characterImgContainer">
           <img
             className="characterImg"
-            src={"http://www.jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/pics/" + character.headshot
+            src={urlPrefix.pics.characters + character.headshot
             }
           />
            </div>
@@ -154,6 +156,17 @@ class Character extends React.Component {
                       }}>
                       {this.state.infoViewSelected === "episodes" ? "Show Bio" : "Show Episodes"}
             </button>
+            {this.props.isAdmin && (
+               <button className="btn-dark"
+                       style={{marginTop:".8em", marginLeft: "4%", width: "29%"}}
+                       type="button"
+                       onClick={(evt) => {
+                                          history.push(`/editCharacter/${character.id}`)
+                                }}
+               >
+                 Edit Character
+              </button>
+            )}
           </div>
         </div>
       </div>

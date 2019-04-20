@@ -15,7 +15,7 @@ const MenuBar = props => {
         <MenuButton name="Episodes" linked="/episodes" />
         <MenuButton name="The World" linked="/cities" />
         <MenuButton name="History" linked="/history" />
-        {props.isLoggedIn && (
+        {props.isAdmin && (
           <Fragment>
             <MenuButton name="Add Episode" linked="/addEpisode" />
             <MenuButton name="Add Character" linked="/addCharacter" />
@@ -27,7 +27,8 @@ const MenuBar = props => {
 }
 
 const mapState = state => ({
-  isLoggedIn: !!state.user.id
+  isLoggedIn: !!state.user.id,
+  isAdmin: state.user.role === 'admin'
 })
 
 export default connect(mapState)(MenuBar)

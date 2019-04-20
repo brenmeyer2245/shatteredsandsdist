@@ -8,7 +8,9 @@ export default class Catalogue extends Component{
     super(props);
     this.state =  {
       currentItemId: 1,
-      currentItem: {name: 'N/A', description: 'none', picture:''}
+      currentItem: {name: '', description: 'none', picture:''},
+      currentCategory: ""
+
     }
   }
   async componentDidMount(){
@@ -20,6 +22,10 @@ export default class Catalogue extends Component{
     let {data: loadedItem} = await axios.get('/api/history/' + newId);
     this.setState({currentItemId: newId, currentItem: loadedItem});
   }
+  updateCategory = (newCategory) => {
+    this.setState({currentCategory: newCategory});
+  }
+
   render(){
     console.log("Catalogue State", this.state);
       return (
@@ -28,7 +34,9 @@ export default class Catalogue extends Component{
                               />
               <CatalogueMenu listOfItems={this.props.listOfItems}
                              listOfCategories={createListOfCategories(this.props.listOfItems)}
+                             currentCategory={this.state.currentCategory}
                              updateItem={this.updateItem}
+                             updateCategory={this.updateCategory}
                              />
         </div>
       )

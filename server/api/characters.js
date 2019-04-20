@@ -3,7 +3,7 @@ const router = express.Router()
 const {Character, Stats, Episode} = require('../db/models')
 
 router.get('/', async (req, res, next) => {
-  const characters = await Character.findAll({include: [Stats, Episode]})
+  const characters = await Character.findAll({include: [Stats, Episode], order: ["id"]})
   res.json(characters)
 })
 

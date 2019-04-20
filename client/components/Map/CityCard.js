@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import {splitSummaryToPages, testSummary} from '../../utils'
+import { urlPrefix } from '../../../Common/Constants';
 
 const CityCard = props => {
   let description = props.description || testSummary
@@ -8,23 +9,24 @@ const CityCard = props => {
   <div className="city-card-container">
 
   {/* City Image Carosel   */}
-    <div className="city-card-img elevatedCard flex">
-      <img style={{border: "1px solid black", maxWidth: "90%", maxHeight: "25em"}}
-        src={
-          // 'http://jbmeyer.org/wp-content/uploads/ShatteredSands/pics/' +
-          '/pics/' + props.pictures[props.currentPictureId]
-        }
-      />
-      <div id="city-card-updateImageButtonGrid">
-            {props.pictures.map((pictures, id) => {
-              return <div key={"picGrid" + id}
-                          className="city-card-img-updateButton cityTag"
-                          onClick={() => props.updateCarosel(id)}
-                      >
+    <div style={{overflow: "scroll"}} className="city-card-img elevatedCard flex">
+      {props.pictures.map( (picture, id ) =>
+        <div className="city-card-img-container" key={"pic" + id}>
+            <img style={{border: "1px solid black", maxHeight: "25em"}}
+              src={
+                urlPrefix.pics.cities + picture
+              }
+            />
+        </div>
 
-                </div>
-            })}
-      </div>
+
+      )}
+      <div className="city-card-img-container" >
+            <div style={{maxHeight: "25em", backgroundColor:"transparent"}}
+
+            />
+       </div>
+      <div style={{width:"1em"}}/>
     </div>
 
     {/* Text Summary of City */}

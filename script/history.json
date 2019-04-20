@@ -1,20 +1,26 @@
 [
   {
     "name": "Venom Fang",
-    "description": "The flagship of Dessan the Scarred, this massive pirate ship is one of the most feared and deadly ships to ever sift through the dunes of the Shangazii",
+    "description": "The flagship of Dessan the Scarred, this massive pirate ship is one of the most feared and deadly ships to ever sift through the dunes of the Shangazi. Dessan is the leader of the Sand Serpents - Cutthroats operating seemingly at random contract to contract. Not afraid to take any job no matter the risk, as long as the price is right.",
     "picture": "Venom-Fang.jpg",
     "category": "Ship"
   },
   {
-    "name": "Black Mamba",
-    "description": "a",
-    "picture": "",
-    "category": "Weapon"
+    "name": "Black Lotus",
+    "description": "A dark and sweetly seductive drug. Black lotus is smoked through long pipes in smoking dens and leaves the consumer paralyzed in bliss. Highly addictive.",
+    "picture": "Black-Lotus-Drug.jpg",
+    "category": "Artifact"
+  },
+  {
+    "name": "Black Lotus",
+    "description": "One of the fastest ships in all the sands, which strange capabilities that match the personality of its pirate captain, Zhai'ir Al'Vidad.",
+    "picture": "Black-lotus-ship.jpg",
+    "category": "Ship"
   },
   {
     "name": "The Asp",
     "description": "Big Boss Thrane's personal sifter. During the fall of Bariik's he gifted to to the party in order for them to escape the Tuman Bay blockade. It is a fast and agile ship that moves with deadly precision upon the sands. ",
-    "picture": "",
+    "picture": "the-asp",
     "category": "Ship"
   },
   {
@@ -25,14 +31,69 @@
   },
   {
     "name": "The Morning Star",
-    "description": "a",
-    "picture": "Morning-Star.jpg",
+    "description": "Talindra Fardan's flagship which sails alongside 'The Living Crescent'. These make up her success pirate band known throughout the sands as the 'The Marauders of the Crescent and Star'",
+    "picture": "Morning_star.jpg",
     "category": "Ship"
   },
   {
     "name": "The Javelin",
     "description": "The Sultan, Hamzakiir's flagship. It is the strongest warship in the Silver Spears armada and often captained by the head of the Silver Spears, it's grand general, Ishan \"the Honey tongue\"",
-    "picture": "Javelin.jpg",
+    "picture": "Javelin-2.jpg",
     "category": "Ship"
+  },
+  {
+    "name": "The Breaking",
+    "description": "It is what some call the 3rd age. many say that the Shattered Sands were once rolling plains of beautiful forests and rushing rivers, but at the end of the first age a four way war between 2 factions of dragons, mortals and demons reached a terrible climax. The once grand and floating dragon city of Sharakhai, a haven of peace and knowledge for all, was ripped from the sky and plummeted to the ground burning up the land as it fell. It is unknown what transpired as many histories were lost. The destruction of the land ushered in the second age.",
+    "picture": "the_breaking.jpg",
+    "category": "History"
+  },
+  {
+    "name": "The Turiyaat",
+    "description": "A famous civilian sifter, the largest ever constructed that ran aground during its maiden voyage. There are many rumors surrounding its destruction -- sabotage by the Silver Spears is the most common and was used by the Slaving Lords of Tuman Bay to declare was upon the Silver Spears."
+    ,
+    "picture": "turiyaat-fromBrian.png",
+    "category": "Ship"
+  },
+  {
+    "name": "Wind ships",
+    "description": "'Sifters' these vessels come in all shapes and sizes from small skiffs up to giant battle class frigates. They are powered by the Shangazi winds as well as the sun via bottom solar panels and move much slower at night. Advantages on many vessels happen when a magic user dedicates their life to the craft, these are known as Wind-Masters or Mistresses. Wind-ships glides effortlessly above the sand at a max height of 30 feet from the sand below."
+    ,
+    "picture": "wind-ships.jpg",
+    "category": "Artifact"
+  },
+  {
+    "name": "The Sultans Highway",
+    "description": "The major wind currents that run between cities and connect the Empire of Shattered Sands. They are the most populated routes with massive amounts of trade that run to and fro various cities. They are heavily patrolled in sections by the Silver Spears. Many parts are treacherous and can be the scene of terrible battles, boarding parties and raids. If a windstorm strays you from your path, good luck finding your way back..."
+    ,
+    "picture": "sultans-highway.jpg",
+    "category": "Artifact"
+  },
+  {
+    "name": "Black Mamba",
+    "description": "An explosive powder manufactured in the Tuman Bay House of Lord Banshear. It is used in warship cannons and can devastate building and other ships on impact",
+    "picture": "black-mamba.jpg",
+    "category": "Weapon"
+  },
+  {
+    "name": "Silver Spears",
+    "description": "The royal army/armada belonging to Sharakhai. The Silver Spears have a large presence throughout much of the SS. They protect Sharakhai and its fellow Sultan controlled cities and citizens from the likes of pirates and creatures from the waste. They patrol along the Sultans Highway in a variety of ships, the most feared are their mighty war galleys."
+    ,
+    "picture": "silver-spear.jpg",
+    "category": "History"
+  },
+  {
+    "name": "Blade Maidens",
+    "description": "A secretive and elite body guard unit of the Sultan. Made up of only women, these warriors are feared throughout the SS. Proficient in every martial weapon and often magic users themselves they operate with deadly precision to ensure the Sultans safety. Their numbers are unknown as they can often be seen leading Silver Spears into battle or on missions."
+    ,
+    "picture": "blade-maiden.jpg",
+    "category": "History"
+  },
+  {
+    "name": "Adicara & Blooming Fields",
+    "description": "Adicara & Blooming Fields: Ancient and holy fields of twisting deadly vines. These fields are where the holy buds of Adicara Blooms can be found. Not much is known about the blooms other than that they are rare--coming out only under the twin moonlight and possess great power often used by the ancient peoples and desert tribes of the Shattered Sands"
+    ,
+    "picture": "aricara.jpg",
+    "category": "Artifact"
+
   }
 ]

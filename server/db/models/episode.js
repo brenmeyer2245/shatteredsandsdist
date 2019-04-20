@@ -14,7 +14,7 @@ const Episode = sqlDB.define('Episode', {
     allowNull: false
   },
   audio: {
-    type: Sequelize.STRING
+    type: Sequelize.ARRAY(Sequelize.STRING)
   },
   series: {
     type: Sequelize.STRING,

@@ -21,6 +21,7 @@ const Characters = props => {
           key={character.id}
           character={character}
           handleClick={props.handleClick}
+          isAdmin={props.isAdmin}
           coords = {{xPosition: x, yPosition: y}}
         />
       )

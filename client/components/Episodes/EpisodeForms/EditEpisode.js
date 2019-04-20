@@ -18,7 +18,7 @@ export class EditEpisodeForm extends Component {
       episodeSummary: '',
       characters: {},
       selectHidden: true,
-      CityId: null
+      CityId: 1
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)

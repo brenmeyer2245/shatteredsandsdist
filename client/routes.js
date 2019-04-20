@@ -16,7 +16,7 @@ import {
   EditEpisode
 } from './components'
 import History from './components/History/History'
-import CityMarker from './components/Animations/CityMarker'
+import CityMarkerAnimation from './components/animations/CityMarkerAnimation'
 
 import {me, fetchCharacters, fetchEpisodes} from './store'
 
@@ -40,7 +40,7 @@ class Routes extends Component {
         <Route path="/episodes/:episodeId" component={SingleEpisode} />
         <Route path="/history" component={History} />
         <Route path="/cities" component={AllCities} />
-        <Route path="/lottie" component={CityMarker} />
+        <Route path="/lottie" component={CityMarkerAnimation} />
         {isLoggedIn &&
         (<Switch>
             <Route path="/addCharacter" component={CreateCharacter} />

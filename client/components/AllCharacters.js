@@ -7,23 +7,16 @@ import {fetchCurrentCharacter} from '../store/currentCharacterReducer'
 const AllCharacters = props => {
   return (
     <div>
-      {/* {currentCharacter.Stat ? (
-          <SingleCharacterView
-            currentStats={currentCharacter.Stat}
-            currentCharacter={currentCharacter}
-            characterId={currentCharacter.characterId}
-          />
-        ) : (
-          <p> No Characters in the Database</p>
-        )}
-        <SingleCharacterNavBar characterId={currentCharacter.characterId} /> */}
-      <Characters characters={props.characters} />;
+      <Characters characters={props.characters}
+                  isAdmin={props.isAdmin}
+                  />;
     </div>
   )
 }
 
 const mapStateToProps = state => ({
-  characters: state.characters
+  characters: state.characters,
+  isAdmin: state.user.role === 'admin'
   // currentCharacter: state.currentCharacter,
 })
 

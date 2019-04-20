@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Lottie from 'react-lottie';
 import * as animationData from '../../../script/animations/cityMarker.json';
 
-export default class LottieControl extends Component{
+export default class CityMarkerAnimation extends Component{
   constructor(props){
     super(props)
     this.state = {
@@ -18,7 +18,7 @@ export default class LottieControl extends Component{
     };
 
     const defaultOptions = {
-      loop: false,
+      loop: true,
       autoplay: true,
       animationData: animationData,
       rendererSettings: {
@@ -28,13 +28,13 @@ export default class LottieControl extends Component{
 
     return <div>
       <Lottie options={defaultOptions}
-              height={400}
-              width={400}
+              height={80}
+              width={80}
               isStopped={this.state.isStopped}
               isPaused={this.state.isPaused}/>
-      <button style={buttonStyle} onClick={() => this.setState({isStopped: true})}>stop</button>
+      {/* <button style={buttonStyle} onClick={() => this.setState({isStopped: true})}>stop</button>
       <button style={buttonStyle} onClick={() => this.setState({isStopped: false})}>play</button>
-      <button style={buttonStyle} onClick={() => this.setState({isPaused: !this.state.isPaused})}>pause</button>
+      <button style={buttonStyle} onClick={() => this.setState({isPaused: !this.state.isPaused})}>pause</button> */}
     </div>
   }
 }
