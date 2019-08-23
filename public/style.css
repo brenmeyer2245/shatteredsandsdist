@@ -7436,10 +7436,19 @@ background-size: contain;
 }
 
 
+.history-catalogue-item-container{
+  height: 47em;
+  overflow: scroll;
+  width: 49em;
+  position: relative;
+  top: -4em;
+  z-index: 1;
+}
+
 .history-catalogue-item{
-  background-image: url(/pics/background-white-paper-burnt.png);
-    width: 99%;
-    height: 65vh;
+   background-image: url(/pics/background-white-paper-burnt.png);
+
+    height: 35em;
     background-size: cover;
 }
 
@@ -7457,8 +7466,20 @@ background-size: contain;
   text-decoration: none;
   list-style-type: none;
   cursor: pointer;
-  min-height: 10em;
-  margin-left: 15%;
+  width: 105%;
+  position: relative;
+  top: -6em;
+  z-index: 2;
+}
+
+.history-catalogue-menu .flex{
+  margin-left: 1rem;
+  margin-right: .25rem;
+}
+
+.history-catalogue-menu-items h6{
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .history-catalogue-menu-list{
@@ -7634,3 +7655,59 @@ background-size: contain;
     right: 38em;
   }
 }
+
+
+@media(max-width: 320px){
+  .nav-justified.bg-primary {
+    height: 7vh;
+  }
+  .nav-justified.bg-primary h1 {
+    font-size: 1rem;
+  }
+
+  .nav-justified.bg-primary .nav-item{
+    display: none;
+  }
+
+  .pageLeft{
+    z-index: 20;
+    left: -700px;
+  }
+  #menuBar{
+    left: -700px;
+
+  }
+  .pageRight{
+    left: 0%;
+
+  }
+
+  /**History*/
+  .history-catalogue-item-container{
+    height: 75vh;
+  }
+
+  .history-catalogue-item {
+      height: 41vh;
+      font-size: .2rem;
+  }
+
+  .history-catalogue-item img{
+    height: 40%;
+    max-width: 38%;
+  }
+
+  .history-catalogue-item-description{
+    margin-top: 3%;
+  }
+  .history-catalogue-menu{
+    width: 100vw;
+  }
+  .history-catalogue-menu .flex{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .history-catalogue-menu div h4{
+    font-size: 0.85rem;
+  }

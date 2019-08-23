@@ -608,7 +608,7 @@
     "title": "The Great Gamble",
     "icon": "The-Great-Gamble.jpg",
     "cast":
-      "Vass: Nathan Spring, Kal: Brendan Meyer, Besh: Lane Florest",
+      "Vass: Nathan Spring, Kal: Brendan Meyer, Besh: Lane Flores",
     "audio": ["the-great-gamble.m4a"],
     "series": "VOS",
     "bookTitle": "Afterglow",
@@ -649,5 +649,17 @@
     "chapterNumber": 14,
     "CityId": 1,
     "audio": ["her-sinking-sun.m4a"]
+  },
+  {
+    "title": "The Weight of Memory",
+    "icon": "weight-of-memory.jpg",
+    "cast":
+    "D'Harr: Trent Stork, Talindra: Lane Flores, Kal: Brendan Meyer, Vass: Nathan Spring, Besh: Lane Flores, Jhanos: Andrew Saenz, Clock: Ben Lapaen, Aragwyn: Iris Kohler, Macide: Soren Ersbak ",
+    "series": "BWS",
+    "bookTitle": "Blood Of My Blood",
+    "bookNumber": 3,
+    "chapterNumber": 14,
+    "CityId": 1,
+    "audio": ["weight-of-memory.m4a","weight-of-memory1.m4a","weight-of-memory2.m4a","weight-of-memory3.m4a","weight-of-memory4.m4a"]
   }
 ]

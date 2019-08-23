@@ -3,7 +3,6 @@ import MenuButton from './MenuButton'
 import {connect} from 'react-redux'
 
 const MenuBar = props => {
-  console.log(props)
   return (
     <div id="menuBar" className="elevatedCard">
       <div className="menuBlock flexDown">

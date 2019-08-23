@@ -6,7 +6,7 @@ import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div>
-    <nav className="bg-primary nav-justified flex">
+    <nav className="bg-primary nav-justified flex position-relative" style={{zIndex: "2"}}>
       <h1 className="nav-text flex-grow-1 px-5 text-white">
         {' '}
         The Shattered Sands Podcast{' '}

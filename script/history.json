@@ -51,7 +51,7 @@
     "name": "The Turiyaat",
     "description": "A famous civilian sifter, the largest ever constructed that ran aground during its maiden voyage. There are many rumors surrounding its destruction -- sabotage by the Silver Spears is the most common and was used by the Slaving Lords of Tuman Bay to declare was upon the Silver Spears."
     ,
-    "picture": "turiyaat-fromBrian.png",
+    "picture": "turiyaat-fromBrian.jpg",
     "category": "Ship"
   },
   {
@@ -95,5 +95,33 @@
     "picture": "aricara.jpg",
     "category": "Artifact"
 
+  },
+  {
+    "name": "Rhia",
+    "description": ""
+    ,
+    "picture": "blade-maiden.jpg",
+    "category": "Gods"
+  },
+  {
+    "name": "Alu",
+    "description": ""
+    ,
+    "picture": "blade-maiden.jpg",
+    "category": "Gods"
+  },
+  {
+    "name": "Teluthan",
+    "description": ""
+    ,
+    "picture": "blade-maiden.jpg",
+    "category": "Gods"
+  },
+  {
+    "name": "Mesut",
+    "description": ""
+    ,
+    "picture": "blade-maiden.jpg",
+    "category": "Gods"
   }
 ]
