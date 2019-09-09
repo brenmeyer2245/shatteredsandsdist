@@ -98,30 +98,64 @@
   },
   {
     "name": "Rhia",
-    "description": ""
+    "description": "One of the old gods. Goddess of the Golden Moon. Of Knowledge, Justice & Wealth"
     ,
-    "picture": "blade-maiden.jpg",
+    "picture": "rhai-img.jpg",
     "category": "Gods"
   },
   {
     "name": "Alu",
-    "description": ""
-    ,
-    "picture": "blade-maiden.jpg",
+    "description": "One of the old gods. The world was created by Alu (Male) and his Twin Sisters Rhia and Tuluthan. Alu is the God of the Sun. Of Strength, Sand Storms & Vengeance",
+    "picture": "alu-img.jpg",
     "category": "Gods"
   },
   {
-    "name": "Teluthan",
-    "description": ""
+    "name": "Tuluthan",
+    "description": "One of the Old Gods. Goddess of the Silver Moon. Of Change, Trickery & Luck"
     ,
-    "picture": "blade-maiden.jpg",
+    "picture": "tuluthan-img.jpg",
     "category": "Gods"
   },
   {
     "name": "Mesut",
-    "description": ""
+    "description": "One of the new Desert Gods. God of the Shifting Sands, Secrets & Creatures"
     ,
-    "picture": "blade-maiden.jpg",
+    "picture": "mesut-img.jpg",
+    "category": "Gods"
+  },
+  {
+    "name": "Thaash",
+    "description": "God of Battle, Conquest & Honor"
+    ,
+    "picture": "thaash-img.jpg",
+    "category": "Gods"
+  },
+  {
+    "name": "Goezhen",
+    "description": "God of Blood, Smiles, Resurrection & Lies"
+    ,
+    "picture": "goezhen-img.jpg",
+    "category": "Gods"
+  },
+  {
+    "name": "Talisi",
+    "description": "Goddess of Birth & Womanhood"
+    ,
+    "picture": "talisi-img.jpg",
+    "category": "Gods"
+  },
+  {
+    "name": "Nalamae",
+    "description": "Goddess of Rejuvenation, Compassion, Spirit & Rebirth"
+    ,
+    "picture": "nalamae-img.jpg",
+    "category": "Gods"
+  },
+  {
+    "name": "Besmut",
+    "description": "Goddess of the Winds, Navigation and Freedom"
+    ,
+    "picture": "besmut-img.jpg",
     "category": "Gods"
   }
 ]

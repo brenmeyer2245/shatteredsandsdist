@@ -660,6 +660,17 @@
     "bookNumber": 3,
     "chapterNumber": 14,
     "CityId": 1,
-    "audio": ["weight-of-memory.m4a","weight-of-memory1.m4a","weight-of-memory2.m4a","weight-of-memory3.m4a","weight-of-memory4.m4a"]
+    "audio": ["weight-of-memory-pt1.m4a","weight-of-memory-pt2.m4a","weight-of-memory-pt3.m4a","weight-of-memory-pt4.m4a","weight-of-memory-pt5.m4a"]
+  },
+  {
+    "title": "Encroaching Shadows",
+    "icon": "In_Harms_Way.jpg ",
+    "cast":
+      "Vass: Nathan Spring, Kal: Brendan Meyer, Besh: Lane Flores",
+    "audio": [""],
+    "series": "BWS",
+    "bookTitle": "The Last Beginning",
+    "bookNumber": 4,
+    "chapterNumber": 1
   }
 ]

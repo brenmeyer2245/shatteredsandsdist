@@ -53,7 +53,6 @@ export class CreateEpisodeForm extends Component {
       episodeCharacters: Object.keys(this.state.characters),
       CityId: parseInt(this.state.CityId)
     }
-    console.log(newEpisode)
     this.props.createEpisode(newEpisode)
     history.push('/episodes')
   }

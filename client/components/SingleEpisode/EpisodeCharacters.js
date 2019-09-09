@@ -3,7 +3,6 @@ import { urlPrefix } from '../../../Common/Constants';
 
 const EpisodeCharacters = props => {
   const {characters} = props
-  console.log(props)
   return (
     <div className="mt-4 flex-lg-wrap flex">
       {characters.map(character => (

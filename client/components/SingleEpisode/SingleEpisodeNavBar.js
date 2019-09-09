@@ -6,7 +6,6 @@ import { urlPrefix } from '../../../Common/Constants';
 
 
 export default props => {
-  console.log('here', urlPrefix)
   return (
     <EpisodeNavWrapper>
       <EpisodeNavLink to={`/episodes/${props.episodeId}/summary`}>

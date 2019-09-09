@@ -42,8 +42,6 @@ class Character extends React.Component {
 
   updateInfoView = (evt, viewType) => {
     evt.stopPropagation();
-    console.log("Before", this.state.infoViewSelected);
-    console.log("Update", viewType);
     this.setState({infoViewSelected: viewType});
   }
 
@@ -63,7 +61,6 @@ class Character extends React.Component {
       'constitution',
       'intelligence'
     ]
-    console.log('View', this.state.infoViewSelected);
     return (
       <div
         ref={this.characterCard}

@@ -25,7 +25,6 @@ export class EditCharacterForm extends Component {
 
   componentDidMount(){
    // let character = getCharacterById()
-   console.log(this.props.currentCharacter);
    if (this.props.currentCharacter){
      const {name, class: classType, bio, headshot: headshotUrl, actor} = this.props.currentCharacter
      const {dexterity: DEX, constitution: CON, strength: STR,

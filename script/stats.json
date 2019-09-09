@@ -172,5 +172,59 @@
     "strength": 12,
     "charisma": 20,
     "CharacterId": 18
+  },
+  {
+    "dexterity": 14,
+    "constitution": 12,
+    "wisdom": 12,
+    "intelligence": 16,
+    "strength": 12,
+    "charisma": 20,
+    "CharacterId": 19
+  },
+  {
+    "dexterity": 14,
+    "constitution": 12,
+    "wisdom": 12,
+    "intelligence": 16,
+    "strength": 12,
+    "charisma": 20,
+    "CharacterId": 20
+  },
+  {
+    "dexterity": 14,
+    "constitution": 12,
+    "wisdom": 12,
+    "intelligence": 16,
+    "strength": 12,
+    "charisma": 20,
+    "CharacterId": 21
+  },
+  {
+    "dexterity": 14,
+    "constitution": 12,
+    "wisdom": 12,
+    "intelligence": 16,
+    "strength": 12,
+    "charisma": 20,
+    "CharacterId": 22
+  },
+  {
+    "dexterity": 14,
+    "constitution": 12,
+    "wisdom": 12,
+    "intelligence": 16,
+    "strength": 12,
+    "charisma": 20,
+    "CharacterId": 23
+  },
+  {
+    "dexterity": 14,
+    "constitution": 12,
+    "wisdom": 12,
+    "intelligence": 16,
+    "strength": 12,
+    "charisma": 20,
+    "CharacterId": 24
   }
 ]

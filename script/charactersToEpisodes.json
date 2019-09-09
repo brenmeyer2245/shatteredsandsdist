@@ -922,5 +922,45 @@
   {
     "episodeId": 54,
     "characterId": 5
+  },
+  {
+    "episodeId": 55,
+    "characterId": 1
+  },
+  {
+    "episodeId": 55,
+    "characterId": 2
+  },
+  {
+    "episodeId": 55,
+    "characterId": 3
+  },
+  {
+    "episodeId": 55,
+    "characterId": 4
+  },
+  {
+    "episodeId": 55,
+    "characterId": 5
+  },
+  {
+    "episodeId": 55,
+    "characterId": 6
+  },
+  {
+    "episodeId": 55,
+    "characterId": 7
+  },
+  {
+    "episodeId": 55,
+    "characterId":9
+  },
+  {
+    "episodeId": 55,
+    "characterId": 10
+  },
+  {
+    "episodeId": 55,
+    "characterId": 11
   }
 ]

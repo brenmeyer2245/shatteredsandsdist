@@ -63,7 +63,7 @@
   },
   {
     "name": "Julian E'Moore",
-    "class": "Fighter",
+    "class": "NPC",
     "bio":
       "A Silver Spear Captain who has won the trust and favor of Ishaan. He is making quite an impression on the highest members of the Silver Spears inner circle.",
     "headshot": "Julian-E'Moore-headshot.jpg",
@@ -88,7 +88,7 @@
   },
   {
     "name": "Turok",
-    "class": "WarCleric",
+    "class": "NPC",
     "bio":
       "Kals friend",
     "headshot": "Turak.png",
@@ -96,7 +96,7 @@
   },
   {
     "name": "Dessan",
-    "class": "Pirate Lord",
+    "class": "NPC",
     "bio":
       "Pirate Lord. Hunts the thief, Clock the Wanted. Head of Sand Serpens",
     "headshot": "Dessan.jpg",
@@ -104,7 +104,7 @@
   },
   {
     "name": "Artameen",
-    "class": "Scholar",
+    "class": "NPC",
     "bio":
       "Mentor of Vassar, a Scholar of the Collegia in Sharakhai, driven out of favor by his wild obsession with the Yuan-Ti",
     "headshot": "master-artameen.jpg",
@@ -112,7 +112,7 @@
   },
   {
     "name": "Kraven",
-    "class": "Toady",
+    "class": "NPC",
     "bio":
       "An Ivory League Penny Pincher, sent to sneer at contractors and those that might pull a fast one.",
     "headshot": "Kraven_headshot.png",
@@ -120,7 +120,7 @@
   },
   {
     "name": "D'Neal",
-    "class": "Fighter",
+    "class": "NPC",
     "bio":
       "His sister was murdered at the hands of the Blood Mage, Macide. He swore revenge and followed it all the way to the deck of the Turiyat.",
     "headshot": "D'Neil-headshot.jpg",
@@ -128,17 +128,65 @@
   },
   {
     "name": "Anya Varesh",
-    "class": "Blood Mage",
+    "class": "NPC",
     "bio":
       "A powerful blood mage and wife of Lord Raffi of Tuman Bay. She is stunningly beautiful and would appear to be a trophy wife of a powerful lord. However, her eyes and blood-crimson lips would suggest that she has much more influence and power than one would expect",
     "headshot": "Ana-Varesh.jpg",
     "actor": "Brian Scannel"
   },{
     "name": "Zhai'ir Al-Vidad",
-    "class": "Pirate",
+    "class": "NPC",
     "bio":
       "Captain of the Black Lotus. Shows up at the most convenient times...for him",
     "headshot": "ruby-Eye.jpg",
+    "actor": "Brian Scannel"
+  },
+  {
+    "name": "Zhai'id Alaz",
+    "class": "NPC",
+    "bio":
+      "One proud king of the world, Zhai'id Alaz, the king of spears was betrayed by an unknown vazir and impaled with a spear before being able to utter his third and final wish. Since the breaking, he has waivered between conciousness and the black abyssmal existance as an Asyram. He looks to right the events of two thousand years past.",
+    "headshot": "zhai'id-alaz-headshot.jpg",
+    "actor": "Brian Scannel"
+  },
+  {
+    "name": "Hamzakir, the Sultan",
+    "class": "NPC",
+    "bio":
+      "Prince of the Morning, the ruler of Sharakhai. As powerful as he is mysterious.",
+    "headshot": "hamzakir-headshot.jpg",
+    "actor": "Brian Scannel"
+  },
+  {
+    "name": "Ishaan",
+    "class": "NPC",
+    "bio":
+      "The Honey Tongue, as he's known in political circles, has a repution for both persuasive argument and military ruthlessness. It was with his leadership that broke the Orc rebellions and many say it is his direct ancestors that defeated the dark armies in the time of the breaking. He is the right hand man of the Sultan, the keeper of the Black Tower and the highest ranking officer in the silver spears. He is a very powerful man",
+    "headshot": "ishaan-headshot.jpg",
+    "actor": "Brian Scannel"
+  },
+  {
+    "name": "Juvaan",
+    "class": "NPC",
+    "bio":
+      "A mysterious bloodmage. A man who is seemingly everywhere, from a salt mine in Tuman Bay to the underground grottos of the Moonless Host",
+    "headshot": "Juvaan-headshot.jpg",
+    "actor": "Brian Scannel"
+  },
+  {
+    "name": "Jazeel",
+    "class": "NPC",
+    "bio":
+      "A Scoundrel tombraider that has a fierce rivalry with Vassar",
+    "headshot": "jazeel-headshot.jpg",
+    "actor": "Brian Scannel"
+  },
+  {
+    "name": "Hektor",
+    "class": "NPC",
+    "bio":
+      "A powerful Nasimi diplomat that has a great amount of money and influence",
+    "headshot": "Hektor-headshot.jpg",
     "actor": "Brian Scannel"
   }
 

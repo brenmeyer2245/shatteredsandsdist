@@ -11,7 +11,6 @@ import { urlPrefix } from '../../../Common/Constants';
 //Styled Components
 const CharacterCard = props => {
   props.characters.map(character => {
-    console.log(character)
     // return <Character character={character} />;
     return <h1 key={character.name}>{character.name} </h1>
   })
@@ -36,7 +35,6 @@ class SingleEpisode extends React.Component {
       title,
       audio,
     } = this.props.currentEpisode
-    console.log(audio);
 
     const characters = this.props.currentEpisode.Characters
     const episodeId = this.props.currentEpisode.id

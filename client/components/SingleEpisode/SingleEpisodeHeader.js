@@ -5,7 +5,6 @@ import SingleEpisodeNavBar from './SingleEpisodeNavBar'
 import { urlPrefix } from '../../../Common/Constants';
 
 const EpisodeHeader = props => {
-  console.log(props.episode.icon)
   const {episode} = props
   return (
     <div>

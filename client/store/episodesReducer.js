@@ -39,7 +39,6 @@ export const postEpisode = episode => {
 }
 
 export const putEpisode = (episode, episodeId) => {
-  console.log('Recducer', episode)
   return async function(dispatch) {
     const {data: updatedEpisode} = await axios.put(
       '/api/episodes/' + episodeId,

@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 
 export default props => {
-  console.log('NavProps:', props)
   return (
     <EpisodeNavWrapper>
       <EpisodeNavLink to={`/characters/${props.characterId}/stats`}>

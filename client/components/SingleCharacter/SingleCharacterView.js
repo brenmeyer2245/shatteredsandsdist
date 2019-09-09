@@ -15,7 +15,6 @@ export default props => {
     'intelligence'
   ]
   const {currentCharacter} = props
-  console.log(urlPrefix)
 
   return (
     <div className="flex singleCharCard">
