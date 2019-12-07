@@ -6856,8 +6856,7 @@ form div {
 #content_frame{
   display: flex;
   justify-content:center;
-  max-width: 60em;
-  top: 10em;
+  height: inherit;
 }
 /*Header and Filter Bar */
 .header{
@@ -6897,13 +6896,6 @@ form div {
   top: 25%;
   left: 5%;
   font-size: 30px;
-}
-
-#menuBar{
-  background-color: rgba(113,2,2);
-  position: fixed;
-  left: 5%;
-  padding: .5em;
 }
 
 #filter{
@@ -6954,18 +6946,19 @@ form div {
 
 
 /*Content*/
-
+#app {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
 
 .pageLeft{
-  position: absolute;
-  left: 5%;
-  width: 12em;
-  margin-right: 4em;
+  margin-left: 5%;
+  width: 20%;
 }
 .pageRight{
-  position: absolute;
-  left: 25em;
- width: 47em;
+  width: 100%;
+  padding-left: 10%;
 }
 
 .menuItems{
@@ -6978,8 +6971,6 @@ form div {
 /* Pictures */
 #party_main_card{
   flex-wrap: wrap;
-  min-height: 60em;
-  width:47em;
   display:flex;
 }
 
@@ -6992,17 +6983,17 @@ form div {
   background-image: url(/pics/brown-card-texture.jpg);
   box-shadow: 0.7em 0.7em rgba(12,1,1,.2);
   overflow: hidden;
-  position: absolute;
+  position: inline;
   border-radius: 1em;
-  transition: height 1s, width 1s, transform 1s;
+  transition: all 1s;
 }
 
 .characterCard.clicked{
   z-index: 5;
-  /* height: 30em; */
-  width: 34em;
-  display: absolute;
-
+  width: 40%;
+  position: fixed;
+  top: calc(50vh - 15em);
+  left: calc(50vw - 13.5em);
 }
 
 
@@ -7046,15 +7037,10 @@ form div {
   transform: translate(-400px,100px);
 }
 
-.characterCard-thumbnail{
-  position: absolute;
-  top: 0;
-}
 
 .characterCard-details{
-  position: absolute;
-  top: 0;
-  left: 14em;
+  margin-bottom: 40px;
+  margin-left: 15px;
 }
 
 .characterImgContainer{
@@ -7098,7 +7084,6 @@ form div {
 .episode_card{
   background-image: url('pics/brown-card-texture.jpg');
   border-top: 1em solid rgb(113, 2,2);
-  max-width: 41em;
   background-color: white;
   margin: 1em;
 }
@@ -7173,38 +7158,8 @@ form div {
   margin-left: 5em;
   margin-top: 7em;
   margin-bottom: 5em;
-
 }
 
-
-/*Footer Audio player*/
-#footer-player{
-  background-color:skyblue;
-
-
-  position:fixed;
-  bottom:0;
-  margin-left: calc(.5em);
-  display:none;
-
-  height:6em;
-  width: 35em;
-  align-items: flex-end;
-}
-#footer-player img{
-  max-height: 6em;
-  max-width: 10em;
-}
-#footer-audio-container{
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  padding: 1em;
-  width: 99%;
-}
-#footer-audio-container audio{
-  width: 100%;
-}
 
 .statRow{
   margin-top: .5em;
@@ -7282,7 +7237,7 @@ form div {
 
 .city-card-contents{
   height: 45em;
-  background-image: url('/pics//parchment-bg-burnt.png');
+  background-image: url('/pics/parchment-bg-burnt.png');
   background-size: cover;
   padding: 8em;
 }
@@ -7291,7 +7246,7 @@ form div {
   height: 70em;
   width: 53em;
   background-position-x: -40px;
-  background-image: url(/pics//parchment-bg-burnt.png);
+  background-image: url('/pics/parchment-bg-burnt.png');
   background-size: cover;
   /* padding: 8em; */
   padding: 9em;
@@ -7300,10 +7255,6 @@ form div {
   padding-bottom: 0em;
   margin-bottom: -3em;
 }
-
-
-
-
 
 
 
@@ -7322,10 +7273,10 @@ form div {
   margin: 1em;
 }
 .worldMap {
-  height: 34em;
-  z-index: 4;
+  height: inherit;
   border: .1em solid rgb(150, 133, 82);
-  background-size: 100%;
+  background-size: cover;
+  position: relative;
 }
 
 .cityTag{
@@ -7339,7 +7290,8 @@ form div {
 }
 
 #city_view {
-  max-width: 53.2em;
+  width: 90%;
+  height: 90%;
   text-align: center;
 }
 
@@ -7351,59 +7303,59 @@ form div {
 
 
 #Naseem{
-  position: relative;
+  position: absolute;
   top: 12rem;
   left: 8rem;
 }
 
 #Sharakhai{
-  position: relative;
+  position: absolute;
   top: 10rem;
   left: 22rem;
 }
 
 #Tear-an{
-  position: relative;
+  position: absolute;
   top: -12rem;
   left: 19em;
 }
 #Jaffa{
-  position: relative;
+  position: absolute;
   top: 8rem;
   left: 40rem;
 }
 
 #Tuman-Bay{
-  position: relative;
+  position: absolute;
   top: 13rem;
   left: 35rem;
 }
 
 #Bariiks-Bowl{
-  position: relative;
+  position: absolute;
   top: 25rem;
   left: 14rem;
 }
 
 #Dumais-Well{
-  position: relative;
+  position: absolute;
     top: 7rem;
     left: 31em;
 }
 
 #Uk-Varr{
-  position: relative;
+  position: absolute;
   top: 24rem;
   left: 1rem;
 }
 #Takoom{
-  position: relative;
+  position: absolute;
     top: -13rem;
     left: 1em;
 }
 
 #Karak-Kazrim{
-  position: relative;
+  position: absolute;
   top: -10rem;
   left: 41em;
 }
@@ -7429,12 +7381,18 @@ background-size: contain;
 }
 
 #SideBarAudioPlayer {
-  position: fixed;
-  top: 30em;
-  background-color: rgba(113,2,2);
-  color: white;
+  width: 100%;
+  display: flex;
 }
 
+#SideBarAudioPlayer img{
+  height: 3rem;
+  width: 3rem;
+}
+
+#audioPlayer{
+  width: 100%;
+}
 
 .history-catalogue-item-container{
   height: 47em;
@@ -7446,7 +7404,7 @@ background-size: contain;
 }
 
 .history-catalogue-item{
-   background-image: url(/pics/background-white-paper-burnt.png);
+   background-image: url('/pics/background-white-paper-burnt.png');
 
     height: 35em;
     background-size: cover;
@@ -7544,99 +7502,6 @@ background-size: contain;
 
 
 
-@media screen and (max-width: 1151px){
-  .menuItems{
-    width: 10em;
-  }
-  #audioPlayer{
-    width: 13em;
-  }
-  .pageRight{
-    left: 22em;
-  }
-}
-
-@media screen and (max-width: 1100px){
-  .pageRight{
-    left: 19em;
-  }
-}
-
-@media screen and (max-width: 1100px){
-  .pageRight{
-   width: 44em;
-  }
-}
-
-@media screen and (max-width: 995px){
-  .pageRight{
-   width: 40em;
-  }
-}
-
-@media screen and (max-width: 940px){
-  .pageRight{
-   width: 38em;
-  }
-}
-
-@media screen and (max-width: 900px){
-  .pageRight{
-   width: 35em;
-  }
-}
-
-@media screen and (max-width: 855px ){
-  .pageRight {
-    width: 32em;
-  }
-}
-
-@media screen and (max-width: 808px ){
-  .pageRight {
-    width: 29em;
-  }
-}
-
-
-
-@media screen and (max-width: 750px ){
-  .pageRight {
-   width: 25em;
-  }
-}
-
-@media screen and (max-width: 700px ){
-  .pageRight {
-   width: 22em;
-  }
-}
-
-@media screen and (max-width: 665 ){
-  .pageRight {
-   width: 20em;
-  }
-}
-
-@media screen and (max-width: 620px ){
-  .pageRight {
-   width: 18em;
-  }
-}
-
-@media screen and (max-width: 590px ){
-  .pageRight {
-   width: 15em;
-  }
-}
-
-@media screen and (max-width: 400px ){
-  .pageRight {
-   left: 1em;
-  }
-}
-
-
 @media(max-width: 1038px){
   .headerText{
     font-size: 30px;
@@ -7669,18 +7534,6 @@ background-size: contain;
     display: none;
   }
 
-  .pageLeft{
-    z-index: 20;
-    left: -700px;
-  }
-  #menuBar{
-    left: -700px;
-
-  }
-  .pageRight{
-    left: 0%;
-
-  }
 
   /**History*/
   .history-catalogue-item-container{
@@ -7711,3 +7564,94 @@ background-size: contain;
   .history-catalogue-menu div h4{
     font-size: 0.85rem;
   }
+}
+
+#hamburger-menu {
+  visibility: hidden;
+  height: 100%;
+  width:10%;
+}
+
+#hamburger-menu img{
+  height: 4rem;
+  width: 4rem;
+}
+
+#menu-bar.clicked {
+  visibility: visible;
+  display: flex;
+  left: 5%;
+  top: 10%;
+}
+
+@media screen and (max-width: 74.625rem){
+  #hamburger-menu {
+    visibility: visible;
+    width: 25%;
+    text-align: right;
+  }
+
+  #menu-bar {
+    visibility: hidden;
+    -webkit-transition: top 2s;
+    transition: left 2s;
+    position: fixed;
+    flex-direction: column;
+    z-index: 10;
+    top: 10%;
+    left: -25%;
+    padding: 2%;
+  }
+}
+
+@media all and (max-width: 47.875rem){
+  .episode_text div {
+    flex-direction: column;
+    text-align: center;
+  }
+  .characterCard{
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 29.6875rem){
+  .episode_content{
+    flex-direction: column;
+    align-items: center;
+  }
+  .episode_text{
+    width: 95%;
+  }
+  .episode_icon img {
+    margin: unset;
+  }
+  .audioPlayer-icon {
+    display: none;
+  }
+
+
+
+}
+
+
+@media screen and (max-width:37.5rem){
+  .pageRight{
+    padding-left: unset;
+  }
+  #menuBar {
+    left: -2%;
+
+  }
+  #menu-bar.clicked {
+    visibility: visible;
+    display: flex;
+    left: 0%;
+    top: 10%;
+    width: 100%;
+    transition: unset;
+  }
+  .nav-text, #audioPlayer-title{
+    font-size: 1rem;
+  }
+
+}

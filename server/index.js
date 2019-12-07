@@ -88,7 +88,6 @@ const createApp = () => {
 
   // sends index.html
   app.get('*', (req, res) => {
-    console.log("Into Index")
     res.sendFile(path.join(__dirname, '..', 'public/index.html'))
   })
 

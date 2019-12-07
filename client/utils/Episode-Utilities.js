@@ -11,7 +11,6 @@
 export const updateAudio = (url, title) => {
   let audio = document.getElementById('audioPlayer');
   let source = document.getElementById('audioPlayer-source-mp3');
-  document.getElementById('audioPlayer-title').innerHTML = title;
   source.src = url;
   audio.load();
   audio.play();
@@ -19,7 +18,6 @@ export const updateAudio = (url, title) => {
 
 
 export const splitSummaryToPages = function(summary, charactersPerPage){
-  // console.log(summary, pageBreak)
    let sectionArray = [];
    let currentId = 0;
    while (currentId < summary.length){

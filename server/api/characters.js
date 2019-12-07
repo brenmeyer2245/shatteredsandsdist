@@ -68,7 +68,6 @@ router.put('/:characterId', async (req, res, next) => {
 router.delete('/:characterId', (req, res, next) => {
   Character.findById(req.params.characterId)
     .then(foundCharacter => {
-      console.log('Character found')
       return foundCharacter.destroy()
     })
     .then(() => {

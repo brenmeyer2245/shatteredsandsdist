@@ -1,13 +1,13 @@
 import React, {Fragment} from 'react'
 import MenuButton from './MenuButton'
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
+import {logout} from '../../store/index';
 
 const MenuBar = props => {
   return (
-    <div id="menuBar" className="elevatedCard">
-      <div className="menuBlock flexDown">
+      <div className="flex" id="menu-bar">
         <MenuButton name="Characters" linked="/characters">
-          <div id="Thing" />
+          <div />
           Characters
         </MenuButton>
         <MenuButton name="Home" />
@@ -20,14 +20,33 @@ const MenuBar = props => {
             <MenuButton name="Add Character" linked="/addCharacter" />
           </Fragment>
         )}
+
+        {props.isLoggedIn ? (
+          <MenuButton className="nav-item text-white" onClick={() => {props.logoutUser()}} name="Logout">
+
+         </MenuButton>
+          ) : (
+          <Fragment>
+            {/* The navbar will show these links before you log in */}
+            <MenuButton className="text-white" name="Login" linked="/login">
+              Login
+            </MenuButton>
+            <MenuButton className="text-white" name="SignUp" linked="/signup">
+              Sign Up
+            </MenuButton>
+          </Fragment>
+        )}
+
       </div>
-    </div>
-  )
+        )
 }
+
+const mapDispatch = dispatch => ({
+  logoutUser: () => dispatch(logout())
+});
 
 const mapState = state => ({
   isLoggedIn: !!state.user.id,
-  isAdmin: state.user.role === 'admin'
+  isAdmin: state.user.role === 'admin',
 })
-
-export default connect(mapState)(MenuBar)
+export default connect(mapState, mapDispatch)(MenuBar)

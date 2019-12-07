@@ -10,7 +10,7 @@ const MenuButtonLink = styled(Link)`
 
 const MenuButton = props => {
   return (
-    <div className="menuItems flexDown">
+    <div className="nav-item">
       <MenuButtonLink to={props.linked || '/'}>{props.name}</MenuButtonLink>
     </div>
   )

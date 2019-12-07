@@ -2,31 +2,37 @@ import React, {Fragment} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {logout} from '../store'
+import MenuBar from './MenuBar/MenuBar';
 
-const Navbar = ({handleClick, isLoggedIn}) => (
+function toggleClicked(){
+  var hamburgerMenu = $('#hamburger-menu')
+  if(hamburgerMenu.hasClass('clicked')) {
+    $('#menu-bar').removeClass('bg-primary elevatedCard');
+
+    //change the src back to hamburger
+    $('#hamburger-menu img').first().attr('src', "/pics/hamburger-menu.png");
+  } else {
+    $('#menu-bar').addClass('bg-primary elevatedCard');
+
+    //change the src to close icon
+    $('#hamburger-menu img').first().attr('src', "/pics/close-icon.png");
+  }
+
+  $('#hamburger-menu').toggleClass('clicked');
+  $('#menu-bar').toggleClass('clicked');
+
+}
+
+const Navbar = ({isLoggedIn}) => (
   <div>
-    <nav className="bg-primary nav-justified flex position-relative" style={{zIndex: "2"}}>
-      <h1 className="nav-text flex-grow-1 px-5 text-white">
+    <nav className="bg-primary justify-content-between flex position-relative" style={{zIndex: "2"}}>
+      <h3 className="nav-text flex-grow-1 px-5 text-white">
         {' '}
         The Shattered Sands Podcast{' '}
-      </h1>
-      <div className="nav-item">
-        {isLoggedIn ? (
-          <a className="text-white" href="#" onClick={handleClick}>
-            Logout
-          </a>
-        ) : (
-          <Fragment>
-            {/* The navbar will show these links before you log in */}
-            <Link className="text-white" to="/login">
-              Login
-            </Link>
-            <Link className="text-white" to="/signup">
-              Sign Up
-            </Link>
-          </Fragment>
-        )}
+      </h3>
+      <MenuBar/>
+      <div id="hamburger-menu" onClick={toggleClicked} >
+        <img src="/pics/hamburger-menu.png"/>
       </div>
     </nav>
     <hr />
@@ -42,20 +48,12 @@ const mapState = state => {
   }
 }
 
-const mapDispatch = dispatch => {
-  return {
-    handleClick() {
-      dispatch(logout())
-    }
-  }
-}
 
-export default connect(mapState, mapDispatch)(Navbar)
+export default connect(mapState)(Navbar)
 
 /**
  * PROP TYPES
  */
 Navbar.propTypes = {
-  handleClick: PropTypes.func.isRequired,
   isLoggedIn: PropTypes.bool.isRequired
 }
