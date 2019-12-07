@@ -1,44 +1,32 @@
-import React, {Fragment} from 'react'
-import StatDisplay from './SingleCharacter/StatDisplay'
-import history from '../history'
-import {urlPrefix} from '../../Common/Constants'
+import React, {Fragment} from 'react';
+import StatDisplay from './SingleCharacter/StatDisplay';
+import history from '../history';
+import {urlPrefix} from '../../Common/Constants';
+import { consolidateStreamedStyles } from 'styled-components';
 
 class Character extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       isClicked: false,
-      transformX: "",
-      transformY: "",
-      prevX: this.props.coords.xPosition,
-      prevY: this.props.coords.yPosition,
-      infoViewSelected: "stats"
+      infoViewSelected: "stats",
+      currentX : 0,
+      currentY : 0
     }
 
-    this.applyTransform = this.applyTransform.bind(this)
     this.handleClick = this.handleClick.bind(this)
     this.characterCard = React.createRef();
 
   }
 
   componentDidMount(){
+    //set top and left for transistions
+    const {x,y} =  this.characterCard.current.getBoundingClientRect();
+    this.setState({currentX: x, currentY: y});
 
   }
 
-  applyTransform(){
-      let {x, y} = this.characterCard.current.getBoundingClientRect()
-     if (!this.state.isClicked){
-        //If y is lt 150, transformTop, gt 400, transformBottom, else do nothing
-        let topOrBottom = (y < 150) ? "transformBottom" : "transformTop";
-        //if x is lt 450, transformLeft, gt 800 transformRight, else do nothing
-        let rightOrLeft = (x < 450) ? "transformLeft" : (x > 800) ? "transformRight" : ""
-        this.setState({transformX: rightOrLeft, transformY: topOrBottom })
-     } else {
-      this.setState({transformX: "", transformY: "" })
-     }
 
-
-  }
 
   updateInfoView = (evt, viewType) => {
     evt.stopPropagation();
@@ -46,13 +34,13 @@ class Character extends React.Component {
   }
 
   handleClick() {
-    this.applyTransform();
     this.setState({isClicked: !this.state.isClicked})
+
   }
 
   render() {
     const {character} = this.props
-    const {xPosition, yPosition} = this.props.coords
+
     const statNames = [
       'dexterity',
       'charisma',
@@ -65,10 +53,14 @@ class Character extends React.Component {
       <div
         ref={this.characterCard}
         onClick={this.handleClick}
-        className={`flex active characterCard ${this.state.transformY} ${
+        style={{top: this.state.isClicked ? "" : this.state.currentY + "px",
+                left: this.state.isClicked ? "" : this.state.currentX + "px"
+              }}
+
+        className={`flex active characterCard ${
           this.state.isClicked ? 'clicked' : ''
-        } ${this.state.transformX} `}
-        style = {{top: `${this.state.prevY}em`, left: `${this.state.prevX}em`}}
+        }`}
+
       >
         <div className="flexDown characterCard-thumbnail">
         <div className="characterImgContainer">

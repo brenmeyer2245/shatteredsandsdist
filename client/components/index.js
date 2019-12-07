@@ -11,6 +11,6 @@ export {
 export {default as EditEpisode} from './Episodes/EpisodeForms/EditEpisode'
 export {default as UserHome} from './user-home'
 export {Login, Signup} from './auth-form'
-export {default as MenuBar} from './MenuBar/MenuBar'
+export {default as MenuBar} from '../components/MenuBar/MenuBar'
 export {default as Navbar} from './navbar'
 export {default as SideBarAudioPlayer} from './MenuBar/SideBarAudioPlayer'

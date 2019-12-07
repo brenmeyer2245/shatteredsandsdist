@@ -1,21 +1,24 @@
 import React from 'react'
 
-import {Navbar, MenuBar, SideBarAudioPlayer} from './components'
+import {Navbar, SideBarAudioPlayer} from './components'
 import Routes from './routes'
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
-      <div id="content_frame">
-        <div className="pageLeft">
-          <MenuBar />
-          <SideBarAudioPlayer />
+    <div style={{height: "100%"}}>
+      <header style={{position: "fixed", width: "100vw", zIndex: "5"}}>
+        <Navbar />
+      </header>
+      <main style={{position: "absolute", width: "100vw", height: "90%", top: "10%", zIndex: "2"}}>
+        <div id="content_frame" className="container">
+          <section className="pageRight position-relative">
+            <Routes />
+          </section>
         </div>
-        <div className="pageRight">
-          <Routes />
-        </div>
-      </div>
+      </main>
+      <footer style={{position: "fixed", right: "0",bottom: "0px",left: "0", zIndex: 3 }}>
+        <SideBarAudioPlayer />
+      </footer>
     </div>
   )
 }
