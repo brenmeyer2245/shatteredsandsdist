@@ -6845,58 +6845,13 @@ form div {
   margin: 1em;
   display: inline-block;
 }
-/*Shattered Sands CSS 6/6/2018*/
 
-#container{
-  max-width: 30em;
-  display: flex;
-  justify-content:center;
-  margin-left: calc(50%)
-}
-#content_frame{
-  display: flex;
-  justify-content:center;
-  height: inherit;
-}
+
+
+
+/*Shattered Sands CSS 6/6/2018*/s
+
 /*Header and Filter Bar */
-.header{
-
-  background-image: url('/pics/Perisan_Palace.jpg');
-  background-size: cover;
-  background-position: 25% 33%;
-  position: fixed;
-  top: 0;
-  visibility: collapse;
-  z-index: 2;
-
-  width: calc(100vw);
-  height: calc(90% - 5em);
-  border-radius: 1%;
-  color: #fff;
-  font-family: Luminari;
-
-/*    Make 10em*/
- transform: translateY(-55em);
-  transition: all 2s;
-  flex-direction: column;
-  justify-content: flex-end;
-  font-size: 3em;
-  box-shadow: 3em white;
-
-
-}
-.header.active{
-/*    add active class to the header when scroll > 10*/
-
-  transform: translateY(8em);
-}
-
-.headerText{
-  position: relative;
-  top: 25%;
-  left: 5%;
-  font-size: 30px;
-}
 
 #filter{
   position: absolute;
@@ -7003,38 +6958,6 @@ form div {
   overflow: scroll;
     padding: 1em;
     height: 14.5em;
-}
-
-.transformLeft{
-  transform: translate(100px, 0);
-}
-
-.transformRight{
-  transform: translate(-400px,0);
-}
-
-.transformTop{
-  transform: translate(-100px, -100px);
-}
-
-.transformBottom{
-  transform: translate(-100px, 100px);
-}
-
-.transformLeft.transformTop{
-  transform: translate(100px, -100px);
-}
-
-.transformRight.transformTop{
-  transform: translate(-400px,-100px);
-}
-
-.transformLeft.transformBottom{
-  transform: translate(100px, 100px);
-}
-
-.transformRight.transformBottom{
-  transform: translate(-400px,100px);
 }
 
 

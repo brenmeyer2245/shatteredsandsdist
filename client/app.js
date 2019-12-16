@@ -10,7 +10,7 @@ const App = () => {
         <Navbar />
       </header>
       <main style={{position: "absolute", width: "100vw", height: "90%", top: "10%", zIndex: "2"}}>
-        <div id="content_frame" className="container">
+        <div className="container">
           <section className="pageRight position-relative">
             <Routes />
           </section>
