@@ -32,7 +32,9 @@ class Character extends React.Component {
 
   }
   componentWillUnmount(){
-    window.removeEventListener("scroll");
+    window.removeEventListener("scroll", function(){
+      update();
+    }, true);
   }
 
 
