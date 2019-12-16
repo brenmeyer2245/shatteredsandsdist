@@ -6938,7 +6938,7 @@ form div {
   background-image: url(/pics/brown-card-texture.jpg);
   box-shadow: 0.7em 0.7em rgba(12,1,1,.2);
   overflow: hidden;
-  position: inline;
+  position: static;
   border-radius: 1em;
   transition: all 1s;
 }
@@ -6946,11 +6946,12 @@ form div {
 .characterCard.clicked{
   z-index: 5;
   width: 40%;
-  position: fixed;
-  top: calc(50vh - 15em);
-  left: calc(50vw - 13.5em);
+  /* position: fixed; */
 }
 
+.characterCard.fixed {
+  position: fixed;
+}
 
 
 

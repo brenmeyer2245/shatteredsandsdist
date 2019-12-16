@@ -16,6 +16,11 @@ const Characters = props => {
       )
         })}
     </div>
+    <br/>
+    <br/>
+    <br/>
+
+
     </Fragment>
   )
 }
