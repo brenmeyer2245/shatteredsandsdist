@@ -6929,6 +6929,12 @@ form div {
   display:flex;
 }
 
+.characterCard-container{
+  margin: .5em;
+  height: 20em;
+  width: 13.5em;
+  position: static;
+}
 
 .characterCard{
   margin: .5em;
@@ -7528,7 +7534,7 @@ background-size: contain;
   }
 }
 
-@media all and (max-width: 47.875rem){
+@media all and (max-width: 48rem){
   .episode_text div {
     flex-direction: column;
     text-align: center;

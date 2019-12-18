@@ -74,6 +74,9 @@ class Character extends React.Component {
       'intelligence'
     ]
     return (
+      <div className="characterCard-container">
+
+
       <div
         ref={this.characterCard}
         onClick={this.handleClick}
@@ -182,6 +185,7 @@ class Character extends React.Component {
               </button>
             )}
           </div>
+        </div>
         </div>
       </div>
     )

@@ -1,7 +1,8 @@
 import React from 'react'
 
 import {Navbar, SideBarAudioPlayer} from './components'
-import Routes from './routes'
+import Routes from './routes';
+import {pageControls} from './utils/index';
 
 const App = () => {
   return (
@@ -10,7 +11,7 @@ const App = () => {
         <Navbar />
       </header>
       <main style={{position: "absolute", width: "100vw", height: "90%", top: "10%", zIndex: "2"}}>
-        <div className="container">
+        <div className={`${ window.outerHeight < pageControls.mediumScreenBreak ? '' : 'container'}`}>
           <section className="pageRight position-relative">
             <Routes />
           </section>
