@@ -1,14 +1,15 @@
 import React, {Fragment} from 'react';
+import ReactDOM from 'react-dom';
 import StatDisplay from './SingleCharacter/StatDisplay';
 import history from '../history';
 import {urlPrefix} from '../../Common/Constants';
-import { consolidateStreamedStyles } from 'styled-components';
 
 class Character extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       isClicked: false,
+      isFixed: false,
       infoViewSelected: "stats",
       currentX : 0,
       currentY : 0
@@ -16,17 +17,31 @@ class Character extends React.Component {
 
     this.handleClick = this.handleClick.bind(this)
     this.characterCard = React.createRef();
+    this.updatePosition = this.updatePosition.bind(this);
 
   }
 
   componentDidMount(){
+    this.updatePosition();
     //set top and left for transistions
-    const {x,y} =  this.characterCard.current.getBoundingClientRect();
-    this.setState({currentX: x, currentY: y});
+    const card = this.characterCard.current;
+    const update = this.updatePosition;
+    window.addEventListener("scroll", function(){
+      update();
+    })
 
+  }
+  componentWillUnmount(){
+    window.removeEventListener("scroll", function(){
+      update();
+    }, true);
   }
 
 
+  updatePosition(){
+    const {x,y} =  this.characterCard.current.getBoundingClientRect();
+    this.setState({currentX: x, currentY: y});
+  }
 
   updateInfoView = (evt, viewType) => {
     evt.stopPropagation();
@@ -34,8 +49,17 @@ class Character extends React.Component {
   }
 
   handleClick() {
-    this.setState({isClicked: !this.state.isClicked})
-
+    const clicked = this.state.isClicked
+    if (clicked){
+      this.setState({isClicked: !clicked});
+      //then change position back to inline
+      const self = this;
+      setTimeout(function(){
+        self.setState({isFixed: false})
+      }, 900);
+    } else {
+      this.setState({isClicked: !clicked, isFixed: true});
+    }
   }
 
   render() {
@@ -50,16 +74,20 @@ class Character extends React.Component {
       'intelligence'
     ]
     return (
+      <div className="characterCard-container">
+
+
       <div
         ref={this.characterCard}
         onClick={this.handleClick}
-        style={{top: this.state.isClicked ? "" : this.state.currentY + "px",
-                left: this.state.isClicked ? "" : this.state.currentX + "px"
+        style={{top: this.state.isClicked ? "calc(50vh - 15em)" : this.state.currentY + "px",
+                left: this.state.isClicked ? "calc(50vw - 13.5em)" : this.state.currentX + "px"
               }}
 
         className={`flex active characterCard ${
-          this.state.isClicked ? 'clicked' : ''
-        }`}
+          this.state.isClicked ? 'clicked' : ''}
+          ${this.state.isFixed ? 'fixed' : ''}
+        `}
 
       >
         <div className="flexDown characterCard-thumbnail">
@@ -157,6 +185,7 @@ class Character extends React.Component {
               </button>
             )}
           </div>
+        </div>
         </div>
       </div>
     )

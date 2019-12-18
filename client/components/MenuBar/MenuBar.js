@@ -22,9 +22,11 @@ const MenuBar = props => {
         )}
 
         {props.isLoggedIn ? (
-          <MenuButton className="nav-item text-white" onClick={() => {props.logoutUser()}} name="Logout">
-
-         </MenuButton>
+          <div style={{cursor: "pointer"}} className="nav-item text-white" onClick={() => {props.logoutUser()}} >
+            <a role="button">
+            Logout
+            </a>
+         </div>
           ) : (
           <Fragment>
             {/* The navbar will show these links before you log in */}
@@ -42,7 +44,9 @@ const MenuBar = props => {
 }
 
 const mapDispatch = dispatch => ({
-  logoutUser: () => dispatch(logout())
+  logoutUser: () => {
+    dispatch(logout())
+  }
 });
 
 const mapState = state => ({
