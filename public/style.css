@@ -6952,7 +6952,6 @@ form div {
 .characterCard.clicked{
   z-index: 5;
   width: 40%;
-  /* position: fixed; */
 }
 
 .characterCard.fixed {
@@ -6985,6 +6984,7 @@ form div {
 .characterTitle{
   font-size: 1em;
   text-align: center;
+  max-width: 95%;
 }
 
 .character_select{
@@ -7170,6 +7170,8 @@ form div {
   background-image: url('/pics/parchment-bg-burnt.png');
   background-size: cover;
   padding: 8em;
+  overflow: scroll;
+  margin-bottom: 1em;
 }
 
 .city-card-contents-repeated{
@@ -7200,14 +7202,22 @@ form div {
   background-image: url('/pics/brown-card-texture.jpg');
   color: black;
   padding: 1em;
-  margin: 1em;
+  margin-bottom: .2em;
+  width: 39em;
+}
+.city_intro h1{
+  font-size: 1.5rem;
 }
 .worldMap {
-  height: inherit;
+  height: 29em;
+  width: 39em;
   border: .1em solid rgb(150, 133, 82);
   background-size: cover;
   position: relative;
 }
+
+
+/**          **/
 
 .cityTag{
   height: 1.5em;
@@ -7234,61 +7244,62 @@ form div {
 
 #Naseem{
   position: absolute;
-  top: 12rem;
-  left: 8rem;
+  top: 43%;
+  left: 15%;
 }
 
 #Sharakhai{
   position: absolute;
-  top: 10rem;
-  left: 22rem;
+  top: 38%;
+  left: 48%;
 }
 
 #Tear-an{
   position: absolute;
-  top: -12rem;
-  left: 19em;
+  top: 2%;
+  left: 40%;
 }
 #Jaffa{
   position: absolute;
-  top: 8rem;
-  left: 40rem;
+  top: 42%;
+  left: 90%;
 }
 
 #Tuman-Bay{
   position: absolute;
-  top: 13rem;
-  left: 35rem;
+  top: 69%;
+    left: 77%;
 }
 
 #Bariiks-Bowl{
   position: absolute;
-  top: 25rem;
-  left: 14rem;
+  top: 88%;
+  left: 31%;
 }
 
 #Dumais-Well{
   position: absolute;
-    top: 7rem;
-    left: 31em;
+  top: 47%;
+  left: 68%;
 }
 
 #Uk-Varr{
   position: absolute;
-  top: 24rem;
-  left: 1rem;
+  top: 83%;
+  left: 2%;
 }
 #Takoom{
   position: absolute;
-    top: -13rem;
-    left: 1em;
+    top: 2%;
+    left: 2%;
 }
 
 #Karak-Kazrim{
   position: absolute;
-  top: -10rem;
-  left: 41em;
+  top: 2%;
+    left: 90%;
 }
+
 
 .episode-summary-img{
   border: 2px solid black;
@@ -7303,10 +7314,11 @@ form div {
 color: white;
 font-family: fantasy;
 text-align: center;
-margin-top: -1.3em;
 position: absolute;
-height: 52em;
-width: 40em;
+padding-top: 10%;
+left: calc(50% - 17em);
+height: 34em;
+width: 26em;
 background-size: contain;
 }
 
@@ -7325,11 +7337,10 @@ background-size: contain;
 }
 
 .history-catalogue-item-container{
-  height: 47em;
+  height: 80vh;
   overflow: scroll;
   width: 49em;
   position: relative;
-  top: -4em;
   z-index: 1;
 }
 
@@ -7354,9 +7365,7 @@ background-size: contain;
   text-decoration: none;
   list-style-type: none;
   cursor: pointer;
-  width: 105%;
-  position: relative;
-  top: -6em;
+  width: 49em;
   z-index: 2;
 }
 
@@ -7389,6 +7398,32 @@ background-size: contain;
   color: black;
   font-size: 1.5em;
 }
+
+
+.headerText{
+  font-size: 1.5rem;
+  font-style: italic;
+}
+#hamburger-menu {
+  visibility: hidden;
+  height: 100%;
+  width:10%;
+}
+
+#hamburger-menu img{
+  height: 4rem;
+  width: 4rem;
+}
+
+#menu-bar.clicked {
+  visibility: visible;
+  display: flex;
+  left: 5%;
+  top: 10%;
+}
+
+
+
 @keyframes cityPulse {
   0% {
       box-shadow: 0 0 0 0 rgba(60, 5, 5, 0.721);
@@ -7432,89 +7467,12 @@ background-size: contain;
 
 
 
-@media(max-width: 1038px){
-  .headerText{
-    font-size: 30px;
-  }
-}
+@media all and (max-width: 76rem){
+  .characterCard.clicked{
+    width: 50%;
 
-@media(max-width: 500px){
-  .headerText{
-    font-size: 15px;
-  }
-  .about{
-    height: 27em;
-    width: 21em;
-    position: absolute;
-    top: 20em;
-    right: 38em;
-  }
-}
-
-
-@media(max-width: 320px){
-  .nav-justified.bg-primary {
-    height: 7vh;
-  }
-  .nav-justified.bg-primary h1 {
-    font-size: 1rem;
   }
 
-  .nav-justified.bg-primary .nav-item{
-    display: none;
-  }
-
-
-  /**History*/
-  .history-catalogue-item-container{
-    height: 75vh;
-  }
-
-  .history-catalogue-item {
-      height: 41vh;
-      font-size: .2rem;
-  }
-
-  .history-catalogue-item img{
-    height: 40%;
-    max-width: 38%;
-  }
-
-  .history-catalogue-item-description{
-    margin-top: 3%;
-  }
-  .history-catalogue-menu{
-    width: 100vw;
-  }
-  .history-catalogue-menu .flex{
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
-  .history-catalogue-menu div h4{
-    font-size: 0.85rem;
-  }
-}
-
-#hamburger-menu {
-  visibility: hidden;
-  height: 100%;
-  width:10%;
-}
-
-#hamburger-menu img{
-  height: 4rem;
-  width: 4rem;
-}
-
-#menu-bar.clicked {
-  visibility: visible;
-  display: flex;
-  left: 5%;
-  top: 10%;
-}
-
-@media screen and (max-width: 74.625rem){
   #hamburger-menu {
     visibility: visible;
     width: 25%;
@@ -7532,39 +7490,176 @@ background-size: contain;
     left: -25%;
     padding: 2%;
   }
+
 }
 
-@media all and (max-width: 48rem){
+@media all and (max-width: 65rem){
+  .characterCard.clicked{
+    width: 60%;
+ }
+ .history-catalogue-item-container, .history-catalogue-menu  {
+   width: 41em;
+ }
+ .history-catalogue-item{
+   height: 28em;
+ }
+}
+
+@media all and (max-width: 52rem){
+  .characterCard.clicked{
+    width: 70%;
+ }
+  /**    Map     **/
+  #city_view h1 {
+    font-size: 1.4rem;
+  }
+  .city_intro{
+    width: 40em;
+  }
+  .worldMap{
+    height: 30em;
+    width: 40em;
+    margin-left: 0;
+  }
+
+
+
+  #Naseem{
+    position: absolute;
+    top: 44%;
+    left: 17%;
+  }
+
+  #Sharakhai{
+    position: absolute;
+    top: 40%;
+    left: 49%;
+  }
+
+  #Tear-an{
+    position: absolute;
+    top: 2%;
+    left: 43%;
+  }
+  #Jaffa{
+    position: absolute;
+    top: 40%;
+    left: 88%;
+  }
+
+  #Tuman-Bay{
+    position: absolute;
+    top: 69%;
+    left: 80%;
+
+  }
+
+  #Bariiks-Bowl{
+    position: absolute;
+    top: 88%;
+    left: 32%;
+  }
+
+  #Dumais-Well{
+    position: absolute;
+    top: 46%;
+    left: 70%;
+  }
+
+  #Uk-Varr{
+    position: absolute;
+    top: 90%;
+    left: 2%;
+  }
+  #Takoom{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+  }
+
+  #Karak-Kazrim{
+    position: absolute;
+    top: 3%;
+    left: 93%;
+  }
+
+
+
+
+  /**          **/
+}
+
+@media all and (max-width: 48.5rem){
   .episode_text div {
     flex-direction: column;
     text-align: center;
   }
-  .characterCard{
-    width: 100%;
+  .characterCard.clicked{
+    width: 79%;
   }
+  .pageRight {
+    padding-left: 2%;
+  }
+  .history-catalogue-item-container, .history-catalogue-menu {
+    width: 38em;
+  }
+  .history-catalogue-menu{
+    margin-top: 1vh;
+  }
+  .history-catalogue-item{
+    height: 27em;
+  }
+  /**    Map     **/
+  #city_view h1 {
+    font-size: 1.4rem;
+  }
+  .city_intro{
+    width: 40em;
+    margin-left: .5em;
+  }
+  .worldMap{
+    height: 30em;
+    width: 40em;
+    margin-left: .5em;
+  }
+
+  /**          **/
+  main .container{
+    margin-left: unset;
+  }
+
 }
 
-@media all and (max-width: 29.6875rem){
-  .episode_content{
-    flex-direction: column;
-    align-items: center;
+
+@media all and (max-width: 41em){
+  .about {
+    left: calc(50% - 13em);
   }
-  .episode_text{
-    width: 95%;
+  .characterCard-container, .characterCard, .characterCard.clicked{
+    width:96%;
   }
-  .episode_icon img {
-    margin: unset;
+  .characterCard.fixed{
+    position: unset;
   }
-  .audioPlayer-icon {
-    display: none;
+  .characterCard.clicked{
+    width: 80%;
+  }
+  /**    Map     **/
+  #city_view h1 {
+    font-size: 1.4rem;
+  }
+  .city_intro{
+    width: 38em;
+  }
+  .worldMap{
+    height: 28em;
+    width: 38em;
   }
 
-
-
+  /**          **/
 }
 
-
-@media screen and (max-width:37.5rem){
+@media all and (max-width:37.5rem){
   .pageRight{
     padding-left: unset;
   }
@@ -7584,4 +7679,309 @@ background-size: contain;
     font-size: 1rem;
   }
 
+  .history-catalogue-item-container, .history-catalogue-menu  {
+    width: 24em;
+  }
+  .history-catalogue-item{
+    height: 17em;
+  }
+  /**    Map     **/
+  #city_view h1 {
+    font-size: 1.2rem;
+  }
+  .city_intro{
+    width: 35em;
+  }
+  .worldMap{
+    height: 26em;
+    width: 35em;
+  }
+
+  /**            **/
 }
+
+
+@media all and (max-width: 35em){
+
+  .characterCard{
+    align-items: unset;
+    height: 18em;
+  }
+
+  .characterCard-details{
+    margin-bottom: unset;
+    margin-left: unset;
+  }
+
+  .characterCard-details-bio-container, .characterCard-details-episodeList-container{
+    padding: .5em;
+  }
+  .statContainer{
+    margin-top: .70em;
+    margin-left: unset;
+  }
+
+  .characterCard-details p {
+    margin-top: .5em;
+    margin-left: .5em;
+    margin-bottom: .5rem;
+  }
+
+  .characterImg{
+    width: 9em;
+    height: 12em;
+    }
+  /**    Map     **/
+  #city_view h1 {
+    font-size: 1.2rem;
+  }
+  .city_intro{
+    width: 32.5em;
+  }
+  .worldMap{
+    height: 24em;
+    width: 32.5em;
+  }
+
+  /**            **/
+  .city-card-contents{
+    padding: 3em;
+  }
+
+  .city_display{
+    width: 31em;
+  }
+}
+
+@media all and (max-width: 31.25em){
+  .headerText{
+    font-size: 15px;
+  }
+  .about{
+    height: 20em;
+    width: 15em;
+    position: absolute;
+    top: 3.5vh;
+    left: calc(50% - 8em);
+  }
+
+  .history-catalogue-menu h4 {
+    font-size: 1rem;
+  }
+  .history-catalogue-item img{
+    max-width: 40%;
+    margin: 2em;
+  }
+
+  .history-container{
+
+    height: 100vh;
+  }
+
+   /**    Map     **/
+   #city_view h1 {
+    font-size: 1rem;
+  }
+  .city_intro{
+    width: 29.5em;
+  }
+  .worldMap{
+    height: 22em;
+    width: 29.5em;
+  }
+  .cityTag{
+    height: 1em;
+    width: 1em
+  }
+  /**            **/
+  .city-card-contents{
+    padding: 4em;
+  }
+
+  .city_display{
+    width: 31em;
+  }
+}
+
+
+
+@media all and (max-width: 29.6875em){
+  .episode_content{
+    flex-direction: column;
+    align-items: center;
+  }
+  .episode_text{
+    width: 95%;
+  }
+  .episode_icon img {
+    margin: unset;
+  }
+  .audioPlayer-icon {
+    display: none;
+  }
+
+
+/* Vertical CharacterCard */
+  .characterCard{
+    flex-direction: column;
+    align-items: center;
+  }
+  .characterCard-container, .characterCard, .characterCard.clicked{
+    width:90%;
+    height: 100%;
+  }
+
+  .characterCard-details {
+    margin-bottom: 33px;
+    margin-left: 15px;
+  }
+
+  .characterCard-details-bio-container, .characterCard-details-episodeList-container{
+    height: 12.2em;
+  }
+  #party_main_card{
+    margin-left: 15%;
+  }
+  /**             **/
+
+   /**    Map     **/
+   #city_view h1 {
+    font-size: 1.2rem;
+  }
+
+  .city_intro{
+    width: 28em;
+  }
+
+  .worldMap{
+    height: 21em;
+    width: 28em;
+  }
+  /**            **/
+  .city-card-contents{
+    background-image: unset;
+    color: white;
+    padding: 3em;
+  }
+
+  .city_display{
+    width: 28em;
+  }
+}
+
+
+@media all and (max-width: 25em){
+    /**    Map     **/
+    #city_view h1 {
+      font-size: .8rem;
+    }
+
+    .city_intro{
+      width: 22em;
+    }
+
+    .worldMap{
+      height: 17em;
+      width: 22em;
+    }
+    /**            **/
+
+    .city-card-contents{
+      background-image: unset;
+      color: white;
+      padding: 3em;
+    }
+
+    .city_display{
+      width: 22em;
+    }
+
+     /** Characters **/
+  #party_main_card{
+    margin-left: 0%;
+  }
+  .characterCard-container, .characterCard, .characterCard.clicked{
+    width:95%;
+    height: 100%;
+  }
+  /**            **/
+
+}
+
+@media all and (max-width: 21em){
+  .nav-justified.bg-primary {
+    height: 7vh;
+  }
+  .nav-justified.bg-primary h1 {
+    font-size: 1rem;
+  }
+
+  .nav-justified.bg-primary .nav-item{
+    display: none;
+  }
+
+
+  /**History*/
+  .history-catalogue-item-container{
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .history-catalogue-item {
+      height: 41vh;
+      font-size: .2rem;
+  }
+
+  .history-catalogue-item img{
+    height: 40%;
+    max-width: 38%;
+  }
+
+  .history-catalogue-item-description{
+    margin-top: 3%;
+  }
+  .history-catalogue-menu{
+    width: 100vw;
+    margin-top: 2vh;
+  }
+  .history-catalogue-menu .flex{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .history-catalogue-menu div h4{
+    font-size: 0.85rem;
+  }
+  /**            **/
+
+
+
+  /**    Map     **/
+  #city_view h1 {
+    font-size: .8rem;
+  }
+
+  .city_intro{
+    width: 15em;
+  }
+  .worldMap{
+    height: 11em;
+    width: 15em;
+    background-size: contain;
+  }
+
+  /**            **/
+  .city-card-contents{
+    background-image: unset;
+    color: white;
+    padding: 3em;
+  }
+
+  .city_display{
+    width: 16em;
+  }
+
+}
+
+
+

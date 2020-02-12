@@ -49,7 +49,7 @@ class AllCities extends React.Component {
           </p> */}
         </div>
         <div
-          className="worldMap elevatedCard m-2"
+          className="worldMap elevatedCard "
           style={{
             backgroundImage: `url('http://www.jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/pics/Shattered_Sands_Map.jpg')`
           }}

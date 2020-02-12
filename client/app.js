@@ -11,7 +11,9 @@ const App = () => {
         <Navbar />
       </header>
       <main style={{position: "absolute", width: "100vw", height: "90%", top: "10%", zIndex: "2"}}>
-        <div className={`${ window.outerHeight < pageControls.mediumScreenBreak ? '' : 'container'}`}>
+        <div className={`${ window.outerWidth < pageControls.mediumScreenBreak ? '' : 'container'}
+                        ${window.outerWidth < pageControls.mediumScreenBreak ? 'underBreak' : ''}
+            `}>
           <section className="pageRight position-relative">
             <Routes />
           </section>

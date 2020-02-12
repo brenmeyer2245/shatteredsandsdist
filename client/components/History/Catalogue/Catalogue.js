@@ -24,8 +24,13 @@ export default class Catalogue extends Component{
 
       return (
         <div className="history-catalogue-container">
+            <CatalogueMenu listOfItems={this.props.listOfItems}
+                           listOfCategories={createListOfCategories(this.props.listOfItems)}
+                           currentCategory={this.state.currentCategory}
+                           updateItem={this.updateItem}
+                           updateCategory={this.updateCategory}
+                           />
             <div className="history-catalogue-item-container">
-            <div style={{height: "5em"}}/>
               {filterByCategory(this.props.listOfItems, this.state.currentCategory)
               .map(  item =>
                                             <CatalogueItem catalogueItem={item}
@@ -34,12 +39,6 @@ export default class Catalogue extends Component{
                                           )
               }
                </div>
-              <CatalogueMenu listOfItems={this.props.listOfItems}
-                             listOfCategories={createListOfCategories(this.props.listOfItems)}
-                             currentCategory={this.state.currentCategory}
-                             updateItem={this.updateItem}
-                             updateCategory={this.updateCategory}
-                             />
         </div>
       )
   }

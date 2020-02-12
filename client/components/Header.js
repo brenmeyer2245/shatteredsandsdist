@@ -9,7 +9,7 @@ const Header = props => {
         backgroundImage: `url('/pics/book_background.jpg')`
       }}
     >
-      <h1 className="headerText">Welcome to the Shattered Sands</h1>
+      <span className="headerText">The Shattered Sands</span>
     </div>
   )
 }
