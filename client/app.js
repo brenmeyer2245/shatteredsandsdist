@@ -10,7 +10,7 @@ const App = () => {
       <header style={{position: "fixed", width: "100vw", zIndex: "5"}}>
         <Navbar />
       </header>
-      <main style={{position: "absolute", width: "100vw", height: "90%", top: "10%", zIndex: "2"}}>
+      <main style={{position: "absolute", width: "100vw", height: "175vh", top: "10%", zIndex: "2"}}>
         <div className={`${ window.outerWidth < pageControls.mediumScreenBreak ? '' : 'container'}
                         ${window.outerWidth < pageControls.mediumScreenBreak ? 'underBreak' : ''}
             `}>

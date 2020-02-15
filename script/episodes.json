@@ -664,13 +664,123 @@
   },
   {
     "title": "Encroaching Shadows",
-    "icon": "In_Harms_Way.jpg ",
+    "icon": "encroaching-shadow.jpg",
     "cast":
       "Vass: Nathan Spring, Kal: Brendan Meyer, Besh: Lane Flores",
-    "audio": [""],
-    "series": "BWS",
+    "audio": ["encroaching-shadow.m4a"],
+    "series": "VOS",
     "bookTitle": "The Last Beginning",
     "bookNumber": 4,
     "chapterNumber": 1
+  },
+  {
+    "title": "Chamber of Reflection",
+    "icon": "chamber-of-reflection.jpg",
+    "cast":
+      "Vass: Nathan Spring, Kal: Brendan Meyer, Besh: Lane Flores",
+    "audio": ["chamber-of-reflection.m4a"],
+    "series": "VOS",
+    "bookTitle": "The Last Beginning",
+    "bookNumber": 4,
+    "chapterNumber": 2
+  },
+  {
+    "title": "Starfall",
+    "icon": "starfall.jpg ",
+    "cast":
+    "Clockaris: Ben Lapean, Macide: Soren Ersbak, Jhanos: Andrew Saenz, Clock: Ben Lapaen, Aragwyn: Iris Kohler",
+    "audio": ["starfall.mp3"],
+    "series": "VOS",
+    "bookTitle": "The Last Beginning",
+    "bookNumber": 4,
+    "chapterNumber": 3
+  },
+  {
+    "title": "Which Way?",
+    "icon": "which-way.jpg ",
+    "cast":
+      "Clockaris: Ben Lapean, Macide: Soren Ersbak, Jhanos: Andrew Saenz, Clock: Ben Lapaen, Aragwyn: Iris Kohler",
+    "audio": ["which-way-1.mp3", "which-way-1.mp3"],
+    "series": "BWS",
+    "bookTitle": "The Last Beginning",
+    "bookNumber": 4,
+    "chapterNumber": 4
+  },
+  {
+    "title": "Diamonds are not Forever",
+    "icon": "diamonds-are-not-forever.jpg ",
+    "cast":
+      "Vass: Nathan Spring, Kal: Brendan Meyer, Besh: Lane Flores",
+    "audio": ["diamonds-are-not-forever.m4a"],
+    "series": "VOS",
+    "bookTitle": "The Last Beginning",
+    "bookNumber": 4,
+    "chapterNumber":5
+  },
+  {
+    "title": "Living Proof",
+    "icon": "living-proof.jpg ",
+    "cast":
+      "Vass: Nathan Spring, Kal: Brendan Meyer, Besh: Lane Flores",
+    "audio": ["living-proof.m4a"],
+    "series": "VOS",
+    "bookTitle": "The Last Beginning",
+    "bookNumber": 4,
+    "chapterNumber": 6
+  },
+  {
+    "title": "Snake in the Grass",
+    "icon": "snake-in-the-grass.jpg ",
+    "cast":
+      "Vass: Nathan Spring, Kal: Brendan Meyer, Besh: Lane Flores",
+    "audio": ["snake-in-the-grass.m4a"],
+    "series": "VOS",
+    "bookTitle": "The Last Beginning",
+    "bookNumber": 4,
+    "chapterNumber": 7
+  },
+  {
+    "title": "Slither",
+    "icon": "slither.jpg ",
+    "cast":
+      "Vass: Nathan Spring, Kal: Brendan Meyer, Besh: Lane Flores",
+    "audio": ["slither.m4a"],
+    "series": "VOS",
+    "bookTitle": "The Last Beginning",
+    "bookNumber": 4,
+    "chapterNumber": 8
+  },
+  {
+    "title": "Scars",
+    "icon": "scars.jpg ",
+    "cast":
+      "Vass: Nathan Spring, Kal: Brendan Meyer, Besh: Lane Flores",
+    "audio": ["scars.m4a"],
+    "series": "VOS",
+    "bookTitle": "The Last Beginning",
+    "bookNumber": 4,
+    "chapterNumber": 8
+  },
+  {
+    "title": "I did it for love",
+    "icon": "i-did-it-for-love.jpg",
+    "cast":
+      "Vass: Nathan Spring, Kal: Brendan Meyer, Besh: Lane Flores",
+    "audio": ["i-did-it-for-love.m4a"],
+    "series": "VOS",
+    "bookTitle": "The Last Beginning",
+    "bookNumber": 4,
+    "chapterNumber": 9
+  },
+  {
+    "title": "Heart of Darkness",
+    "icon": "heart-of-darkness.jpg ",
+    "cast":
+      "Vass: Nathan Spring, Kal: Brendan Meyer, Besh: Lane Flores",
+    "audio": ["heart-of-darkness.m4a"],
+    "series": "VOS",
+    "bookTitle": "The Last Beginning",
+    "bookNumber": 4,
+    "chapterNumber": 10
   }
 ]
