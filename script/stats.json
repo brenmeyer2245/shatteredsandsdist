@@ -226,5 +226,23 @@
     "strength": 12,
     "charisma": 20,
     "CharacterId": 24
+  },
+  {
+    "dexterity": 14,
+    "constitution": 12,
+    "wisdom": 12,
+    "intelligence": 16,
+    "strength": 12,
+    "charisma": 20,
+    "CharacterId": 25
+  },
+  {
+    "dexterity": 14,
+    "constitution": 12,
+    "wisdom": 12,
+    "intelligence": 16,
+    "strength": 12,
+    "charisma": 20,
+    "CharacterId": 26
   }
 ]

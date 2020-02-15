@@ -182,12 +182,26 @@
     "actor": "Brian Scannel"
   },
   {
-    "name": "Hektor",
-    "class": "NPC",
+    "name": "Madesh",
+    "class": "Paladin",
     "bio":
-      "A powerful Nasimi diplomat that has a great amount of money and influence",
-    "headshot": "Hektor-headshot.jpg",
-    "actor": "Brian Scannel"
+      "Blurb",
+    "headshot": "madesh-headshot.jpg",
+    "actor": "Matt Scannel"
+  },{
+    "name": "Korf",
+    "class": "Rogue",
+    "bio":
+      "Blurb",
+    "headshot": "korf-headshot.jpg",
+    "actor": "Brian Shutters"
+  },{
+    "name": "Ragnar",
+    "class": "Fighter",
+    "bio":
+      "Blurb about Ragnar",
+    "headshot": "ragnar-headshot.jpg",
+    "actor": "Greg Leist"
   }
 
 ]
