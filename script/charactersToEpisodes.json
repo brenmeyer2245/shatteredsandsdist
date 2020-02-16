@@ -986,6 +986,10 @@
   },
   {
     "episodeId": 57,
+    "characterId": 9
+  },
+  {
+    "episodeId": 57,
     "characterId": 10
   }, {
     "episodeId": 57,
@@ -1141,6 +1145,10 @@
   },
   {
     "episodeId": 66,
+    "characterId": 9
+  },
+  {
+    "episodeId": 66,
     "characterId": 10
   }, {
     "episodeId": 66,
@@ -1148,6 +1156,25 @@
   },
   {
     "episodeId": 66,
+    "characterId": 24
+  },
+  {
+    "episodeId": 67,
+    "characterId": 1
+  },
+  {
+    "episodeId": 67,
+    "characterId": 9
+  },
+  {
+    "episodeId": 67,
+    "characterId": 10
+  }, {
+    "episodeId": 67,
+    "characterId": 6
+  },
+  {
+    "episodeId": 67,
     "characterId": 24
   }
 ]
