@@ -782,5 +782,16 @@
     "bookTitle": "The Last Beginning",
     "bookNumber": 4,
     "chapterNumber": 10
+  },
+  {
+    "title": "Heart of Stone",
+    "icon": "heart-of-stone.jpg ",
+    "cast":
+      "Vass: Nathan Spring, Kal: Brendan Meyer, Besh: Lane Flores",
+    "audio": ["heart-of-stone.m4a"],
+    "series": "VOS",
+    "bookTitle": "The Last Beginning",
+    "bookNumber": 4,
+    "chapterNumber": 11
   }
 ]
