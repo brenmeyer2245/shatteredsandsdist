@@ -13,11 +13,10 @@ import {
   CreateEpisode,
   AllEpisodes,
   EditCharacter,
-  EditEpisode
+  EditEpisode,
+  CharacterAccordion
 } from './components'
 import History from './components/History/History'
-import CityMarkerAnimation from './components/animations/CityMarkerAnimation'
-
 import {me, fetchCharacters, fetchEpisodes} from './store'
 
 /**
@@ -40,7 +39,7 @@ class Routes extends Component {
         <Route path="/episodes/:episodeId" component={SingleEpisode} />
         <Route path="/history" component={History} />
         <Route path="/cities" component={AllCities} />
-        <Route path="/lottie" component={CityMarkerAnimation} />
+        <Route exact path="/mock" component={CharacterAccordion} />
         {isLoggedIn &&
         (<Switch>
             <Route path="/addCharacter" component={CreateCharacter} />

@@ -3,7 +3,6 @@ import CityCard from './CityCard'
 import CityTag from './CityTag'
 import {connect} from 'react-redux'
 import {fetchCities} from '../../store/citiesReducer'
-import CityMarkerAnimation from '../animations/CityMarkerAnimation'
 import {urlPrefix} from '../../../Common/Constants'
 
 class AllCities extends React.Component {
@@ -34,19 +33,6 @@ class AllCities extends React.Component {
       <div id="city_view">
         <div className="city_intro red-trim elevatedCard">
           <h1>The World of the Shattered Sands </h1>
-
-          {/* - Original Intro for this Page => Will determine if it Stays
-            <p>
-            {' '}
-            This world is set within the vast and seemingly endless desert of
-            the Shangazi, also known as the "Great Waste". <br />Along the edges
-            of the Shangazi is the mountain range called the Vine. <br />Throughout
-            SS there is a deep magic that runs through the ancient sands. Oasis'
-            hidden by mirages, temples that come and go with the shifting winds
-            of sand. <br />Grottos, slums, gladiator pits, hanging gardens,
-            opium dens and bazaars litter most cities. Here under the harsh sun
-            and reflections of the Shangzi your destiny is truly your own.{' '}
-          </p> */}
         </div>
         <div
           className="worldMap elevatedCard "
@@ -54,10 +40,6 @@ class AllCities extends React.Component {
             backgroundImage: `url('http://www.jbmeyer.org/wp-content/uploads/2018/07/ShatteredSands/pics/Shattered_Sands_Map.jpg')`
           }}
         >
-         {/* <div style={{position: "relative", width: '1em', top: "45%", left:"16%", right: "0em", zIndex: "100"}}>
-         <CityMarkerAnimation />
-          </div> */}
-
           {this.props.cities.map(city => (
             <CityTag
               clickOnCity={this.clickOnCity}
