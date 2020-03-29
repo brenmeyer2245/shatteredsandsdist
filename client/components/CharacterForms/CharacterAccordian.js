@@ -1,29 +1,24 @@
 import React, {useState, useEffect} from "react"
-import {ShatteredSandsAccordion, ShatteredSandsModal} from '../Utility';
-
+import {Modal} from '../Utility/Modal/Modal';
 import {connect} from 'react-redux';
 import {fetchCharacters} from '../../store'
 
 
-const CharacterAccordion = (props) => {
-const mockCharacters = [
-  {name: 'Kal'},
-  {name: 'Jaonos'},
-  {name: 'Besh'},
-  {name: 'Vass'},
-  {name: 'Macide'},
-  {name: 'Clock'},
-  {name: 'Pal'},
-]
- return <ShatteredSandsModal>
-   <h1>
-
-     Toot
-   </h1>
-
- </ShatteredSandsModal>
-
-}
+const CharacterAccordion = (props) => (
+  <Modal
+    isOpen={true}
+    popup={true}
+    modifiers={['popup', 'large']}
+    onRequestClose={() => {console.log("close")}}
+    onClickClose={() => {console.log(" click close")}}
+  >
+  <div>
+    <h1>
+    This is a test
+      </h1>
+  </div>
+ </Modal>
+)
 
 const mapStateToProps = (state) => ({
   allCharacters: state.characters

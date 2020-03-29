@@ -1,0 +1,137 @@
+.Modal {
+  .ReactModal {
+    &__Content {
+      height: 100%;
+    }
+  }
+  &__Overlay{
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: $z-index-modal-overlay;
+
+   opacity: 0;
+   background-color: $bg-modal-overlay;
+   transition: all 0.5s ease 0s;
+  }
+  &.ReactModal__Overlay--after-open {
+    opacity: 1;
+    .Modal__Content {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+  &__Content{
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all .3s ease 0.15s;
+    transform: translateX(50%);
+    opacity: 0;
+    width: 100%;
+    // @include media-breakpoint-up(sm){
+    //   width: 336;
+    // }
+  }
+  &__InnerScrollbar {
+    padding: 24px;
+  }
+  &__Close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		width: 18px;
+		height: 18px;
+		font-size: 15px;
+    cursor: pointer;
+    &.u-reset-button{
+      margin: 24px;
+    }
+	}
+}
+.Modal {
+	&__Overlay--error {
+		z-index: $z-index-modal-overlay--global-error;
+	}
+}
+.Modal--popup {
+	height: 100%;
+	overflow: scroll;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	display: flex;
+	// flex + auto margin allows flex vertical center without overflow clipping
+	// caused by justify-content/align-items
+
+	.Modal {
+		&__Content {
+			margin: auto; // use with flex parent for overflow centering
+			position: static;
+			width: auto;
+			height: auto;
+			transform: translateX(0%);
+
+			// default is medium
+			width: 80vw;
+
+			@media screen and (max-width: 360px) {
+				width: 90vw;
+			}
+
+			@media screen and (min-width: 768px) {
+				width: 450px;
+			}
+		}
+	}
+}
+
+.Modal--small {
+	.Modal {
+		&__Content {
+			width: 320px;
+
+			@media screen and (max-width: 360px) {
+				width: 90vw;
+			}
+		}
+	}
+}
+
+.Modal--medium {
+	.Modal {
+		&__Content {
+			width: 80vw;
+
+			@media screen and (max-width: 360px) {
+				width: 90vw;
+			}
+
+			@media screen and (min-width: 768px) {
+				width: 450px;
+			}
+		}
+	}
+}
+
+.Modal--large {
+	.Modal {
+		&__Content {
+			width: 80vw;
+
+			@media screen and (max-width: 360px) {
+				width: 90vw;
+			}
+
+			@media screen and (min-width: 768px) {
+				width: 700px;
+			}
+		}
+	}
+}
+

@@ -12,3 +12,8 @@ export const createListOfCategories = (listOfItems) => {
   })
   return categories;
 }
+
+
+export const numberToArray = (num) => {
+  return new Array(num).fill("");
+}

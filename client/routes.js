@@ -33,7 +33,7 @@ class Routes extends Component {
     return (
       <Switch>
         {/* Routes placed here are available to all visitors */}
-        <Route exact path="/" component={Header} />
+        <Route exact path="/" component={AllEpisodes} />
         <Route exact path="/episodes" component={AllEpisodes} />
         <Route exact path="/characters" component={AllCharacters} />
         <Route path="/episodes/:episodeId" component={SingleEpisode} />

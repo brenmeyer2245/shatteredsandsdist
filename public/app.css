@@ -1,0 +1,114 @@
+.Modal .ReactModal__Content {
+  height: 100%;
+}
+.Modal__Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.595);
+  transition: all 0.5s ease 0s;
+}
+.Modal.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+.Modal.ReactModal__Overlay--after-open .Modal__Content {
+  transform: translateX(0%);
+  opacity: 1;
+}
+.Modal__Content {
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease 0.15s;
+  transform: translateX(50%);
+  opacity: 0;
+  width: 100%;
+}
+.Modal__InnerScrollbar {
+  padding: 24px;
+}
+.Modal__Close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 18px;
+  height: 18px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.Modal__Overlay--error {
+  z-index: 2500;
+}
+
+.Modal--popup {
+  height: 100%;
+  overflow: scroll;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+}
+.Modal--popup .Modal__Content {
+  margin: auto;
+  position: static;
+  width: auto;
+  height: auto;
+  transform: translateX(0%);
+  width: 80vw;
+}
+@media screen and (max-width: 360px) {
+  .Modal--popup .Modal__Content {
+    width: 90vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Modal--popup .Modal__Content {
+    width: 450px;
+  }
+}
+
+.Modal--small .Modal__Content {
+  width: 320px;
+}
+@media screen and (max-width: 360px) {
+  .Modal--small .Modal__Content {
+    width: 90vw;
+  }
+}
+
+.Modal--medium .Modal__Content {
+  width: 80vw;
+}
+@media screen and (max-width: 360px) {
+  .Modal--medium .Modal__Content {
+    width: 90vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Modal--medium .Modal__Content {
+    width: 450px;
+  }
+}
+
+.Modal--large .Modal__Content {
+  width: 80vw;
+}
+@media screen and (max-width: 360px) {
+  .Modal--large .Modal__Content {
+    width: 90vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Modal--large .Modal__Content {
+    width: 700px;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */
