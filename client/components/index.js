@@ -15,4 +15,3 @@ export {default as MenuBar} from '../components/MenuBar/MenuBar'
 export {default as Navbar} from './navbar'
 export {default as SideBarAudioPlayer} from './MenuBar/SideBarAudioPlayer'
 
-export {default as CharacterAccordion} from './CharacterForms/CharacterAccordian';

@@ -16,6 +16,9 @@ import {
   EditEpisode,
   CharacterAccordion
 } from './components'
+
+import {EpisodeFormCreate} from './components/Episodes/EpisodeForms/EpisodeFormCreate/EpisodeFormCreate'
+
 import History from './components/History/History'
 import {me, fetchCharacters, fetchEpisodes} from './store'
 

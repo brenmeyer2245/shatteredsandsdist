@@ -7,15 +7,15 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1000;
+  z-index: 2000;
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0.595);
+  background-color: blue;
   transition: all 0.5s ease 0s;
 }
-.Modal.ReactModal__Overlay--after-open {
+.Modal__Overlay.ReactModal__Overlay--after-open {
   opacity: 1;
 }
-.Modal.ReactModal__Overlay--after-open .Modal__Content {
+.Modal__Overlay.ReactModal__Overlay--after-open .Modal__Content {
   transform: translateX(0%);
   opacity: 1;
 }
@@ -23,7 +23,6 @@
   background: white;
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
   transition: all 0.3s ease 0.15s;
@@ -45,7 +44,7 @@
 }
 
 .Modal__Overlay--error {
-  z-index: 2500;
+  z-index: 1000;
 }
 
 .Modal--popup {
@@ -109,6 +108,23 @@
   .Modal--large .Modal__Content {
     width: 700px;
   }
+}
+
+.EpisodeForm__Top {
+  margin: 24px 0;
+}
+.EpisodeForm__Heading {
+  position: relative;
+  padding-left: 32px;
+}
+.EpisodeForm__HeadingIcon {
+  top: 0;
+  left: 0;
+  color: red;
+  position: absolute;
+}
+.EpisodeForm__ProgressBar {
+  margin-top: 33px;
 }
 
 /*# sourceMappingURL=app.css.map */
