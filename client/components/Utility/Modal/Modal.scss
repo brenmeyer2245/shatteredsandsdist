@@ -1,63 +1,66 @@
+
+
 .Modal {
-  .ReactModal {
-    &__Content {
-      height: 100%;
-    }
-  }
-  &__Overlay{
-   position: fixed;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   z-index: $z-index-modal-overlay;
+	// @bem-ignore
+	.ReactModal {
+		&__Content {
+			height: 100%;
+		}
+	}
+	&__Overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 2000;
 
-   opacity: 0;
-   background-color: $bg-modal-overlay;
-   transition: all 0.5s ease 0s;
-  }
-  &.ReactModal__Overlay--after-open {
-    opacity: 1;
-    .Modal__Content {
-      transform: translateX(0%);
-      opacity: 1;
-    }
-  }
+		opacity: 0;
+		background-color: blue;
+		transition: all 0.5s ease 0s;
 
-  &__Content{
-    background: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: all .3s ease 0.15s;
-    transform: translateX(50%);
-    opacity: 0;
-    width: 100%;
-    // @include media-breakpoint-up(sm){
-    //   width: 336;
-    // }
-  }
-  &__InnerScrollbar {
-    padding: 24px;
-  }
-  &__Close {
+		// @bem-ignore
+		&.ReactModal__Overlay--after-open {
+			opacity: 1;
+			.Modal__Content {
+				transform: translateX(0%);
+				opacity: 1;
+			}
+		}
+	}
+	&__Content {
+		background: white;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		transition: all 0.3s ease 0.15s;
+		transform: translateX(50%);
+		opacity: 0;
+		width: 100%;
+		// @include media-breakpoint-up(sm) {
+		// 	width: 336px;
+		// }
+	}
+	&__InnerScrollbar {
+		padding: 24px;
+		// @include media-breakpoint-down(sm) {
+		// 	padding: 16px;
+		// }
+	}
+	&__Close {
 		position: absolute;
 		top: 15px;
 		right: 15px;
 		width: 18px;
 		height: 18px;
 		font-size: 15px;
-    cursor: pointer;
-    &.u-reset-button{
-      margin: 24px;
-    }
+		cursor: pointer;
 	}
 }
 .Modal {
 	&__Overlay--error {
-		z-index: $z-index-modal-overlay--global-error;
+		z-index: 1000;
 	}
 }
 .Modal--popup {
@@ -134,4 +137,3 @@
 		}
 	}
 }
-

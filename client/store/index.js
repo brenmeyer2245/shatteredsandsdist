@@ -8,14 +8,15 @@ import cities from './citiesReducer'
 import currentCharacter from './currentCharacterReducer'
 import currentEpisode from './currentEpisodeReducer'
 import episodes from './episodesReducer'
-
+import episodeForm from '../components/Episodes/EpisodeForms/EpisodeFormCreate/EpisodeFormCreate.reducer'
 const reducer = combineReducers({
   user,
   characters,
   cities,
   currentCharacter,
   currentEpisode,
-  episodes
+  episodes,
+  episodeForm
 })
 const middleware = composeWithDevTools(
   applyMiddleware(thunkMiddleware, createLogger({collapsed: true}))

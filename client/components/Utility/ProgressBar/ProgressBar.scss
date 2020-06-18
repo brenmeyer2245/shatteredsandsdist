@@ -1,0 +1,44 @@
+.ProgressBar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  //line through the background
+  &::after{
+    content: '';
+    position: absolute;
+    z-index: 0;
+    border-bottom: 1px solid lightgrey;
+    left: 28px;
+    right: 28px;
+  }
+
+
+  &__Step {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  &__Label{
+    margin-top: 5px;
+    font-size: .7rem;
+    //@include type-medium;
+    //@include type-small;
+    line-height: 20px;
+  }
+
+  &__Circle{
+    border-radius: 100%;
+    border: 1px solid red;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-left: calc(50% - 20px);
+    box-shadow: 1px 1px 2px;
+    background: white;
+  }
+}
+

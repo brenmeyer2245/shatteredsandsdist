@@ -14,5 +14,4 @@ export {Login, Signup} from './auth-form'
 export {default as MenuBar} from '../components/MenuBar/MenuBar'
 export {default as Navbar} from './navbar'
 export {default as SideBarAudioPlayer} from './MenuBar/SideBarAudioPlayer'
-
-export {default as CharacterAccordion} from './CharacterForms/CharacterAccordian';
+export {default as EpisodeForm} from './Episodes/EpisodeForms/EpisodeFormCreate/EpisodeFormCreate'
