@@ -1,16 +1,16 @@
 import React from 'react'
 import {Modal} from '../../../Utility/Modal/Modal';
-import {classes} from '../../../Utility/UtilityFunctions/classes'
 import {connect} from 'react-redux';
-import {EpisodeFormStepConstants} from './EpisodeFormCreate.data'
+import {EpisodeFormStepConstants, EpisodeFormData} from './EpisodeFormCreate.data'
  import {episodeFormOpen, episodeFormClose} from './EpisodeFormCreate.actions'
+ import {ProgressBar} from '../../../Utility/ProgressBar/ProgressBar.component'
 
-
-export const EpisodeFormCreate = (props) =>{
-
+ const EpisodeFormCreate = (props) =>{
+  console.log(props)
   if (props.preventRender) return null;
   let bodyContent = null;
 
+  //TODO: replace with Actual Component
   if (props.step == EpisodeFormStepConstants.Title)
   bodyContent = (<div style={{height: "200px", width: "200px", background: 'blue'}}>
     <h1>
@@ -19,7 +19,7 @@ export const EpisodeFormCreate = (props) =>{
   </div>
 
   )
-  if (props.step == EpisodeFormStepConstants.Description)
+  else
   bodyContent = (<div style={{height: "200px", width: "200px", background: 'blue'}}>
     <h1>
      Description Body
@@ -29,9 +29,8 @@ export const EpisodeFormCreate = (props) =>{
 
 
   return(
-    <div className={classes('EpisodeForm')}
-    >
-      <Modal
+    <div>
+  <Modal
         modifiers={['popup', 'large']}
         popup={true}
         isOpen={props.isOpen}
@@ -39,23 +38,42 @@ export const EpisodeFormCreate = (props) =>{
         onClickClose={props.episodeFormClose}
       >
         <div className="EpisodeForm__Top">
-            <h2
-            className="EpisodeForm__Heading type-headline-small"
-            >
+            <h2 className="EpisodeForm__Heading type-headline-small">
             <span className="EpisodeForm__HeadingText">
-							{props.vm.heading}
+              New Episode
 						</span>
             </h2>
-        {/* Progress Bar */}
-          <div 							className="EpisodeForm__ProgressBar">
-            </div>
+
+
+      <ProgressBar                
+          className="EpisodeForm__ProgressBar"
+          selectedStep={props.step}
+          steps={[
+            {
+              label: 'Step 1 Label',
+              id: EpisodeFormStepConstants.Title,
+              handleClick: () => {
+                props.episodeForm.setStep(EpisodeFormStepConstants.Title)
+              }
+            }
+            ,{
+              label: 'Step 2 Label',
+              id: EpisodeFormStepConstants.Description,
+              handleClick: () => {
+                props.episodeForm.setStep(EpisodeFormStepConstants.Description)
+              }
+            }
+          ]}
+          ariaLabel=""
+          >
+          <div
+            className="EpisodeForm__Body">
+            {bodyContent}
+          </div>
+          </ProgressBar>
         </div>
 
-        <div
-          className="EpisodeForm__Body">
-          {bodyContent}
-        </div>
-      </Modal>
+        </Modal>
     </div>
   )
 }
@@ -66,13 +84,22 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  episodeFormClose: () => dispatch(episodeFormClose()),
-  episodeFormOpen: () => dispatch(episodeFormOpen()),
+  episodeFormClose: () => {
+    console.log('Close Fired')
+    dispatch(episodeFormClose())
+  },
+  episodeFormOpen: () => {
+    console.log('[MODAL OPEN] Fired')
+    dispatch(episodeFormOpen())
+  }
+    ,
   episodeFormSetStep: (newStep) => dispatch(episodeFormOpen(newStep))
 })
 
-export const EpisodeFormCreateConnect = connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(EpisodeFormCreate);
+
+
 

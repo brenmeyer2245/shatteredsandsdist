@@ -31,7 +31,7 @@ const EpisodeFormReducer = (
       case EPISODE_FORM_CLOSE: {
         return {
           ...formState,
-          formOpen: true
+          formOpen: false
         }
       }
       case EPISODE_FORM_SET_STEP: {

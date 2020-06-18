@@ -35,7 +35,6 @@ const Navbar = ({isLoggedIn}) => (
         <img src="/pics/hamburger-menu.png"/>
       </div>
     </nav>
-    <hr />
   </div>
 )
 

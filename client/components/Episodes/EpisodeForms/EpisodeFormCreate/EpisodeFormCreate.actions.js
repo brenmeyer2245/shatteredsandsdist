@@ -7,7 +7,7 @@ export const episodeFormOpen = () => ({
   type: EPISODE_FORM_OPEN,
 });
 export const episodeFormClose = () => ({
-  type: EPISODE_FORM_OPEN,
+  type: EPISODE_FORM_CLOSE,
 });
 export const  episodeFormSetStep = (step) => ({
   type: EPISODE_FORM_SET_STEP,

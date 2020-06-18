@@ -14,10 +14,8 @@ import {
   AllEpisodes,
   EditCharacter,
   EditEpisode,
-  CharacterAccordion
+  EpisodeForm
 } from './components'
-
-import {EpisodeFormCreate} from './components/Episodes/EpisodeForms/EpisodeFormCreate/EpisodeFormCreate'
 
 import History from './components/History/History'
 import {me, fetchCharacters, fetchEpisodes} from './store'
@@ -42,7 +40,7 @@ class Routes extends Component {
         <Route path="/episodes/:episodeId" component={SingleEpisode} />
         <Route path="/history" component={History} />
         <Route path="/cities" component={AllCities} />
-        <Route exact path="/mock" component={CharacterAccordion} />
+        <Route exact path="/mock" component={EpisodeForm} />
         {isLoggedIn &&
         (<Switch>
             <Route path="/addCharacter" component={CreateCharacter} />
